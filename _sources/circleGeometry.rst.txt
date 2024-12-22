@@ -1,0 +1,48 @@
+
+Circles
+======================================
+
+Inscribed Angle
+------------------
+
+.. image:: geom_figs/circle/inscribed_ang_thm.png
+  :width: 600
+
+.. image:: geom_figs/circle/diameter.png
+  :width: 400
+	  
+Chords
+--------
+
+.. image:: geom_figs/circle/chords.png
+  :width: 600
+
+.. image:: geom_figs/circle/inner_intersection_angle.png
+  :width: 600
+	  
+.. image:: geom_figs/circle/outer_intersection_angle.png
+  :width: 600
+
+.. image:: geom_figs/circle/chord_intersection.png
+  :width: 600
+	  
+
+Tangents and Secants
+---------------------
+
+.. image:: geom_figs/circle/two_tangents.png
+  :width: 600
+
+.. image:: geom_figs/circle/tangent_secant.png
+  :width: 600
+
+
+
+	  
+
+
+
+
+
+
+

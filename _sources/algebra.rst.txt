@@ -8,8 +8,6 @@ Algebra
  
    theoryIndices.rst
    
-   algebraicManipulations.rst
-   
    algebraicIdentities.rst
 
    amgmhm.rst

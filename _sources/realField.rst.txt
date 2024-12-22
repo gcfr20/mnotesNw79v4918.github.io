@@ -93,7 +93,9 @@ This can be extended to more than two invertible real numbers.
 .. math::
 
    (a\cdot b\cdot c\cdot d)^{-1} &= d^{-1}\cdot c^{-1}\cdot b^{-1}\cdot a^{-1} = a^{-1}\cdot b^{-1}\cdot c^{-1}\cdot d^{-1}
-	
+
+   
+   
 Other Operations
 -------------------
 

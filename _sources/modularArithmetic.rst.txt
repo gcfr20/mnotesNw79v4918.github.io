@@ -13,9 +13,9 @@ For example, :math:`-11,-8,-5,-2,1,4,7,10` all give remainder :math:`1` when div
 In a modular congruence, any one of these numbers can be used interchangeably.
 
 If :math:`a\equiv b~(mod~n)` and :math:`c\equiv d~(mod~n)`, then
-:math:`(a+c)\equiv (b+d)~(mod~n),~ac\equiv bd~(mod~n)`.
+:math:`(a+c)\equiv (b+d)~(mod~n)~[i],~ac\equiv bd~(mod~n)~[ii]`.
 
-It follows that :math:`ak\equiv bk~(mod~n)` as :math:`k\equiv k~(mod~n)` for any integer :math:`k`. Additionally, successive multiplication gives :math:`a^k\equiv b^k~(mod~n)`.
+It follows that :math:`ak\equiv bk~(mod~n)~[iii]` as :math:`k\equiv k~(mod~n)` for any integer :math:`k`. Additionally, successive multiplication gives :math:`a^k\equiv b^k~(mod~n)~[iv]`.
 
 Examples
 -----------
@@ -26,18 +26,18 @@ Examples
   
    &~
    
-   & (-4)(-1)\equiv (3)(-1)~(mod~7) 
+   & (-4)(-1)\equiv (3)(-1)~(mod~7)~\text{(Using $[iii]$)}
 
    & 4\equiv -3~(mod~7)
 
    &~
    
-   & (-4)(2)\equiv (3)(2)~(mod~7) 
+   & (-4)(2)\equiv (3)(2)~(mod~7)~\text{(Using $[iii]$)}
 
    & -8\equiv 6~(mod~7) 
 
    &~
 
-   & (-4)^2\equiv (3)^2~(mod~7)
+   & (-4)^2\equiv (3)^2~(mod~7)~\text{(Using $[iv]$)}
 
    & 16\equiv 9~(mod~7)

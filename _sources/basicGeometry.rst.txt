@@ -1,0 +1,83 @@
+
+Parallel Lines and Triangles
+======================================
+
+Parallel Lines
+---------------
+
+.. image:: geom_figs/basics/parallel_lines.png
+  :width: 400
+
+
+Triangle Congruence
+---------------------
+
+.. image:: geom_figs/basics/congruence.png
+  :width: 600
+
+.. image:: geom_figs/basics/congruence_ASS_fallacy.png
+  :width: 500
+
+Triangle Similarity
+----------------------
+
+
+.. image:: geom_figs/basics/similarity.png
+  :width: 600
+
+
+.. image:: geom_figs/basics/similarity_case_1.png
+  :width: 400
+
+
+.. image:: geom_figs/basics/similarity_case_2.png
+  :width: 500
+
+.. image:: geom_figs/basics/similarity_case_3.png
+  :width: 500
+
+.. image:: geom_figs/basics/right_triangle_similarity.png
+  :width: 350
+
+
+
+Area Ratios
+-------------
+
+.. image:: geom_figs/basics/area_ratio_parallel_lines.png
+  :width: 600
+
+.. image:: geom_figs/basics/area_ratio_adjacent_triangles.png
+  :width: 400
+
+Angle Bisector Theorem
+------------------------
+
+.. image:: geom_figs/basics/angle_bisector_theorem.png
+  :width: 500
+
+Circumcircle and Incircle
+---------------------------
+
+.. image:: geom_figs/basics/circumcircle.png
+  :width: 500	  
+	   
+.. image:: geom_figs/basics/incircle.png
+  :width: 500
+
+Viviani's Theorem
+-------------------
+
+.. image:: geom_figs/basics/Viviani.png
+  :width: 500
+
+
+
+
+
+
+
+
+
+
+
