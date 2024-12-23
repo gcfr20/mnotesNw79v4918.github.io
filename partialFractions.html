@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Partial Fractions &#8212; Math Notes  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Summation and Products (Finite Terms)" href="series.html" />
+    <link rel="prev" title="Simplifying Expressions with Radicals" href="radicalSimplification.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="series.html" title="Summation and Products (Finite Terms)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="radicalSimplification.html" title="Simplifying Expressions with Radicals"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Math Notes  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="algebra.html" accesskey="U">Algebra</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Partial Fractions</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="partial-fractions">
+<h1>Partial Fractions<a class="headerlink" href="#partial-fractions" title="Permalink to this headline">¶</a></h1>
+<p>This section is mainly to present some background for the topic of telescopic summation. We limit ourselves to easy cases.</p>
+<p>Consider a fraction of polynomials as follows:</p>
+<div class="math">
+<p><img src="_images/math/d25e238766b12d35128f57bd021fc17560a823be.png" alt="\frac{8x+21}{(2x+3)(x-3)}"/></p>
+</div><p>The denominator contains two degree 1 polynomials with no common factors and the numerator is of degree 1. This discussion is applicable even if the the numerator is a constant i.e. of degree 0. For example,</p>
+<div class="math">
+<p><img src="_images/math/e88fb3f1b79c319ed4dff6a1b73310d2a9d4775f.png" alt="\frac{2}{(2x+3)(x-3)}"/></p>
+</div><p>Both these expressions can be put in the form</p>
+<div class="math">
+<p><img src="_images/math/739867281b099ef214572aecc794fd8328a60dfd.png" alt="\frac{A}{2x+3} + \frac{B}{x-3}"/></p>
+</div><p>where <img class="math" src="_images/math/211284f68205c3e66773eaf026f32a0acdd3dfb3.png" alt="A"/> and <img class="math" src="_images/math/4bc3e94a67870b41b7c20179693e889251e2c136.png" alt="B"/> are constants (no terms in <img class="math" src="_images/math/888f7c323ac0341871e867220ae2d76467d74d6e.png" alt="x"/>). If the numerator is to have any <img class="math" src="_images/math/888f7c323ac0341871e867220ae2d76467d74d6e.png" alt="x"/> term, then the quotient of the division will be non-zero. However, the quotient in the case of the original fraction is zero as the degree of the numerator is lower than the degree of the denominator.</p>
+<p>The constants <img class="math" src="_images/math/211284f68205c3e66773eaf026f32a0acdd3dfb3.png" alt="A"/> and <img class="math" src="_images/math/4bc3e94a67870b41b7c20179693e889251e2c136.png" alt="B"/> can be found as follows:</p>
+<div class="math">
+<p><img src="_images/math/7a2dbcc96207fd10e71e67f84faad7c10b1873d5.png" alt="&amp;\frac{8x+21}{(2x+3)(x-3)}  =  \frac{A}{2x+3} + \frac{B}{x-3} = \frac{A(x-3)+B(2x+3)}{(2x+3)(x-3)}
+
+&amp;~
+
+&amp;8x+21 = A(x-3) + B(2x+3)~(I)
+
+&amp;\text{Plug in the root of $2x+3=0$ i.e. $x=-\frac{3}{2}$ in $(I)$}
+
+&amp;8\left(-\frac{3}{2}\right)+21 = A\left(-\frac{3}{2}-3\right) + B (0)\implies A=-2
+
+&amp;\text{Plug in the root of $x-3=0$ i.e. $x=3$ in $(I)$}
+
+&amp;8\cdot 3 + 21 = A(0)) + B (2\cdot 3 +3)\implies B=5
+
+&amp;\text{Thus,}
+
+&amp;\frac{8x+21}{(2x+3)(x-3)}  =  \frac{-2}{2x+3} + \frac{5}{x-3}"/></p>
+</div></section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="radicalSimplification.html"
+                        title="previous chapter">Simplifying Expressions with Radicals</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="series.html"
+                        title="next chapter">Summation and Products (Finite Terms)</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/partialFractions.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="series.html" title="Summation and Products (Finite Terms)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="radicalSimplification.html" title="Simplifying Expressions with Radicals"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Math Notes  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="algebra.html" >Algebra</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Partial Fractions</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2024, AI.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+    </div>
+  </body>
+</html>

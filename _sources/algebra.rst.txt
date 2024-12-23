@@ -13,6 +13,12 @@ Algebra
    amgmhm.rst
 
    radicalSimplification.rst
+
+   systemsEquations.rst
+   
+   partialFractions.rst
+   
+   series.rst
    
    infiniteRadicals.rst
    

@@ -1,0 +1,50 @@
+
+System of Equations in Two Variables
+===========================================
+
+Consider a system of equations in two variables with a uniques solution
+
+.. math::
+
+   & 7x-2y=45
+
+   & 5x+y=37
+
+The solution for :math:`x` can be written down directly as
+
+.. math::
+
+   x=\frac{(45)(1)-(37)(-2)}{(7)(1)-(5)(-2)}=\frac{119}{17}=7
+
+We are using cross-multiplication and subtraction.
+
+
+:math:`y` can then be solved by substituting :math:`x` in any of the two equations.
+
+In general, if a unique solution exists, then
+
+.. math::
+
+   & a_1 x+b_1 y = c_1
+
+   & a_2 x+b_2 y = c_2
+
+   & \implies
+
+   & x = \frac{c_1 b_2 - c_2 b_1}{a_1 b_2 - a_2 b_1}
+
+   & y = \frac{c_1 a_2 - c_2 a_1}{b_1 a_2 - b_2 a_1}~\text{(Interchanging $a$ and $b$ in the result for $x$)}
+
+   
+
+  
+
+
+   
+ 
+
+   
+
+   
+
+   
