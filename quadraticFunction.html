@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Maximizing/minimizing Quadratic Function &#8212; Math Notes  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Number Theory" href="numberTheory.html" />
+    <link rel="prev" title="Recursive Problems" href="infiniteRadicals.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="numberTheory.html" title="Number Theory"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="infiniteRadicals.html" title="Recursive Problems"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Math Notes  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="algebra.html" accesskey="U">Algebra</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Maximizing/minimizing Quadratic Function</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="maximizing-minimizing-quadratic-function">
+<h1>Maximizing/minimizing Quadratic Function<a class="headerlink" href="#maximizing-minimizing-quadratic-function" title="Permalink to this headline">¶</a></h1>
+<p>A general quadratic function can be written as <img class="math" src="_images/math/c3cac50870f03e7845e47891531a84bfc0bc7c2a.png" alt="y=ax^2+bx+c"/>.</p>
+<p>If <img class="math" src="_images/math/b0b8616a4165ec875702c6a7983c183fd84a6522.png" alt="a&gt;0"/>, then the graph of this function is a parabola that opens up (in the positive Y direction). Thus, the function has a minimum value. If <img class="math" src="_images/math/a4cd4013f704a7bbac7b041e0d65d5114ecb6bdb.png" alt="a&lt;0"/>, then the parabola opens down and the function has a maximum value.</p>
+<div class="math">
+<p><img src="_images/math/ff4f1c570bc3acecfeff0b151517d80878609f10.png" alt="y &amp;= ax^2+bx+c
+
+  &amp;= a\left(x+\frac{b}{2a}\right)^2+d
+
+\text{where}&amp;
+
+d &amp;=c-\frac{b^2}{4a}"/></p>
+</div><p>The minumum or the maximum happens when the square term <img class="math" src="_images/math/ed332cc0225aae8cc4a66d96a5d02b1be9b1b337.png" alt="\left(x+\frac{b}{2a}\right)^2"/> takes a minimum value of 0, that is, when</p>
+<blockquote>
+<div><div class="math">
+<p><img src="_images/math/2ed992facd230529d3b8468d2a7ae5921aa6e2fa.png" alt="x=-\frac{b}{2a}"/></p>
+</div></div></blockquote>
+<p>The minimum/maximum value can be obtained by plugging this value of <img class="math" src="_images/math/888f7c323ac0341871e867220ae2d76467d74d6e.png" alt="x"/> in <img class="math" src="_images/math/d4bf44b2cab9be5a5a36ff7b17464b67de2e9fa6.png" alt="ax^2+bx+c"/>.</p>
+<p>Examples:</p>
+<hr class="docutils" />
+<p><img class="math" src="_images/math/10a966b8fa38301d83ef738d62da839cecd1e1d0.png" alt="y=2x^2-2x+7"/></p>
+<p>Minimum at <img class="math" src="_images/math/eb8455129ad3589b1daa6a28a95b589ec4319bc1.png" alt="-\frac{b}{2a}=\frac{2}{4}=\frac{1}{2}"/></p>
+<p>Minumum value <img class="math" src="_images/math/d75d781e8042067d780f27b048fc4a62e70fcc99.png" alt="2\left(\frac{1}{2}\right)^2-2\left(\frac{1}{2}\right)+7=\frac{13}{2}"/></p>
+<a class="reference internal image-reference" href="_images/parabola_up.png"><img alt="_images/parabola_up.png" src="_images/parabola_up.png" style="width: 400px;" /></a>
+<hr class="docutils" />
+<p><img class="math" src="_images/math/0e44580e9fc7e877c149bcb4f68a02c1e4cb98a9.png" alt="y=-3x^2-12x+17"/></p>
+<p>Minimum at <img class="math" src="_images/math/8d8af452028ee2cb2b0f970cb9ff02a873ea07b1.png" alt="-\frac{b}{2a}=-\frac{12}{6}=-2"/></p>
+<p>Minumum value <img class="math" src="_images/math/8c1f6fe44a166656c0390d885714979ca84106e4.png" alt="-3(-2)^2-12(-2)+17=29"/></p>
+<a class="reference internal image-reference" href="_images/parabola_down.png"><img alt="_images/parabola_down.png" src="_images/parabola_down.png" style="width: 400px;" /></a>
+<hr class="docutils" />
+<p>Calculus is intentionally avoided here.</p>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="infiniteRadicals.html"
+                        title="previous chapter">Recursive Problems</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="numberTheory.html"
+                        title="next chapter">Number Theory</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/quadraticFunction.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="numberTheory.html" title="Number Theory"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="infiniteRadicals.html" title="Recursive Problems"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Math Notes  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="algebra.html" >Algebra</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Maximizing/minimizing Quadratic Function</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2024, AI.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+    </div>
+  </body>
+</html>

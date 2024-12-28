@@ -17,7 +17,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Mass Points" href="circleGeometry.html" />
+    <link rel="next" title="Circles" href="circleGeometry.html" />
     <link rel="prev" title="Parallel Lines and Triangles" href="basicGeometry.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
@@ -27,7 +27,7 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="circleGeometry.html" title="Mass Points"
+          <a href="circleGeometry.html" title="Circles"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="basicGeometry.html" title="Parallel Lines and Triangles"
@@ -47,19 +47,65 @@
 <h1>Quadrilaterals<a class="headerlink" href="#quadrilaterals" title="Permalink to this headline">¶</a></h1>
 <section id="parallelogram">
 <h2>Parallelogram<a class="headerlink" href="#parallelogram" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Opposite sides are parallel</p></li>
+<li><p>Diagonals bisect each other (Converse is also true. If diagonals of a quadrilateral bisect each other, then the quadrilateral is a parallelogram.)</p></li>
+<li><p>The two red triangles are congruent and the two blue triangles are quadrilateral</p></li>
+<li><p>Area of the parallelogram is twice the area of triangle ABC or twice the area of triangle ABD</p></li>
+</ul>
 <a class="reference internal image-reference" href="_images/parallelogram.png"><img alt="_images/parallelogram.png" src="_images/parallelogram.png" style="width: 600px;" /></a>
+<p>A rectangle is a parallelogram with all angles right angles</p>
 </section>
 <section id="rhombus">
 <h2>Rhombus<a class="headerlink" href="#rhombus" title="Permalink to this headline">¶</a></h2>
+<p>Rhombus is parallelogram with all sides equal</p>
+<ul class="simple">
+<li><p>Diagonals bisect each other (as rhombus is also a parallelogram)</p></li>
+<li><p>Diagonals are perpendicular to each other</p></li>
+<li><p>Diagonals are angle bisectors of the angles</p></li>
+<li><p>All four blue triangles are congruent right-angled triangles</p></li>
+<li><p>Area is four times the area of any one of the four right-angled triangles. Hence,</p></li>
+</ul>
+<div class="math">
+<p><img src="_images/math/09ae3ff69e89262676646163f6b23a4d4a20019b.png" alt="\text{Area of rhombus}=\frac{d_1\times d_2}{2}"/></p>
+</div><p>where <img class="math" src="_images/math/3ae609da43d4b08e38f5d39c0e6b1334d3c6bbd9.png" alt="d_1"/> and <img class="math" src="_images/math/cc01b82d36d02dbb2f81204ce239408227e1f242.png" alt="d_2"/> are the two diagonals.</p>
 <a class="reference internal image-reference" href="_images/rhombus.png"><img alt="_images/rhombus.png" src="_images/rhombus.png" style="width: 600px;" /></a>
-</section>
+<p>A square is also a rhombus</p>
+<ul class="simple">
+<li><p>Square is a rhombus with all angles right angles</p></li>
+<li><p>Square is a rhombus with both diagonals equal. If <img class="math" src="_images/math/106b04b320e75010b1d8029e59244f234f75e6f9.png" alt="s"/> is a side of a square and <img class="math" src="_images/math/badad346f6fbe2e237af99bfbd9a93a4da53a3da.png" alt="d"/> is the diagonal, then</p></li>
+</ul>
+<div class="math">
+<p><img src="_images/math/e0d0f1973f7d62e420a8c809b098d5323c4c4f0b.png" alt="\text{Area of square}=s^2=\frac{d^2}{2}\implies d=s\sqrt{2}"/></p>
+</div></section>
 <section id="kite">
 <h2>Kite<a class="headerlink" href="#kite" title="Permalink to this headline">¶</a></h2>
+<p>A kite is a quadrilateral that has mirror symmetry about one of the diagonals.</p>
+<ul class="simple">
+<li><p>Diagonals are perpendicular to each other</p></li>
+<li><p>The diagonal that forms the mirror axis (AC) bisects the other diagonal (BD).</p></li>
+<li><p>The blue sides are equal and the red sides are equal</p></li>
+<li><p>The blue triangles are congruent and the red triangles are congruent</p></li>
+<li><p>The area is two times the sum of the blue triangle (ABE) and the red triangle (CBE)</p></li>
+</ul>
 <a class="reference internal image-reference" href="_images/kite.png"><img alt="_images/kite.png" src="_images/kite.png" style="width: 400px;" /></a>
 </section>
 <section id="trapezoid">
 <h2>Trapezoid<a class="headerlink" href="#trapezoid" title="Permalink to this headline">¶</a></h2>
+<p>A trapezoid is a quadrilateral with one pair of opposite sides parallel. In the figure below AB and DC are parallel.</p>
 <a class="reference internal image-reference" href="_images/trapezoid.png"><img alt="_images/trapezoid.png" src="_images/trapezoid.png" style="width: 500px;" /></a>
+<div class="math">
+<p><img src="_images/math/a8f3573d921000b8819171b217eb16ea776b025c.png" alt="&amp;\text{Area of trapezoid}=\text{Area  of rectangle ABFE}-\text{Area of triangle EAD}-\text{Area of triangle BFC}
+
+&amp;=AE(ED+DC+CF)-\frac{1}{2}\cdot AE(ED)-\frac{1}{2}\cdot AE(CF)
+
+&amp;=AE\left(\frac{ED}{2}+DC+\frac{CF}{2}\right)
+
+&amp;=\frac{AE}{2}\left[\left(ED+DC+CF\right)+DC\right]
+
+&amp;=AE\left(\frac{AB+DC}{2}\right)"/></p>
+</div><p>Thus, <strong>Area of trapezoid = Average of the two parallel sides x Distance between the parallel sides</strong>.</p>
+<p>If AD = BC, then the trapezoid is called an isosceles trapezoid. In that case, <img class="math" src="_images/math/a27537cce6eb3a779c986a7982ac1eae2e8244ca.png" alt="\angle DAB=\angle CBA"/>.</p>
 </section>
 </section>
 
@@ -86,7 +132,7 @@
                         title="previous chapter">Parallel Lines and Triangles</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="circleGeometry.html"
-                        title="next chapter">Mass Points</a></p>
+                        title="next chapter">Circles</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -115,7 +161,7 @@
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="circleGeometry.html" title="Mass Points"
+          <a href="circleGeometry.html" title="Circles"
              >next</a> |</li>
         <li class="right" >
           <a href="basicGeometry.html" title="Parallel Lines and Triangles"

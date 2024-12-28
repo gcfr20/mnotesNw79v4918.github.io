@@ -1,4 +1,3 @@
-
 Circles
 ======================================
 
@@ -6,26 +5,96 @@ Inscribed Angle
 ------------------
 
 .. image:: geom_figs/circle/inscribed_ang_thm.png
-  :width: 600
+  :width: 400
+
+A part of the circumference of the circle is called an "arc". In the above figure, BGC is an arc. The arc is measured by the angle it subtends at the center of the circle. So arc BGC has measure :math:`108^o` (the measure of angle BAC).
+	  
+Angles inscribed in the circle are angles whose vertex is on the circle and the arms of the angle are chords of the circle. Angles BDC and BEC (purple angles) are inscribed angles that are subtended the same arc BGC. The measure of these angles is half the measure of the arc. **All inscribed angles that are substended bu arc BGC are equal and have measure equal to half of the arc measure. This is the inscribed-angle theorem.**
+
+The measure of arc BDC is :math:`360^o-\angle BAC=252^o`. Angles BGC anf BHC are inscribed angles subtended by arc BDC (blue angles). Their measure is half of the measure of arc BDC i.e. :math:`126^o`.
+
+Note that :math:`\angle BCF` is formed by the chord that connects the ends of the arc BGC and the tangent at point C. The measure of this angle is also half the arc measure. Similarly :math:`\angle BCI` is half the measure of arc BDC.
+
+======================================
 
 .. image:: geom_figs/circle/diameter.png
   :width: 400
+
+A diameter can be thought of as the angle subtended by the semicircle at the center of the circle. This subtended angle is :math:`180^o`. Hence, any inscribed angle subtended by the semicircle of the diameter is equal to :math:`90^o`. Hence, :math:`\angle BFC=\angle BGC=\angle BHC=90^o`. As discussed in the preceding example, :math:`BCE` is also a right angle. Thus, a tangent is perpendicular to the segment joining the center of the circle (A) to the point of tangency (C).
+
+In problems involving tangents, this segment from the center to the point of tangency is a common useful auxilliary segment.
 	  
 Chords
 --------
 
 .. image:: geom_figs/circle/chords.png
-  :width: 600
+  :width: 500
+
+EF is a chord of the circle. A perpendicular dropped from the center of the circle to the chord (AG) bisects the chord EF forming two congruent triangles AEG and AFG (SSS or hypotenuse-leg test).
+
+Additionally, all chords of the same length are equidistant from the center.
+
+.. math::
+
+   EF=BC \implies AG=AD
+
+The largest chord is the diameter which has distance 0 from the center. As the distance of the chord from the center increases, the length of the chord keeps decreasing. When the distance of the chord from the center approaches the radius, the length of the chord approaches 0.
+
+
+======================================
 
 .. image:: geom_figs/circle/inner_intersection_angle.png
-  :width: 600
+  :width: 400
+
+BC and DE are two chords that intersect inside the circle. The measure of angles BFE and CFD are half of the sum of the measures of the two arcs BE and CD (the arcs that are subtended at these angles). Here is a short proof:
+
+.. math::
+
+   \angle BDE &= \frac{1}{2} \angle BAE~\text{(Inscribed angle theorem)}
+
+   \angle DBC &= \frac{1}{2} \angle DAC~\text{(Inscribed angle theorem)}
+
+   \angle BFE &= \angle BDE + \angle DBC~\text{(Exterior angle = sum of remote interior angles)}
+
+   \angle BFE &= \angle CFD~\text{(Vertically opposite angles)}
+
+   &=\frac{1}{2}\left(\angle BAE + \angle DAC\right)~\text{(Putting all the preceding steps together)}
+   
+	  
+======================================
 	  
 .. image:: geom_figs/circle/outer_intersection_angle.png
   :width: 600
 
+Here, chords BD and EC intersect at point F outside the circle when extended. The measure of angle BFE in this case is half of the difference of the measures of the two arcs BE and DC (the subtended arcs). Now for the proof:
+
+.. math::
+
+   \angle BCE &= \frac{1}{2} \angle BAE~\text{(Inscribed angle theorem)}
+
+   \angle FBC &= \frac{1}{2} \angle DAC~\text{(Inscribed angle theorem)}
+
+   \angle BFE &= \angle BCE - \angle FBC~\text{(Exterior angle = sum of remote interior angles)}
+
+   &=\frac{1}{2}\left(\angle BAE - \angle DAC\right)~\text{(Putting all the preceding steps together)}
+  	  
+======================================
+
 .. image:: geom_figs/circle/chord_intersection.png
-  :width: 600
+  :width: 500
+
+If BC and DE are two chords that intersect inside the circle at point F, then :math:`BF \times FC = EF\times FD`. This is the **chord-intersection theorem**.
 	  
+This follows from the similarity of triangles FBE and FDC.
+
+.. math::
+
+   \angle BEF &= \angle DCF~\text{(Inscribed angles subtending the same arc)}
+
+   \angle BFE &= \angle DFC~\text{(Vertically opposite angles)}
+
+   \Delta BFE\sim \Delta DFC~\text{(Similarity by AA test)}
+
 
 Tangents and Secants
 ---------------------
@@ -33,14 +102,90 @@ Tangents and Secants
 .. image:: geom_figs/circle/two_tangents.png
   :width: 600
 
+We have already seen that a tangent is perpendicular to the segement joining the center of the circle to the point of tangency. As seen in the above figure, two tangents can be drawn from an external point to the circle. Both the tangents are equal. This follows from the congruency of triangles ABC and ADC due to the hypotenuse-leg test (One leg in the radius in both triangles and the hypotenuse is a common side).
+
+In most problems involving tangency of a line/segment or tagnency of two circles, joining the point of tangency to the center is a useful construction. Also, wehen two tangents from a common point is involved, constructing the hypotenuse is also sometimes useful.
+
+======================================
+
 .. image:: geom_figs/circle/tangent_secant.png
   :width: 600
 
+In the above figure DB is part of a tangent and DL anf DH  are parts of secants (Lines that intersect the circle in two points). If the tangent and secants pass through a common point (D in the above figure), the following relation holds:
 
+.. math::
 
+   & DB^2 = DK\times DL = DH\times DG
+
+This is the **tangent-secant theorem**.
+
+The proof (which we skip here) is based on :math:`\Delta DKH\sim \Delta DLG` and :math:`\Delta DBK\sim \Delta DBL`.
+
+Incircle
+===========
 	  
+.. image:: geom_figs/basics/incircle.png
+  :width: 500
+
+The incircle is the circle which is inside the triangle and has the three sides of the triangle as tangents. Thus, we have two tangents from each vertex. Fron the discussion in the preceding section, the line that passes through the center of this circle (called the incenter) and the vertex will be the angle bisector of the angle at the vertex (from the congruence of the two symmetric triangles). Thus, the incenter is the point of intersection of the angle bisectors of the three interior angles of the triangle. A is the center of the circle anf point B, C, and D are points of tangency.
+
+We end up with the following relations:
+
+.. math::
+
+   & AB = AC = AD = \text{radius of the circle (the inradius)}
+
+   & \angle AGB = \angle AGC,~\angle AFC=\angle AFD,~\angle AED=\angle AEB
+
+   & EB = ED,~FD=FC,~GC=GB
+
+We also have the right-angles and the associated Pythagoras theorem relations in the six triangles - AGB, AGC, AFC, AFD, AED, and AEB.
+
+Let :math:`r` be the inradius. We also have
+
+.. math::
+
+   \text{Area of }\Delta EFG &= \text{Area of }\Delta AEF + \text{Area of }\Delta AFG + \text{Area of }\Delta AGE
+
+   &= \frac{1}{2}AD\cdot EF+\frac{1}{2}AC\cdot FG+\frac{1}{2}AB\cdot GE
+
+   &= \frac{1}{2}r\cdot\left(EF+FG+GE\right)
+
+   &= \frac{1}{2}r\cdot \text{Perimeter of }\Delta EFG
+
+   \implies \text{Inradius}~&=~\frac{\text{Area}}{\text{Semi-perimeter}}
+
+Semi-perimeter is half of the perimeter.
 
 
+Circumcircle
+---------------------------
+
+.. image:: geom_figs/basics/circumcircle.png
+  :width: 500	  
+
+There is a unique circle that can be drawn through three non-collinear points. If the three points are vertices of the triangle, the circle is called the circumcircle. Each side of the triangle is a chord of the circle. The perpendicular bisector of a chord passes through the center of the circle. Hence, the center of the circumcircle - the circumcenter - is the intersection of the perpendicular bisectors of the three sides.
+
+
+**In problems involving chords and tangents that generate right-angled triangles, it is always useful to check if the triangle is a 30-60-90 or a 45-45-90 triangle, or if Pythagorean triplets are involved.**
+
+
+Pythagorean Triplets
+----------------------
+
+The common Pythagorean triplets are listed below. The triplets could also be scaled proportionately (as in the case of similar right triangles).
+
+.. math::
+
+   & 3^2+4^2 = 5^2
+
+   & 5^2+12^2 = 13^2
+
+   & 8^2+15^2 = 17^2
+
+   & 7^2+24^2 = 25^2
+
+   
 
 
 

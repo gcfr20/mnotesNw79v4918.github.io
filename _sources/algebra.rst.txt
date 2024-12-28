@@ -21,4 +21,8 @@ Algebra
    series.rst
    
    infiniteRadicals.rst
+
+   quadraticFunction.rst
+
+   
    

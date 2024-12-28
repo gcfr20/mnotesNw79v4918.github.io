@@ -12,6 +12,7 @@ Geometry
 
    massPoints.rst
 
+   threeDimensional.rst
    
   
    
