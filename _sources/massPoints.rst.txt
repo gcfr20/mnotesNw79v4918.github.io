@@ -19,9 +19,6 @@ The segments from the triangle vertices to the opposite sides are called **Cevia
 Mass Point Analysis
 ---------------------
 
-	  
-=================================================
-
 .. image:: geom_figs/mass_pts/mass_pts_ex1.png
   :width: 400
 

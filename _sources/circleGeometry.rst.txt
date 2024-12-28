@@ -5,7 +5,7 @@ Inscribed Angle
 ------------------
 
 .. image:: geom_figs/circle/inscribed_ang_thm.png
-  :width: 400
+  :width: 600
 
 A part of the circumference of the circle is called an "arc". In the above figure, BGC is an arc. The arc is measured by the angle it subtends at the center of the circle. So arc BGC has measure :math:`108^o` (the measure of angle BAC).
 	  
