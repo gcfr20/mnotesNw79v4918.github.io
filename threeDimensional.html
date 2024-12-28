@@ -1,0 +1,248 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Three-Dimensional Geometry &#8212; Math Notes  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Mass Points" href="massPoints.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="massPoints.html" title="Mass Points"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Math Notes  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="geometry.html" accesskey="U">Geometry</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Three-Dimensional Geometry</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="three-dimensional-geometry">
+<h1>Three-Dimensional Geometry<a class="headerlink" href="#three-dimensional-geometry" title="Permalink to this headline">¶</a></h1>
+<section id="polyhedra">
+<h2>Polyhedra<a class="headerlink" href="#polyhedra" title="Permalink to this headline">¶</a></h2>
+<p>3D equivalent of polygons - polygonal faces and straight edges</p>
+<p>We restrict ourselves to convex polyhedra. If any two points on the polyhedra are connected by a line segment, the line segment should not have any part outside the polyhedra.</p>
+<p>For a convex polyhedra, the following relationship attributed to Euler holds:</p>
+<div class="math">
+<p><img src="_images/math/940c833484b21306529deb81ff851152500bb23b.png" alt="&amp;\textbf{F + V = E +2}"/></p>
+</div><p>where <strong>F: Number of faces, V: Number of vertices, and E: Number of edges</strong>.</p>
+<hr class="docutils" />
+<p>Here is an example problem:</p>
+<a class="reference internal image-reference" href="_images/icoxxxhedron.png"><img alt="_images/icoxxxhedron.png" src="_images/icoxxxhedron.png" style="width: 200px;" /></a>
+<p>The polyhedron in the above figure has 20 triangular faces and 12 pentagonal faces. How many edges and vertices does it have?</p>
+<p>In this problem, it is easier to find out how many polygons meet at an edge (the answer is 2) than to find out how many polygons meet at a vertex.</p>
+<p>First step: Count the edges contributed by all the faces</p>
+<div class="math">
+<p><img src="_images/math/3f409428d29ecb92050bf9d330e808809f699c0b.png" alt="20 \times 3 + 12 \times 5 = 120"/></p>
+</div><p>However, each edge is formed by two faces meeting. Hence, we have counted each edge twice in the above calculation. So divide by 2 to get the number of edges.</p>
+<div class="math">
+<p><img src="_images/math/b9ed30e1f951d17409b6e2624fa3dcf2698f479d.png" alt="E = \frac{120}{2}=60"/></p>
+</div><p>Euler’s formula then gives us the number of vertices.</p>
+<div class="math">
+<p><img src="_images/math/5fc39170edd46d976df0101ba0e8d21c1513e3bd.png" alt="F + V &amp;= E + 2
+
+32 + V &amp;= 60 + 2 \implies V = 30"/></p>
+</div></section>
+<section id="distance-in-2d">
+<h2>Distance in 2D<a class="headerlink" href="#distance-in-2d" title="Permalink to this headline">¶</a></h2>
+<p>Let us first start with 2D.</p>
+<a class="reference internal image-reference" href="_images/dist2D.png"><img alt="_images/dist2D.png" src="_images/dist2D.png" style="width: 400px;" /></a>
+<p>In the figure above, applying Pythagoras theorem, the distance DI can be calculated as <img class="math" src="_images/math/e33029fb04cad9c4875de475616cb996cf3209a2.png" alt="DI=\sqrt{DA^2+AI^2}"/>. If an XY coordinate system is attached to the figure such that DA is along X and AI is along Y, then DA is the change in the X coordinate - <img class="math" src="_images/math/7c3282642d867109f551c02c4946b913e5c0a430.png" alt="\Delta x"/> - and AI is the change in the Y coordinate - <img class="math" src="_images/math/09081834f13c72fb00b7cf764822a9e48ece7003.png" alt="\Delta y"/> - as one goes from D to I. Thus,</p>
+<div class="math">
+<p><img src="_images/math/3f23ff13a0c69a381369d75904136ca7e395d7e0.png" alt="DI=\sqrt{(\Delta x)^2+(\Delta y)^2}."/></p>
+</div><p>Alternatively, <img class="math" src="_images/math/7c3282642d867109f551c02c4946b913e5c0a430.png" alt="\Delta x"/> and <img class="math" src="_images/math/09081834f13c72fb00b7cf764822a9e48ece7003.png" alt="\Delta y"/> can be calculated by summing the change in X and Y coordinates along DE, EF, FG, GH, and HI.</p>
+<div class="math">
+<p><img src="_images/math/6695e773701a54ffd45a020793542a2353bcdcef.png" alt="\Delta x&amp;= \Delta x_{DE} + \Delta x_{EF} + \Delta x_{FG} + \Delta x_{GH} + \Delta x_{HI}
+
+\Delta y&amp;= \Delta y_{DE} + \Delta y_{EF} + \Delta y_{FG} + \Delta y_{GH} + \Delta y_{HI}"/></p>
+</div><p>The choice of the origin and the direction of the X axis was arbitrary. Thus, the above relations hold for any choice of X and Y coordinates.</p>
+<hr class="docutils" />
+<p>Now, consider the following problem:</p>
+<a class="reference internal image-reference" href="_images/dist2D_multi.png"><img alt="_images/dist2D_multi.png" src="_images/dist2D_multi.png" style="width: 400px;" /></a>
+<p>The segment chain with lengths 13, 7, and 11 starts at one end of the diagonal and ends at the other end. Hence, we could use this segment to compute the diagonal. An obvious choice of the coordinate system is to choose X axis parallel to the 13 and 11 segements (bottom-left to top-right) and Y axis parallel to the 7 segment (down-right to up-left). With this choice,</p>
+<div class="math">
+<p><img src="_images/math/8a44fc07df65154d203aba2184f9cb698291c574.png" alt="\Delta x &amp;= 13 + 11 = 24
+
+\Delta y &amp;= -7
+
+\text{Diagonal}~&amp;=~\sqrt{(\Delta x)^2+(\Delta y)^2}=\sqrt{24^2+7^2}=25"/></p>
+</div><p>Note that the location of the origin did not matter.</p>
+<p>The segment chain with lengths 10, 4, 2, and 5 starts at the bottom-left corner of the rectangle and ends at the top-left corner. Thus, this should allow us to compute the width of the rectangle. For this computation, we can choose a different set of axes, X-axis parallel to the 10 segment (bottom-left to top-right) and Y-axis parallel to the 4 segment (bottom-right to top-left).</p>
+<div class="math">
+<p><img src="_images/math/2c0560356d0878797d1cb046826b2a73c7199efd.png" alt="\Delta x &amp;= 10 + 2 = 12
+
+\Delta y &amp;= 4+5=9
+
+\text{Width}~&amp;=~\sqrt{(\Delta x)^2+(\Delta y)^2}=\sqrt{12^2+9^2}=15"/></p>
+</div><p>Note that in the calculation of both diagonal and width, a Pythogorean triplet or its multiple was involved. This may not always be true.</p>
+<p>The length of the rectangle can be computed from the diagonal and the width.</p>
+</section>
+<section id="distance-in-3d">
+<h2>Distance in 3D<a class="headerlink" href="#distance-in-3d" title="Permalink to this headline">¶</a></h2>
+<p>When dealing with distances in 3D, we need a third Z axis that is perpendicular to both X and Y. The distance is then be given by</p>
+<div class="math">
+<p><img src="_images/math/934aebb9f03e8f7b71a77c8f8d78e50447446c46.png" alt="\sqrt{(\Delta x)^2 + (\Delta y)^2 + (\Delta z)^2}"/></p>
+</div><a class="reference internal image-reference" href="_images/dist3D.png"><img alt="_images/dist3D.png" src="_images/dist3D.png" style="width: 700px;" /></a>
+<p>In the above figure, the objective is to find length EF. X, Y, Z is an arbitrary coordinate system such that the X, Y, and Z axes are perpendicular to each other.</p>
+<p>As one traverses from E to F, the X, Y, and Z coordinates chnage by <img class="math" src="_images/math/7c3282642d867109f551c02c4946b913e5c0a430.png" alt="\Delta x"/>, <img class="math" src="_images/math/09081834f13c72fb00b7cf764822a9e48ece7003.png" alt="\Delta y"/>, <img class="math" src="_images/math/f52e428a596299d136f6a197f954d730669c0253.png" alt="\Delta z"/>, respectively. GH is the projection (shadow) of EF on the XY plane. Thus, as one traverses from G to H, X and Y change by the same amount as in the case of traversal from E to F. However, there is no change in the Z coordinate. Using Pythagoras, as in the 2D case, <img class="math" src="_images/math/efff36c5f94880f1ba0b6a16662a480a1d590ac2.png" alt="GH=\sqrt{(\Delta x)^2 + (\Delta y)^2}"/>. Note that EI is just a parallel translation of GH in the Z direction without change in length. Thus, <img class="math" src="_images/math/a51ae61f5278c25adfff39114636dd28e1075103.png" alt="EI=\sqrt{(\Delta x)^2 + (\Delta y)^2}"/>. FI is perpendicular to EI nd has length <img class="math" src="_images/math/f52e428a596299d136f6a197f954d730669c0253.png" alt="\Delta z"/>. Applying Pythagoras to triangle EIF,</p>
+<div class="math">
+<p><img src="_images/math/bdf11380de68614c9ee1e6c483c82751d94e5203.png" alt="EF^2 &amp; = EI^2 + IF^2
+
+&amp; = (\Delta x)^2 + (\Delta y)^2 + (\Delta z)^2
+
+EF = \sqrt{(\Delta x)^2 + (\Delta y)^2 + (\Delta z)^2}"/></p>
+</div><hr class="docutils" />
+<p>Example: In the rectangular prism below, I and J are the mid-points of BG and EF, respectively. AB=4, AD=2, and DE=5. Find BH (face diagonal), BE (body diagonal), and IJ.</p>
+<a class="reference internal image-reference" href="_images/rect3D.png"><img alt="_images/rect3D.png" src="_images/rect3D.png" style="width: 400px;" /></a>
+<p>AB, AD, and AH are perpendicular to each other. Let us choose X along AB, Y along AH, and Z along AD.</p>
+<p>As one traverses from B to H:</p>
+<div class="math">
+<p><img src="_images/math/2e318ae527c32571e2569d2130df388410aef843.png" alt="\Delta x &amp;= -4,~\Delta y = 5,~\Delta z = 0
+
+BH &amp;= \sqrt{(-4)^2+(5)^2}=\sqrt{41}"/></p>
+</div><p>As one traverses from B to E:</p>
+<div class="math">
+<p><img src="_images/math/fec6608673cc6d91c2caf9192116d8030db6a464.png" alt="\Delta x &amp;= -4,~\Delta y = 5,~\Delta z =2
+
+BE &amp;= \sqrt{(-4)^2+(5)^2+(2)^2}=\sqrt{45}"/></p>
+</div><p>As one traverses from I to H:</p>
+<div class="math">
+<p><img src="_images/math/6aea5f219895c95eb71a52c8ea709a8b469ed273.png" alt="\Delta x &amp;= -\frac{4}{2}=-2,~\Delta y = \frac{5}{2},~\Delta z =2
+
+IJ &amp;= \sqrt{(-2)^2+\left(\frac{5}{2}\right)^2+(2)^2}=\sqrt{\frac{57}{4}}=\frac{\sqrt{57}}{2}"/></p>
+</div></section>
+<section id="surface-area-and-volume">
+<h2>Surface Area and Volume<a class="headerlink" href="#surface-area-and-volume" title="Permalink to this headline">¶</a></h2>
+<p>Let us begin with an observation. In the figure below are shown three functions of <img class="math" src="_images/math/888f7c323ac0341871e867220ae2d76467d74d6e.png" alt="x"/>. The green function takes a constant value of <img class="math" src="_images/math/a5fa84b363f309ebc8fe7db38304541732c7de9a.png" alt="q"/> over <img class="math" src="_images/math/2e5b4a97cac1d0960e3ebd39e540fc7a20c9f47a.png" alt="0&lt;x&lt;h"/>. The red function grows linearly from <img class="math" src="_images/math/31fdf41b39df23c95e52c5aef07f59d9adf82f3c.png" alt="0"/> to <img class="math" src="_images/math/a5fa84b363f309ebc8fe7db38304541732c7de9a.png" alt="q"/>, and the blue function grows quadratically from <img class="math" src="_images/math/31fdf41b39df23c95e52c5aef07f59d9adf82f3c.png" alt="0"/> to <img class="math" src="_images/math/a5fa84b363f309ebc8fe7db38304541732c7de9a.png" alt="q"/>. The area under the green curve (and above the X axis) over <img class="math" src="_images/math/2e5b4a97cac1d0960e3ebd39e540fc7a20c9f47a.png" alt="0&lt;x&lt;h"/> is <img class="math" src="_images/math/b89187239963ff8e1517d5e0521e78b322091bf8.png" alt="qh"/>. The area under the red curve is half of that i.e. <img class="math" src="_images/math/08ef1b53ed3c031f46e1a35a1fe01f5d68c0523d.png" alt="\frac{qh}{2}"/>, and the area under the blue curve is <img class="math" src="_images/math/d32bb498c658ffce81d7047bae14b8f055c71b77.png" alt="\frac{qh}{3}"/> (stated without proof).</p>
+<a class="reference internal image-reference" href="_images/graphs.png"><img alt="_images/graphs.png" src="_images/graphs.png" style="width: 400px;" /></a>
+<div class="math">
+<p><img src="_images/math/bc5a62355e955c54c5f29c5777e718b028a483ed.png" alt="&amp;\text{Area under green curve} = qh
+
+&amp;\text{Area under red curve} = \frac{qh}{2}
+
+&amp;\text{Area under blue curve} = \frac{qh}{3}"/></p>
+</div><hr class="docutils" />
+<p>The figure below shows a prism (left) and a pyramid (right). The left solid is generated by sweeping a fixed template - the base of the prism - from the bottom to the top. The surface area of the side of the prism can be thought of being generated by the perimeter of the base being swept through the height of the prism. Similarly the volume of the prism is generated by the sweeing of the base area through the height. The side surface area is the area under the green curve above with <img class="math" src="_images/math/a5fa84b363f309ebc8fe7db38304541732c7de9a.png" alt="q"/> replaced by the perimeter and <img class="math" src="_images/math/4c120f773ab4e1c59ad2bd44aae969ce24dd190a.png" alt="h"/> the height of the prism. The volume is the area under the green curve awith <img class="math" src="_images/math/a5fa84b363f309ebc8fe7db38304541732c7de9a.png" alt="q"/> replaced by the base area. To get the total surface area, the areas of the bottom and top faces need to be added to the side surface area.</p>
+<a class="reference internal image-reference" href="_images/prism_pyramid.png"><img alt="_images/prism_pyramid.png" src="_images/prism_pyramid.png" style="width: 700px;" /></a>
+<div class="math">
+<p><img src="_images/math/8542e39177db827568f044b68cb24cbc156d230c.png" alt="&amp;\text{Surface area of prism} = \text{Perimeter of base}~\times~\text{Height} + 2\times~\text{Base area}
+
+&amp;\text{Volume of prism} = \text{Base area}~\times~\text{Height}"/></p>
+</div><p>For the pyramid, any linear dimension of the base increases linearly as the base template is swept from bottom to the top. As the pyramid is swept from the bottom to the top, the bases generated are all similar. Thus, the perimeter of the base increases linearly. On the other hand, the area of the base increases quadratically. Thus, the side surface area computation is equivalent to finding the area under the red curve with <img class="math" src="_images/math/a5fa84b363f309ebc8fe7db38304541732c7de9a.png" alt="q"/> the perimeter. The volume computation is equivalent to finding the area under the blue curve with <img class="math" src="_images/math/a5fa84b363f309ebc8fe7db38304541732c7de9a.png" alt="q"/> the base area at the top. For the total surface area, just the surface area of the base at the top needs to be added. Therefore,</p>
+<div class="math">
+<p><img src="_images/math/32a680b70be763ea098117477225a04333fa2f60.png" alt="&amp;\text{Surface area of pyramid} = \frac{1}{2}\times\text{Perimeter of base}~\times~\text{Height} + \text{Base area at the top}
+
+&amp;\text{Volume of pyramid} = \frac{1}{3}\times\text{Base area at the top}~\times~\text{Height}"/></p>
+</div><p>The red and the blue bases are similar and their linear dimension scale-factors is just the ratio of the heights at which the bases are located. Thus,</p>
+<div class="math">
+<p><img src="_images/math/004f087859efeb7fed953403b8a6007181e9d958.png" alt="\frac{EF}{AB} &amp;= \frac{FH}{BC} = \frac{CD}{HG} = \frac{DA}{GE}
+
+&amp;=\frac{\text{Perimeter of blue base}}{\text{Perimeter of red base}}
+
+&amp;=\frac{\sqrt{\text{Area of blue base}}}{\sqrt{\text{Area of red base}}}
+
+&amp;=\frac{\sqrt[3]{\text{Volume under blue base}}}{\sqrt[3]{\text{Volume under red base}}}
+
+&amp;=\frac{\text{Height of blue base}}{\text{Height of red base}}"/></p>
+</div><p>A cone is a special case of a pyramid with circular base. Hence the volume of a cone is <img class="math" src="_images/math/cccf6247e6ad5dd0a5f6b3fc4310465c4640ef3f.png" alt="\frac{1}{3}\times \pi r^2 \times h"/> where <img class="math" src="_images/math/79a3d439d28652c547386f39b555d90d3aaf102d.png" alt="r"/> is the radius of the base and <img class="math" src="_images/math/4c120f773ab4e1c59ad2bd44aae969ce24dd190a.png" alt="h"/> is the height of the cone.</p>
+<hr class="docutils" />
+<p>The hemisphere can be thought of as a pyramid with height equal to the radius - R. Hoever, the circumference and area of the circular template grows neither linearly, not quadratically.</p>
+<a class="reference internal image-reference" href="_images/hemisphere.png"><img alt="_images/hemisphere.png" src="_images/hemisphere.png" style="width: 300px;" /></a>
+<p>In this case,</p>
+<div class="math">
+<p><img src="_images/math/0f18aa68fa6c5bdb063d49152eff62cfbfbe2c42.png" alt="&amp;\text{Area of the side (excluding the cap)} = (2\pi R) \times (R)=2\pi R^2
+
+&amp;\text{Volume of hemisphere} = \frac{2\pi}{3}\times \left(\pi R^2\right) \times (R) = \frac{2\pi R^3}{3}"/></p>
+</div><p>By doubling the results, we get the corresponding parameters for a sphere.</p>
+<div class="math">
+<p><img src="_images/math/829477b759d7b47209532a16b756f7b31a431170.png" alt="&amp;\text{Surface area of sphere} = 4\pi R^2
+
+&amp;\text{Volume of sphere} = \frac{4\pi R^3}{3}"/></p>
+</div></section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Three-Dimensional Geometry</a><ul>
+<li><a class="reference internal" href="#polyhedra">Polyhedra</a></li>
+<li><a class="reference internal" href="#distance-in-2d">Distance in 2D</a></li>
+<li><a class="reference internal" href="#distance-in-3d">Distance in 3D</a></li>
+<li><a class="reference internal" href="#surface-area-and-volume">Surface Area and Volume</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="massPoints.html"
+                        title="previous chapter">Mass Points</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/threeDimensional.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="massPoints.html" title="Mass Points"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Math Notes  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="geometry.html" >Geometry</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Three-Dimensional Geometry</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2024, AI.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+    </div>
+  </body>
+</html>
