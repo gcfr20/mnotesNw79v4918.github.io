@@ -1,5 +1,5 @@
 
-Maximizing/minimizing Quadratic Function 
+Maximizing/Minimizing Quadratic Functions 
 ===========================================
 
 A general quadratic function can be written as :math:`y=ax^2+bx+c`.
