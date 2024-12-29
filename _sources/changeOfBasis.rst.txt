@@ -21,6 +21,37 @@ Hence, instead of calling the places as "units", "tens", "hundreds" etc., we cou
 
 To identify what basis is being used, we will write :math:`83521` as :math:`83521_{10}`
 
+======================================
+
+Remark: 83521 can be written in other ways too. A couple of examples are given below.
+
+.. math::
+
+   83521 &= 521 + 1000\times 83
+
+   &= 21 + 100\times 835
+   
+======================================
+   
+Sometimes, when repeating patterns are involved, it is useful to use powers of 10 that match the pattern. Here is an example.
+
+.. math::
+
+   231231231 &= 231 + 10^3\times 231 + 10^6\times 231
+
+   &=231\times(1+10^3+10^6)=231\times 1001001
+
+======================================
+
+Another set of interesting numbers are numbers of the form :math:`111...111`. If the number of digits is composite, tehn this number will not be a prime. Example, suppose the number of digits is a multiple of 5, we can treat the repeating pattern to be of length 5.
+
+.. math::
+
+   111111111111111 &= 11111 + 10^5\times 11111 + 10^{10}\times 11111
+
+   &= 11111 \times 10000100001
+   
+
 Numbers in other bases
 ------------------------
 
@@ -64,7 +95,7 @@ The concept of the conversion is shown below.
 The conversion is actually done by keeping track of remainders while repeatedly dividing by 16.
 
 
-.. list-table:: Title
+.. list-table:: 
    :widths: 10 50 20 20
    :header-rows: 1
 

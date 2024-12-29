@@ -1,0 +1,14 @@
+
+Graph Theory
+======================================
+
+Shortest Path
+----------------
+
+The figure below shows a weighted graph. The vertices represent cities and the edges the roads between the cities. The weights on the edges represent distances between cities along the roads. The objective is to find the shortest distance between the vertex 0 and all other vertices. For example, there are different choices for the roads to use to go from 0 to 8. What is the distance for the shortest path?
+
+The algorithm used here is attributed to Djikstra.
+
+.. image:: graph_theory_figs/weighted_graph.png
+  :width: 400
+

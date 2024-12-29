@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Recursive Problems &#8212; Math Notes  documentation</title>
+    <title>Graph Theory &#8212; Math Notes  documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/classic.css" />
     
@@ -17,8 +17,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Maximizing/Minimizing Quadratic Functions" href="quadraticFunction.html" />
-    <link rel="prev" title="Summation and Products (Finite Terms)" href="series.html" /> 
+    <link rel="prev" title="Three-Dimensional Geometry" href="threeDimensional.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
@@ -27,14 +26,10 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="quadraticFunction.html" title="Maximizing/Minimizing Quadratic Functions"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="series.html" title="Summation and Products (Finite Terms)"
+          <a href="threeDimensional.html" title="Three-Dimensional Geometry"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">Math Notes  documentation</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="algebra.html" accesskey="U">Algebra</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Recursive Problems</a></li> 
+        <li class="nav-item nav-item-this"><a href="">Graph Theory</a></li> 
       </ul>
     </div>  
 
@@ -43,32 +38,14 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="recursive-problems">
-<h1>Recursive Problems<a class="headerlink" href="#recursive-problems" title="Permalink to this headline">¶</a></h1>
-<p>Simplify <img class="math" src="_images/math/b4038ebc76e0dbc2389dc6a672a884283cd76499.png" alt="\sqrt{2+\sqrt{2+\sqrt{2+\sqrt{2+...}}}}"/></p>
-<p>Let <img class="math" src="_images/math/e37f3080dab2cb7037d7e205e8b09ebf825cb4b9.png" alt="x=\sqrt{2+\sqrt{2+\sqrt{2+\sqrt{2+...}}}}"/></p>
-<div class="math">
-<p><img src="_images/math/ed0846ed615cdf351a1a316cd7b6f54265729a23.png" alt="&amp;x = \sqrt{2+x}
-
-&amp;x^2 = 2 + x
-
-&amp;x^2-x-2 = 0
-
-&amp;x=2,~-1"/></p>
-</div><p>Dropping the negative root, <img class="math" src="_images/math/8021655a2bd20df129efc37408841fc35d1e7656.png" alt="x=2"/></p>
-<hr class="docutils" />
-<p>Simplify</p>
-<div class="math">
-<p><img src="_images/math/187f694fbdafb4bcfd273426895d07b350168a50.png" alt="&amp;x = 1+\frac{1}{1+\frac{1}{1+\frac{1}{1+\ddots}}}
-
-&amp;x=1+\frac{1}{x}
-
-&amp;x=\frac{x+1}{x}
-
-&amp;x^2-x-1=0
-
-&amp;x=\frac{1+\sqrt{5}}{2},~\frac{1-\sqrt{5}}{2}"/></p>
-</div><p>Dropping the negative root, <img class="math" src="_images/math/0d028b4985abf225a45305a775fb61f2380bc5ce.png" alt="x=\frac{1+\sqrt{5}}{2}"/></p>
+  <section id="graph-theory">
+<h1>Graph Theory<a class="headerlink" href="#graph-theory" title="Permalink to this headline">¶</a></h1>
+<section id="shortest-path">
+<h2>Shortest Path<a class="headerlink" href="#shortest-path" title="Permalink to this headline">¶</a></h2>
+<p>The figure below shows a weighted graph. The vertices represent cities and the edges the roads between the cities. The weights on the edges represent distances between cities along the roads. The objective is to find the shortest distance between the vertex 0 and all other vertices. For example, there are different choices for the roads to use to go from 0 to 8. What is the distance for the shortest path?</p>
+<p>The algorithm used here is attributed to Djikstra.</p>
+<a class="reference internal image-reference" href="_images/weighted_graph.png"><img alt="_images/weighted_graph.png" src="_images/weighted_graph.png" style="width: 400px;" /></a>
+</section>
 </section>
 
 
@@ -78,16 +55,21 @@
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Graph Theory</a><ul>
+<li><a class="reference internal" href="#shortest-path">Shortest Path</a></li>
+</ul>
+</li>
+</ul>
+
   <h4>Previous topic</h4>
-  <p class="topless"><a href="series.html"
-                        title="previous chapter">Summation and Products (Finite Terms)</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="quadraticFunction.html"
-                        title="next chapter">Maximizing/Minimizing Quadratic Functions</a></p>
+  <p class="topless"><a href="threeDimensional.html"
+                        title="previous chapter">Three-Dimensional Geometry</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/infiniteRadicals.rst.txt"
+      <li><a href="_sources/graphTheory.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
@@ -112,14 +94,10 @@
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="quadraticFunction.html" title="Maximizing/Minimizing Quadratic Functions"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="series.html" title="Summation and Products (Finite Terms)"
+          <a href="threeDimensional.html" title="Three-Dimensional Geometry"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">Math Notes  documentation</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="algebra.html" >Algebra</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Recursive Problems</a></li> 
+        <li class="nav-item nav-item-this"><a href="">Graph Theory</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">

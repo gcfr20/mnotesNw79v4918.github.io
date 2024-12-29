@@ -50,6 +50,23 @@
 <p>The two horizontal lines are parallel with a transversal intersecting the two lines. Notice which angles are equal and which are supplementary.</p>
 <a class="reference internal image-reference" href="_images/parallel_lines.png"><img alt="_images/parallel_lines.png" src="_images/parallel_lines.png" style="width: 400px;" /></a>
 </section>
+<section id="triangle-inequality">
+<h2>Triangle Inequality<a class="headerlink" href="#triangle-inequality" title="Permalink to this headline">¶</a></h2>
+<p><strong>In any triangle, the sum of any two sides is greater than the third side</strong></p>
+<a class="reference internal image-reference" href="_images/triIneq.png"><img alt="_images/triIneq.png" src="_images/triIneq.png" style="width: 300px;" /></a>
+<p>The intuition can be obtained using the above figure. All the red segments are congruent and all the blue segments are congruent. Moreover, <img class="math" src="_images/math/56b08747de68e1b1f6b60b732eb100ad1921e78b.png" alt="AD+DB=AB"/>. Thus, in triangle AHB, the purple part is <img class="math" src="_images/math/5f739158774b0e31d9fc40cb43e395fa8c695385.png" alt="(AH+BH)-AB"/>. In triangle AMB, the purple part is <img class="math" src="_images/math/b41ef578c2e6244e19f4495b372edb0babbb38e6.png" alt="(AM+BM)-AB"/>. Thus, the two sides of the triangle other than AB sum up to AB only when the triangle collapses to ADB. In the other cases, there is the “purple” part that makes the sum larger than AB.</p>
+<p>Conversely, any set of three numbers - a, b, c - that satisfy the triangle inequalities can form a triangle. Note that all three inequalities have to be satisfied. Any set of three numbers that violates one or more of the inequalities cannot form a triangle.</p>
+<div class="math">
+<p><img src="_images/math/1eef4edb1c506ced1c7e89610e7a26c822b5e577.png" alt="&amp;a + b &gt; c
+
+&amp;b + c &gt; a
+
+&amp;c + a &gt; b"/></p>
+</div><p>For example, if two sides of a triangle are <img class="math" src="_images/math/106f87bcf928fca3bc7f2442dada1654cec42956.png" alt="a=4"/> and <img class="math" src="_images/math/5be84d1f64a96d6c2013fef7343d67587ccd11e4.png" alt="b=7"/>, the range for the third side is <img class="math" src="_images/math/63df1046b53fa77af0093d197cb372e3ce874a9a.png" alt="|a-b| &lt; c &lt; a+b"/> i.e. <img class="math" src="_images/math/48f250c0d2fec91782bf71167ab83b7beee7a31a.png" alt="3 &lt; c &lt; 11"/>.</p>
+<p><img class="math" src="_images/math/4d0f42994df8d4e3e621cd26efb33e4b5bcd1a74.png" alt="c\geq 11\implies c \geq a+b"/> - a violation of the first inequality.</p>
+<p><img class="math" src="_images/math/7bd3c3c2e5357cb097b04aa05ee19efe28a7d58e.png" alt="c\leq 3\implies c+a\leq b"/> - a violation of the last inequality.</p>
+<p>Hence, a combination such as (2,4,7) cannot form a triangle.</p>
+</section>
 <section id="triangle-congruence">
 <h2>Triangle Congruence<a class="headerlink" href="#triangle-congruence" title="Permalink to this headline">¶</a></h2>
 <p>Two triangles are congruent when they can be made to coincide through translation and rotation.</p>
@@ -208,6 +225,7 @@
   <ul>
 <li><a class="reference internal" href="#">Parallel Lines and Triangles</a><ul>
 <li><a class="reference internal" href="#parallel-lines">Parallel Lines</a></li>
+<li><a class="reference internal" href="#triangle-inequality">Triangle Inequality</a></li>
 <li><a class="reference internal" href="#triangle-congruence">Triangle Congruence</a></li>
 <li><a class="reference internal" href="#triangle-similarity">Triangle Similarity</a></li>
 <li><a class="reference internal" href="#area-ratios">Area Ratios</a></li>

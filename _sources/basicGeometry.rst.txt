@@ -10,6 +10,34 @@ The two horizontal lines are parallel with a transversal intersecting the two li
 .. image:: geom_figs/basics/parallel_lines.png
   :width: 400
 
+Triangle Inequality
+---------------------
+
+**In any triangle, the sum of any two sides is greater than the third side**
+
+.. image:: geom_figs/basics/triIneq.png
+  :width: 300
+
+The intuition can be obtained using the above figure. All the red segments are congruent and all the blue segments are congruent. Moreover, :math:`AD+DB=AB`. Thus, in triangle AHB, the purple part is :math:`(AH+BH)-AB`. In triangle AMB, the purple part is :math:`(AM+BM)-AB`. Thus, the two sides of the triangle other than AB sum up to AB only when the triangle collapses to ADB. In the other cases, there is the "purple" part that makes the sum larger than AB.
+
+Conversely, any set of three numbers - a, b, c - that satisfy the triangle inequalities can form a triangle. Note that all three inequalities have to be satisfied. Any set of three numbers that violates one or more of the inequalities cannot form a triangle.
+
+.. math::
+
+   &a + b > c
+
+   &b + c > a
+
+   &c + a > b
+
+For example, if two sides of a triangle are :math:`a=4` and :math:`b=7`, the range for the third side is :math:`|a-b| < c < a+b` i.e. :math:`3 < c < 11`.
+
+:math:`c\geq 11\implies c \geq a+b` - a violation of the first inequality.
+
+:math:`c\leq 3\implies c+a\leq b` - a violation of the last inequality.
+
+Hence, a combination such as (2,4,7) cannot form a triangle.    
+
 
 Triangle Congruence
 ---------------------

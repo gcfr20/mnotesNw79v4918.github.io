@@ -14,9 +14,8 @@ Welcome to Math Notes's documentation!
    numberTheory.rst
    combinatorics.rst
    geometry.rst
-   
+   graphTheory.rst
 
-	     
 
 Indices and tables
 ==================
