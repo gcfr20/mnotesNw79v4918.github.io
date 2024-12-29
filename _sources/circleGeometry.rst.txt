@@ -166,6 +166,7 @@ Circumcircle
 
 There is a unique circle that can be drawn through three non-collinear points. If the three points are vertices of the triangle, the circle is called the circumcircle. Each side of the triangle is a chord of the circle. The perpendicular bisector of a chord passes through the center of the circle. Hence, the center of the circumcircle - the circumcenter - is the intersection of the perpendicular bisectors of the three sides.
 
+We have seen that a diameter subtends a right angle at any point on the circle. Likewise, the circumcircle of any right-angled triangle has the hypotenuse as a diameter. The circumcenter is at the center of the hypotenuse.
 
 **In problems involving chords and tangents that generate right-angled triangles, it is always useful to check if the triangle is a 30-60-90 or a 45-45-90 triangle, or if Pythagorean triplets are involved.**
 
