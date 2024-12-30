@@ -1,0 +1,71 @@
+
+Ratio and Proportions
+======================================
+
+Example problems:
+
+======================================
+
+.. math::
+
+   &\frac{3p-5q}{7p+11q}=8,~\frac{p}{q}=?
+
+   &\text{Let }\frac{p}{q}=k,~p=qk
+
+   &\frac{3p-5q}{7p+11q}=8\implies \frac{3qk-5q}{7qk+11q}=8\implies \frac{3k-5}{7k+11}=8
+
+   &\implies 3k-5=8(7k+11) \implies k=-\frac{93}{53}
+
+======================================
+   
+.. math::
+
+   &\frac{a}{b}=\frac{7}{2}, \frac{a-2b}{3a+7b}=?
+
+   &k=\frac{7}{2},~a=kb
+
+   &\frac{a-2b}{3a+7b}=\frac{kb-2b}{3kb+7b}=\frac{k-2}{3k+7}=\frac{3}{35}
+
+======================================
+
+25 horses (H) eat 5 bags of corn (B) in 12 days (D), how many bags of corn will 10 horses eat in 18 days?
+
+.. math::
+
+  &D \propto B~\text{(Number of days is directly proportional to number of bags)}
+
+  &D \propto \frac{1}{H}~\text{(Number of days is inversely proportional to number of horses)}
+
+  &D=\frac{kB}{H}~\text{(Combine proportionalities into a single equation by introducing constant of proportionality - $k$)}
+
+  &12=\frac{5k}{25}~\text{(I)}
+
+  &18=\frac{kB}{10}~\text{(II)}
+
+  &\text{Dividing (II) by (I),}
+
+  &\frac{18}{12}=\frac{B}{10}\times\frac{25}{5}\implies B=3
+  
+======================================
+
+
+
+A person's BMI (body mass index) varies directly as their weight and inversely as the square of their height. Given a person who weighs 180 pounds and is 60 inches tall has a BMI of 35.2, what is the BMI for  someone who is 150 pounds and 68 inches tall?
+
+.. math::
+
+   &BMI \propto w
+
+   &BMI \propto \frac{1}{h^2}
+
+   &BMI=\frac{kw}{h^2}
+
+   &35.2=\frac{180k}{60^2}~\text{(I)}
+
+   &BMI=\frac{150k}{68^2}~\text{(II)}
+
+   &\text{Dividing (II) by (I)},
+
+   &\frac{BMI}{35.2}=\frac{150}{68^2}\times\frac{60^2}{180}\implies BMI\approx 22.83
+   
+   

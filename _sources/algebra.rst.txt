@@ -10,6 +10,8 @@ Algebra
    
    algebraicIdentities.rst
 
+   ratio.rst
+
    amgmhm.rst
 
    radicalSimplification.rst

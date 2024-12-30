@@ -72,4 +72,8 @@ Reverse the series and add element-wise. The sum will be :math:`n` times the ave
    
    S=\frac{n}{2}\left(\text{first term}+\text{last term}\right)=\frac{n}{2}\left\{a+\left[a+(n-1)d\right]\right\}
    
-   
+**S = average of the first and last terms x number of terms**
+
+.. math::
+
+   1+2+3+...+n = \frac{(1+n)}{2}\times n=\frac{n(n+1)}{2}
