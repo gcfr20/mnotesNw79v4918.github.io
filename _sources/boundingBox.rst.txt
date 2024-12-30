@@ -1,0 +1,11 @@
+
+Bounding Box Method For Area
+======================================
+
+.. image:: geom_figs/basics/bbox.png
+  :width: 400
+
+**Given the coordinates of the vertices of a polygon ABCDE, the objective is to find the area of the polygon**. In the figure above, instead of writing down the coordinates, we have shown the underlying grid.
+
+The bounding box method puts a bounding box FGHI around the polygon as shown. The area between the bounding box and the polygon is then tiled into right-angled triangles and rectangles aligned with the coordinate directions. Finding the areas of the bounding box and these tiles is straight-forward given the coordinates. The difference of the area of the bounding box and the total area of the tiles is the area of the polygon.
+

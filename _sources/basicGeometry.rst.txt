@@ -290,8 +290,6 @@ ABC is an equilateral triangle of side :math:`s`. The area of ABC computed in tw
    \text{Area}~\Delta ABC &=\frac{s}{2}\cdot CD
 
    \text{Hence,}~CD=EH+EF+EG
-
-   
    
 
 
