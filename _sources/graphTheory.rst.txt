@@ -1,4 +1,3 @@
-
 Graph Theory
 ======================================
 
@@ -231,11 +230,13 @@ How about other graphs? Which undirected graphs have Eulerian circuits?
 
 The degree of a node is the number of edges attached to the node.
 
+Intuitively, at any node, for every edge that acts as the entry edge, there has to be a different edge that acts as an exit edge. Thus, there needs to be pairs of entry-exit edges at each node.
+
 ======================================
 
 Now instead of having the starting node being the same as the ending node, what happens if the starting node and ending nodes are different? We still need to draw all edges without lifting the pencil and without retracing any edge. Incidentally, the path in this case is called an **"Eulerian trail"**.
 
 **A graph has an Eulerian trail if and only if two nodes have odd degree and the nodes with nonzero degree are connected**
 
-
+The intuition is similar to the one for Eulerian circuit except that the starting node can have one exit edge without a corresponding entry edge as the trail starts at this node, and the ending node can have one entry edge without a corresponding exit edge as the trail stops at this node.
 
