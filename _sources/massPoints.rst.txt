@@ -92,3 +92,35 @@ Consider the case where the feet of the transversals are mid-points of the sides
   :width: 400
 
 Just as in the case of the centroid of a triangle, equal masses need to be placed at the four vertices of the quadrilateral ABCD. From the masses in the above figure, the transversals which form the diagonals of quadrilateral EFGH bisect each other. Thus, quadrilateral ABCD is a parallelogram. This is a remarkable result. **The quadrialteral formed by connecting successive mid-points of any convex quarilateral is always a parallelogram**.
+
+=================================================
+
+Here is another example where mass points approach needs to be supplemented by other geometrical properties.
+
+.. image:: geom_figs/mass_pts/area_sim_1.png
+  :width: 400
+
+Given in rectangle ABCD, BD=4, AB=2, AE=EC, and CF=FD, find the area of the shaded triangle.
+
+Triangle BCD is a good candidate for the application of mass points as two Cevians are visible. However, we have only one ratio to work with CF/FD=1. We need two ratios to resolve the traingle using mass points.
+
+We get the second ratio using similarity. Triangles EGC and DGB are similar. Moreover, BD/EC=2. Hence, BG/GC=2. There is our second ratio.
+
+So we assign mass 1 to B, 2 to C (to account for BG/GC=2). Then, we assign mass 2 to point D (to account for CF/FD=1). The masses for G, F, and H can then be deduced. See figure below.
+
+.. image:: geom_figs/mass_pts/area_sim_1_mp.png
+  :width: 400
+
+The area ratios can then be deduced as follows:
+
+.. math::
+
+  &\text{Area of }\Delta BCD=\frac{1}{2}~\text{Area of rectangle ABCD}=4
+
+  &\frac{\text{Area of }\Delta BDG}{\text{Area of }\Delta CDG}=\frac{BG}{GC}=2~\text{(Triangles with same height have areas in the ratio of the bases)}
+
+  &\implies \text{Area of }\Delta BDG=\frac{2}{3}\times\text{Area of }\Delta BCD=\frac{8}{3}
+
+    &\frac{\text{Area of }\Delta BHG}{\text{Area of }\Delta BHD}=\frac{GH}{HD}=\frac{2}{3}~\text{(Triangles with same height have areas in the ratio of the bases)}
+
+  &\implies \text{Area of }\Delta BHG=\frac{2}{5}\times\text{Area of }\Delta BDG=\frac{2}{5}\times\frac{8}{3}=\frac{16}{15}
