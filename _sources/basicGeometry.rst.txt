@@ -20,6 +20,8 @@ Triangle Inequality
 
 The intuition can be obtained using the above figure. All the red segments are congruent and all the blue segments are congruent. Moreover, :math:`AD+DB=AB`. Thus, in triangle AHB, the purple part is :math:`(AH+BH)-AB`. In triangle AMB, the purple part is :math:`(AM+BM)-AB`. Thus, the two sides of the triangle other than AB sum up to AB only when the triangle collapses to ADB. In the other cases, there is the "purple" part that makes the sum larger than AB.
 
+**Another way to think of this is that the shortest distance from A to B is along the straight segment. Distance along any other path is larger.**
+
 Conversely, any set of three numbers - a, b, c - that satisfy the triangle inequalities can form a triangle. Note that all three inequalities have to be satisfied. Any set of three numbers that violates one or more of the inequalities cannot form a triangle.
 
 .. math::
