@@ -1,5 +1,5 @@
 Practice Problems
-=======================
+===============================
 
 P 1
 
@@ -195,4 +195,166 @@ P 39
 
 .. image:: practice_problems/prob39.png
   :width: 800
+
+P 40
+
+.. image:: practice_problems/prob40.png
+  :width: 800
+
+P 41
+
+.. image:: practice_problems/prob41.png
+  :width: 800
+
+P 42
+
+.. image:: practice_problems/prob42.png
+  :width: 800
+
+P 43
+
+.. image:: practice_problems/prob43.png
+  :width: 800
+
+P 44
+
+.. image:: practice_problems/prob44.png
+  :width: 800
+
+P 45
+
+.. image:: practice_problems/prob45.png
+  :width: 800
+
+P 46
+
+.. image:: practice_problems/prob46.png
+  :width: 800
+
+P 47
+
+.. image:: practice_problems/prob47.png
+  :width: 800
+
+P 48
+
+.. image:: practice_problems/prob48.png
+  :width: 800
+
+P 49
+
+.. image:: practice_problems/prob49.png
+  :width: 800
+
+P 50
+
+.. image:: practice_problems/prob50.png
+  :width: 800
+
+P 51
+
+.. image:: practice_problems/prob51.png
+  :width: 800
+
+P 52
+
+.. image:: practice_problems/prob52.png
+  :width: 800
+
+P 53
+
+.. image:: practice_problems/prob53.png
+  :width: 800
+
+P 54
+
+.. image:: practice_problems/prob54.png
+  :width: 800
+
+P 55
+
+.. image:: practice_problems/prob55.png
+  :width: 800
+
+P 56
+
+.. image:: practice_problems/prob56.png
+  :width: 800
+
+P 57
+
+.. image:: practice_problems/prob57.png
+  :width: 800
+
+P 58
+
+.. image:: practice_problems/prob58.png
+  :width: 800
+
+P 59
+
+.. image:: practice_problems/prob59.png
+  :width: 800
+
+P 60
+
+.. image:: practice_problems/prob60.png
+  :width: 800
+
+P 61
+
+.. image:: practice_problems/prob61.png
+  :width: 800
+
+P 62
+
+.. image:: practice_problems/prob62.png
+  :width: 800
+
+P 63
+
+.. image:: practice_problems/prob63.png
+  :width: 800
+
+P 64
+
+.. image:: practice_problems/prob64.png
+  :width: 800
+
+P 65
+
+.. image:: practice_problems/prob65.png
+  :width: 800
+
+P 66
+
+.. image:: practice_problems/prob66.png
+  :width: 800
+
+P 67
+
+.. image:: practice_problems/prob67.png
+  :width: 800
+
+P 68
+
+.. image:: practice_problems/prob68.png
+  :width: 800
+
+P 69
+
+.. image:: practice_problems/prob69.png
+  :width: 800
+
+P 70
+
+.. image:: practice_problems/prob70.png
+  :width: 800
+
+P 71
+
+.. image:: practice_problems/prob71.png
+  :width: 800
+
+
 
