@@ -15,7 +15,8 @@ Welcome to Math Notes's documentation!
    combinatorics.rst
    geometry.rst
    graphTheory.rst
-
+   practiceProblems.rst
+   
 
 Indices and tables
 ==================
