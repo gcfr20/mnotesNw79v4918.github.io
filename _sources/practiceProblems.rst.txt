@@ -356,5 +356,35 @@ P 71
 .. image:: practice_problems/prob71.png
   :width: 800
 
+P 72
+
+.. image:: practice_problems/prob72.png
+  :width: 800
+
+P 73
+
+.. image:: practice_problems/prob73.png
+  :width: 800
+
+P 74
+
+.. image:: practice_problems/prob74.png
+  :width: 800
+
+P 75
+
+.. image:: practice_problems/prob75.png
+  :width: 800
+
+P 76
+
+.. image:: practice_problems/prob76.png
+  :width: 800
+
+P 77
+
+.. image:: practice_problems/prob77.png
+  :width: 800
+
 
 
