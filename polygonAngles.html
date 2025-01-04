@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Angles in a polygon &#8212; Math Notes  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Parallel Lines and Triangles" href="basicGeometry.html" />
+    <link rel="prev" title="Bounding Box Method For Area" href="boundingBox.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="basicGeometry.html" title="Parallel Lines and Triangles"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="boundingBox.html" title="Bounding Box Method For Area"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Math Notes  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="geometry.html" accesskey="U">Geometry</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Angles in a polygon</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="angles-in-a-polygon">
+<h1>Angles in a polygon<a class="headerlink" href="#angles-in-a-polygon" title="Permalink to this headline">¶</a></h1>
+<a class="reference internal image-reference" href="_images/convex_vs_non_convex.png"><img alt="_images/convex_vs_non_convex.png" src="_images/convex_vs_non_convex.png" style="width: 600px;" /></a>
+<p>A region such that all the line segments between any two points of the region stay inside the region is called a convex region.</p>
+<p>A region that is not convex is non-convex or concave. In the second image above, a line segment is shown between two points of the region that is outside the region for some finite length.</p>
+<section id="convex-polygons-in-a-plane">
+<h2>Convex polygons in a plane<a class="headerlink" href="#convex-polygons-in-a-plane" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/convex_exterior.png"><img alt="_images/convex_exterior.png" src="_images/convex_exterior.png" style="width: 600px;" /></a>
+<p>The figure above shows exterior angles of a convex polygon. These exterior angles add up to <img class="math" src="_images/math/99ed4de69a73cb2161accd1664630ab539c74ea6.png" alt="360^o"/>. This can be seen from the following: ray DG is rotated left and translated to become ray CI, ray CI is then rotated left and translated to become ray BK. Continuing this process, eventually ray EO is rotated left and translated to become ray DG. Thus, ray DG goes through one full rotation of <img class="math" src="_images/math/99ed4de69a73cb2161accd1664630ab539c74ea6.png" alt="360^o"/> while going through the series of rotations i.e. the series of exterior angles. Thus, the exterior angles add up to <img class="math" src="_images/math/99ed4de69a73cb2161accd1664630ab539c74ea6.png" alt="360^o"/>. The angles supplementary to each of these exterior angles are the interior angles. Thus, if there are <img class="math" src="_images/math/5a939c5280da7202ca4531f175a7780ad5e1f80a.png" alt="n"/> interior/exterior angles, then the sum of the interior angles equals <img class="math" src="_images/math/3549940ea367c91dd2a42ac84ee471e918910dfe.png" alt="(180\times n-360)^o=(n-2)\times 180^o"/>.</p>
+<hr class="docutils" />
+<a class="reference internal image-reference" href="_images/convex_interior_with_center.png"><img alt="_images/convex_interior_with_center.png" src="_images/convex_interior_with_center.png" style="width: 400px;" /></a>
+<p>The same result can be obtained using the figure above. There are <img class="math" src="_images/math/5a939c5280da7202ca4531f175a7780ad5e1f80a.png" alt="n"/> interior angles, sides, and triangles. The sum of the interior angles is the sum of the angles of all triangles minus the <img class="math" src="_images/math/99ed4de69a73cb2161accd1664630ab539c74ea6.png" alt="360^o"/> at the center. Thus, the sume of the interior angles is <img class="math" src="_images/math/91c960a78f7b9510beeec1634db0013dfba8881a.png" alt="(n-2)\times 180^o"/>.</p>
+<hr class="docutils" />
+<a class="reference internal image-reference" href="_images/convex_interior_wo_center.png"><img alt="_images/convex_interior_wo_center.png" src="_images/convex_interior_wo_center.png" style="width: 400px;" /></a>
+<p>A third way of getting the same result is by tesselating the interior into <img class="math" src="_images/math/7046228257af6ebbbde8ef7c8f944119e0a768d0.png" alt="n-2"/> triangles thereby getting <img class="math" src="_images/math/91c960a78f7b9510beeec1634db0013dfba8881a.png" alt="(n-2)\times 180^o"/> for the sum of the interior angles.</p>
+</section>
+<section id="non-convex-polygons-in-a-plane">
+<h2>Non-convex polygons in a plane<a class="headerlink" href="#non-convex-polygons-in-a-plane" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/non_convex_interior_basic.png"><img alt="_images/non_convex_interior_basic.png" src="_images/non_convex_interior_basic.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="_images/non_convex_interior.png"><img alt="_images/non_convex_interior.png" src="_images/non_convex_interior.png" style="width: 400px;" /></a>
+<p>From the above two images, it can be seen that the same contruct and the same formula holds for non-convex polygons as well.</p>
+<p>The argument of exterior angles adding up to <img class="math" src="_images/math/99ed4de69a73cb2161accd1664630ab539c74ea6.png" alt="360^o"/> for convex polygons does not work for this case because not all turns are in the same sense, there are left turns and right turns.</p>
+</section>
+<section id="stars">
+<h2>Stars<a class="headerlink" href="#stars" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/star_exterior.png"><img alt="_images/star_exterior.png" src="_images/star_exterior.png" style="width: 500px;" /></a>
+<p>Interestingly, an equivalent of the <img class="math" src="_images/math/99ed4de69a73cb2161accd1664630ab539c74ea6.png" alt="360^o"/> argument for convex polygons works for stars. In the above figure, the rays are rotates/translated as follows: BG -&gt; CI -&gt; DL -&gt; EN -&gt; AB -&gt; BG. In doing these rotations, for this particular star, we have made <strong>two complete rotations</strong>. Hence the exterior angles add up to <img class="math" src="_images/math/c6d4cb9e314178d2d1ee74f92576feef2bb796dc.png" alt="720^o"/>. The interior angles at the star corners are supplementary to these exterior angles. Hence, the interior angles add up to <img class="math" src="_images/math/db105f297e292f092ba5f2b6dc3b91d20259f6f9.png" alt="(5\times 180 - 720)^o=180^o"/>. The <img class="math" src="_images/math/51d4ace3c51c5a5490fc4464952d6c46d518fbc8.png" alt="5"/> is for the number of exterior and interior corner angles. Note that the interior angles of convex pentagon QRSTU follows the formula derived earlier <img class="math" src="_images/math/7423fa13970b6f1c7c32a94d9a3673abb00e54f4.png" alt="(n-2)\times 180^o=3\times 180^o=540^o"/>. The angles AQC, CUR, ETB, BSD, DRA are angles vertically opposite to the interior angles of pentagon QRSTU. Hence, these add up to <img class="math" src="_images/math/9b41cc66ad2846db00e59648f425dc3b90b0e9d8.png" alt="540^o"/>.</p>
+<hr class="docutils" />
+<p>Here is a problem involving the star geometry that can be solved using basic geometry instead of any of the matter discussed so far about angles in polygons. THe angles written in black font are given. The objective is to find interior angle A.</p>
+<a class="reference internal image-reference" href="_images/star_problem.png"><img alt="_images/star_problem.png" src="_images/star_problem.png" style="width: 400px;" /></a>
+<p>The angles written in red can be deduced using angle chasing via exterior angle/supplementary angle arguments. Thus, interior angle A is <img class="math" src="_images/math/cab2cf89b82b2d719e3945df2c4271e62aee924f.png" alt="30^o"/>.</p>
+</section>
+<section id="convex-polygons-on-polyhedra">
+<h2>Convex polygons on polyhedra<a class="headerlink" href="#convex-polygons-on-polyhedra" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/polygon_on_cube.png"><img alt="_images/polygon_on_cube.png" src="_images/polygon_on_cube.png" style="width: 400px;" /></a>
+<p>Here is a variant of the convex polygon interior angle sum problem discussed above. The convex polygon (heptagon) is at the corner of a polyhedron (in this case a cube). The objective is to find the sum of the planar colored angles. We join the vertrices of the polygons to the corner of the cube. Thus, we have 7 triangles whose angles add up to <img class="math" src="_images/math/0bc75d4dfb028509a73b78e4bc048763c4a27d08.png" alt="7\times 180^o"/>. However, instead of subtracting <img class="math" src="_images/math/99ed4de69a73cb2161accd1664630ab539c74ea6.png" alt="360^o"/> at the central point, here we need to subtract <img class="math" src="_images/math/d59cd983507e0c9b03256db11e660fc78f565b16.png" alt="270^o"/> as th center contributes three right angles - one on each of three faces of the polyhedron that the corner shares. Thus, the sum of the colored planar angles is <img class="math" src="_images/math/d36369d4c87058cb8d13cd676401301d5dfefdd3.png" alt="(7\times 180-270)^o=990^o"/>.</p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Angles in a polygon</a><ul>
+<li><a class="reference internal" href="#convex-polygons-in-a-plane">Convex polygons in a plane</a></li>
+<li><a class="reference internal" href="#non-convex-polygons-in-a-plane">Non-convex polygons in a plane</a></li>
+<li><a class="reference internal" href="#stars">Stars</a></li>
+<li><a class="reference internal" href="#convex-polygons-on-polyhedra">Convex polygons on polyhedra</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="boundingBox.html"
+                        title="previous chapter">Bounding Box Method For Area</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="basicGeometry.html"
+                        title="next chapter">Parallel Lines and Triangles</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/polygonAngles.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="basicGeometry.html" title="Parallel Lines and Triangles"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="boundingBox.html" title="Bounding Box Method For Area"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Math Notes  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="geometry.html" >Geometry</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Angles in a polygon</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2024, AI.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+    </div>
+  </body>
+</html>

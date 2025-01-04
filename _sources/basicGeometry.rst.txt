@@ -40,6 +40,15 @@ For example, if two sides of a triangle are :math:`a=4` and :math:`b=7`, the ran
 
 Hence, a combination such as (2,4,7) cannot form a triangle.    
 
+Distance Properties
+--------------------
+
+**The longest side in a right-angled triangle is the hypotenuse**
+
+**The shortest distance to a line from a point not on it is the length of the perpendicular segment dropped from the point to the line**
+
+**In any triangle, the lengths of the sides are in the same order at the angles opposite the sides (Longest side opposite the largest angle, shortest side opposite the smallest angle, and the third side opposite the third angle)**
+
 
 Triangle Congruence
 ---------------------
@@ -163,10 +172,18 @@ A perpendicular dropped from the right angle of a right-angled triangle to the h
 
    & \frac{AD}{AC}=\frac{AB}{BC}\implies AD\cdot BC=AB\cdot AC = 2\times \text{Area of}~\Delta ABC
 
-
-
 =================================================
 
+.. image:: geom_figs/basics/quad_right_intersect.png
+  :width: 500
+
+When segments starting at two corners of a rectangle intersect at right angles, several similar triangles are created. This can be seen by denoting :math:`\angle HDE` by :math:`\theta` and then noting down all the other angles obtained by angle-chasing. In fact, when triangles with multiple right angles are involved, it is a great idea to list out the angles obtained by angle-chasing as is seen in this example.
+
+We have
+
+.. math::
+
+   \Delta DEH\sim \Delta GAH\sim \Delta ADH\sim \Delta GDA\sim \Delta AED~\text{(All by AA test)}
 
 Area Ratios
 -------------

@@ -15,6 +15,7 @@ Welcome to Math Notes's documentation!
    combinatorics.rst
    geometry.rst
    graphTheory.rst
+   speedTricks.rst
    practiceProblems.rst
    
 

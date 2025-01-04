@@ -5,6 +5,8 @@ Geometry
 .. toctree::
 
    boundingBox.rst
+
+   polygonAngles.rst
    
    basicGeometry.rst
 

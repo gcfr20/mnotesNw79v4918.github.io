@@ -18,7 +18,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Quadrilaterals" href="quadrilaterals.html" />
-    <link rel="prev" title="Bounding Box Method For Area" href="boundingBox.html" /> 
+    <link rel="prev" title="Angles in a polygon" href="polygonAngles.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
@@ -30,7 +30,7 @@
           <a href="quadrilaterals.html" title="Quadrilaterals"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="boundingBox.html" title="Bounding Box Method For Area"
+          <a href="polygonAngles.html" title="Angles in a polygon"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">Math Notes  documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="geometry.html" accesskey="U">Geometry</a> &#187;</li>
@@ -67,6 +67,12 @@
 <p><img class="math" src="_images/math/4d0f42994df8d4e3e621cd26efb33e4b5bcd1a74.png" alt="c\geq 11\implies c \geq a+b"/> - a violation of the first inequality.</p>
 <p><img class="math" src="_images/math/7bd3c3c2e5357cb097b04aa05ee19efe28a7d58e.png" alt="c\leq 3\implies c+a\leq b"/> - a violation of the last inequality.</p>
 <p>Hence, a combination such as (2,4,7) cannot form a triangle.</p>
+</section>
+<section id="distance-properties">
+<h2>Distance Properties<a class="headerlink" href="#distance-properties" title="Permalink to this headline">¶</a></h2>
+<p><strong>The longest side in a right-angled triangle is the hypotenuse</strong></p>
+<p><strong>The shortest distance to a line from a point not on it is the length of the perpendicular segment dropped from the point to the line</strong></p>
+<p><strong>In any triangle, the lengths of the sides are in the same order at the angles opposite the sides (Longest side opposite the largest angle, shortest side opposite the smallest angle, and the third side opposite the third angle)</strong></p>
 </section>
 <section id="triangle-congruence">
 <h2>Triangle Congruence<a class="headerlink" href="#triangle-congruence" title="Permalink to this headline">¶</a></h2>
@@ -139,8 +145,13 @@
 <p><img src="_images/math/dcd67b3523dba8cc6f4a5f024420713c78f6870c.png" alt="&amp; \frac{AD}{DC}=\frac{BD}{AD}\implies AD^2=DC\cdot DB
 
 &amp; \frac{AD}{AC}=\frac{AB}{BC}\implies AD\cdot BC=AB\cdot AC = 2\times \text{Area of}~\Delta ABC"/></p>
+</div><hr class="docutils" />
+<a class="reference internal image-reference" href="_images/quad_right_intersect.png"><img alt="_images/quad_right_intersect.png" src="_images/quad_right_intersect.png" style="width: 500px;" /></a>
+<p>When segments starting at two corners of a rectangle intersect at right angles, several similar triangles are created. This can be seen by denoting <img class="math" src="_images/math/e6bf3e31cba24ccce44077d122abc3cd2dfd8f59.png" alt="\angle HDE"/> by <img class="math" src="_images/math/8a87f04e7d7cca18343c084cceca5237fae62491.png" alt="\theta"/> and then noting down all the other angles obtained by angle-chasing. In fact, when triangles with multiple right angles are involved, it is a great idea to list out the angles obtained by angle-chasing as is seen in this example.</p>
+<p>We have</p>
+<div class="math">
+<p><img src="_images/math/29d736bceb3612aeaca033be71cb4150d617d813.png" alt="\Delta DEH\sim \Delta GAH\sim \Delta ADH\sim \Delta GDA\sim \Delta AED~\text{(All by AA test)}"/></p>
 </div></section>
-<hr class="docutils" />
 <section id="area-ratios">
 <h2>Area Ratios<a class="headerlink" href="#area-ratios" title="Permalink to this headline">¶</a></h2>
 <p>Some geometrical setups lead to the ratio of areas being equal to the ratio of specific sides. This is different from the situation in similar figures where the area ratio goes as the square of the linear dimension ratio.</p>
@@ -227,6 +238,7 @@
 <li><a class="reference internal" href="#">Parallel Lines and Triangles</a><ul>
 <li><a class="reference internal" href="#parallel-lines">Parallel Lines</a></li>
 <li><a class="reference internal" href="#triangle-inequality">Triangle Inequality</a></li>
+<li><a class="reference internal" href="#distance-properties">Distance Properties</a></li>
 <li><a class="reference internal" href="#triangle-congruence">Triangle Congruence</a></li>
 <li><a class="reference internal" href="#triangle-similarity">Triangle Similarity</a></li>
 <li><a class="reference internal" href="#area-ratios">Area Ratios</a></li>
@@ -238,8 +250,8 @@
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="boundingBox.html"
-                        title="previous chapter">Bounding Box Method For Area</a></p>
+  <p class="topless"><a href="polygonAngles.html"
+                        title="previous chapter">Angles in a polygon</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="quadrilaterals.html"
                         title="next chapter">Quadrilaterals</a></p>
@@ -274,7 +286,7 @@
           <a href="quadrilaterals.html" title="Quadrilaterals"
              >next</a> |</li>
         <li class="right" >
-          <a href="boundingBox.html" title="Bounding Box Method For Area"
+          <a href="polygonAngles.html" title="Angles in a polygon"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">Math Notes  documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="geometry.html" >Geometry</a> &#187;</li>

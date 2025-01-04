@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Bounding Box Method For Area &#8212; Math Notes  documentation</title>
+    <title>Area of polygons on a grid &#8212; Math Notes  documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/classic.css" />
     
@@ -17,7 +17,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Parallel Lines and Triangles" href="basicGeometry.html" />
+    <link rel="next" title="Angles in a polygon" href="polygonAngles.html" />
     <link rel="prev" title="Geometry" href="geometry.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
@@ -27,14 +27,14 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="basicGeometry.html" title="Parallel Lines and Triangles"
+          <a href="polygonAngles.html" title="Angles in a polygon"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="geometry.html" title="Geometry"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">Math Notes  documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="geometry.html" accesskey="U">Geometry</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Bounding Box Method For Area</a></li> 
+        <li class="nav-item nav-item-this"><a href="">Area of polygons on a grid</a></li> 
       </ul>
     </div>  
 
@@ -43,11 +43,32 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="bounding-box-method-for-area">
-<h1>Bounding Box Method For Area<a class="headerlink" href="#bounding-box-method-for-area" title="Permalink to this headline">¶</a></h1>
+  <section id="area-of-polygons-on-a-grid">
+<h1>Area of polygons on a grid<a class="headerlink" href="#area-of-polygons-on-a-grid" title="Permalink to this headline">¶</a></h1>
+<p>Given a polygon drawn on a grid with unit spacing, find the area of the polygon.</p>
+<section id="pick-s-theorem">
+<h2>Pick’s theorem<a class="headerlink" href="#pick-s-theorem" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/picks.png"><img alt="_images/picks.png" src="_images/picks.png" style="width: 500px;" /></a>
+<p>The figure above shows an outer polygon with two polygonal holes inside. The objective if to find the area of the polygon minus the areas of the two holes. Pick’s theorem says that this area is given by</p>
+<div class="math">
+<p><img src="_images/math/cb7760b3e5709817c5202f82a6cdeeea83e2842a.png" alt="&amp;A = I + \frac{B}{2} + H - 1
+
+&amp;A:~\text{Area}
+
+&amp;I:~\text{Number of interior grid points}
+
+&amp;B:~\text{Number of boundary points}
+
+&amp;H:~\text{Number of holes}"/></p>
+</div><p>In the above image, there are 28 interior points (shown in blue), 20 boundary points (shown in red), and 2 holes. Hence, area = 28 + 20/2 + 2 - 1 = 39 square units.</p>
+</section>
+<section id="bounding-box-method">
+<h2>Bounding box method<a class="headerlink" href="#bounding-box-method" title="Permalink to this headline">¶</a></h2>
 <a class="reference internal image-reference" href="_images/bbox.png"><img alt="_images/bbox.png" src="_images/bbox.png" style="width: 400px;" /></a>
-<p><strong>Given the coordinates of the vertices of a polygon ABCDE, the objective is to find the area of the polygon</strong>. In the figure above, instead of writing down the coordinates, we have shown the underlying grid.</p>
 <p>The bounding box method puts a bounding box FGHI around the polygon as shown. The area between the bounding box and the polygon is then tiled into right-angled triangles and rectangles aligned with the coordinate directions. Finding the areas of the bounding box and these tiles is straight-forward given the coordinates. The difference of the area of the bounding box and the total area of the tiles is the area of the polygon.</p>
+<p>If there are holes in the polygon as in the case of Pick’s theorem, the areas of the holes can be found using the bounding box method and the subtracted off from the area of the outer polygon.</p>
+<p>Bounding box method is useful when the number of points to be counted for the application of Pick’s theorem is large and the number of triangles/rectangles to be removed from the bounding box is small.</p>
+</section>
 </section>
 
 
@@ -57,12 +78,21 @@
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Area of polygons on a grid</a><ul>
+<li><a class="reference internal" href="#pick-s-theorem">Pick’s theorem</a></li>
+<li><a class="reference internal" href="#bounding-box-method">Bounding box method</a></li>
+</ul>
+</li>
+</ul>
+
   <h4>Previous topic</h4>
   <p class="topless"><a href="geometry.html"
                         title="previous chapter">Geometry</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="basicGeometry.html"
-                        title="next chapter">Parallel Lines and Triangles</a></p>
+  <p class="topless"><a href="polygonAngles.html"
+                        title="next chapter">Angles in a polygon</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -91,14 +121,14 @@
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="basicGeometry.html" title="Parallel Lines and Triangles"
+          <a href="polygonAngles.html" title="Angles in a polygon"
              >next</a> |</li>
         <li class="right" >
           <a href="geometry.html" title="Geometry"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">Math Notes  documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="geometry.html" >Geometry</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Bounding Box Method For Area</a></li> 
+        <li class="nav-item nav-item-this"><a href="">Area of polygons on a grid</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">

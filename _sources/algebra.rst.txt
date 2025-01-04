@@ -14,9 +14,9 @@ Algebra
 
    amgmhm.rst
 
+   relativeSpeed.rst
+   
    radicalSimplification.rst
-
-   systemsEquations.rst
    
    partialFractions.rst
    
@@ -26,5 +26,8 @@ Algebra
 
    quadraticFunction.rst
 
+   linearOptimization.rst
+
+   
    
    
