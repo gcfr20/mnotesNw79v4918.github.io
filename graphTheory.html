@@ -17,6 +17,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Speed Tricks" href="speedTricks.html" />
     <link rel="prev" title="Three-Dimensional Geometry" href="threeDimensional.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
@@ -25,6 +26,9 @@
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="speedTricks.html" title="Speed Tricks"
+             accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="threeDimensional.html" title="Three-Dimensional Geometry"
              accesskey="P">previous</a> |</li>
@@ -148,6 +152,80 @@
 <p><strong>A graph has an Eulerian trail if and only if two nodes have odd degree and the nodes with nonzero degree are connected</strong></p>
 <p>The intuition is similar to the one for Eulerian circuit except that the starting node can have one exit edge without a corresponding entry edge as the trail starts at this node, and the ending node can have one entry edge without a corresponding exit edge as the trail stops at this node.</p>
 </section>
+<section id="graph-coloring">
+<h2>Graph Coloring<a class="headerlink" href="#graph-coloring" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/coloring_rooms.png"><img alt="_images/coloring_rooms.png" src="_images/coloring_rooms.png" style="width: 300px;" /></a>
+<a class="reference internal image-reference" href="_images/coloring_graph.png"><img alt="_images/coloring_graph.png" src="_images/coloring_graph.png" style="width: 400px;" /></a>
+<p>The left image shows the layout of a house with 5 rooms. The rooms are to be painted in such a way that <strong>no</strong> adjacent rooms are painted in the same color.</p>
+<p>Th right image shows the equivalent graph. Rooms that cannot be painted in the same color are connected by red edges; rooms that can be (not should be) be painted in the same color are connected by green edges. The red and green edges put together form a complete graph (every node connected to every other node). Thus, there are <img class="math" src="_images/math/bd1648ea28f27e5e2c550d1210689a6ecc79a9d9.png" alt="C(5,2)=10"/> total edges.</p>
+<p><strong>How many ways are there to color the rooms if 5, 4, 3, or 2 colors are available?</strong></p>
+<hr class="docutils" />
+<p><strong>Case 1: 5 colors</strong></p>
+<p>Attempt 1:</p>
+<p>Start with an arbitrary node (say node B in this example). There are 5 color choices for node B.</p>
+<p>Move to node adjacent to an already colored node (say node D). There are 4 color choices for node D (all colors except the one chosen for node B)</p>
+<p>Continue the iterations. Move to node E. 4 color choices for E (all colors except the one chosen for node D). Note that the color assigned to node B can be reused here as E is connected to node B by a green edge, not a red edge.</p>
+<p>Move to node A. <strong>The number of choices depends on whether nodes B and E have the same color or different colors. Hence, we much distinguish those cases upfront.</strong></p>
+<p>Let us try this again.</p>
+<hr class="docutils" />
+<p>Attempt 2:</p>
+<p><strong>Case 1: 5 colors</strong></p>
+<p><strong>Case 1A: B and E should have the same color</strong></p>
+<p>Choice for B -&gt; 5 colors. This fixes the color of E as well.</p>
+<p>Choice for D -&gt; 4 (all colors except the one chosen for B and E)</p>
+<p>Choice for A -&gt; 4 (all colors except the one chosen for B and E)</p>
+<p>Choice of C -&gt; 4 (all colors except the one chosen for D)</p>
+<p><strong>Case 1B: B and E should have different colors</strong></p>
+<p>Choice for B -&gt; 5</p>
+<p>Choice for D -&gt; 4 (all colors except the one chosen for B)</p>
+<p>Choice for E -&gt; 3 (all colors except the ones chosen for B and D)</p>
+<p>Choice for A -&gt; 3 (all colors except the ones chosen for B and E)</p>
+<p>Choice of C -&gt; 4 (all colors except the one chosen for D)</p>
+<p><strong>Total number of ways = 5 x 4 x 4 x 4 + 5 x 4 x 3 x 3 x 4 = 5 x 4 x 4 x ( 4 + 3 x 3) = 1040</strong></p>
+<hr class="docutils" />
+<p><strong>Case 2: 4 colors</strong></p>
+<p><strong>Case 1A: B and E should have the same color</strong></p>
+<p>Choice for B -&gt; 4 colors. This fixes the color of E as well.</p>
+<p>Choice for D -&gt; 3 (all colors except the one chosen for B and E)</p>
+<p>Choice for A -&gt; 3 (all colors except the one chosen for B and E)</p>
+<p>Choice of C -&gt; 3 (all colors except the one chosen for D)</p>
+<p><strong>Case 1B: B and E should have different colors</strong></p>
+<p>Choice for B -&gt; 4</p>
+<p>Choice for D -&gt; 3 (all colors except the one chosen for B)</p>
+<p>Choice for E -&gt; 2 (all colors except the ones chosen for B and D)</p>
+<p>Choice for A -&gt; 2 (all colors except the ones chosen for B and E)</p>
+<p>Choice of C -&gt; 3 (all colors except the one chosen for D)</p>
+<p><strong>Total number of ways = 4 x 3 x 3 x 3 + 4 x 3 x 2 x 2 x 3 = 4 x 3 x 3 x ( 3 + 2 x 2) = 252</strong></p>
+<hr class="docutils" />
+<p><strong>Case 3: 3 colors</strong></p>
+<p><strong>Case 1A: B and E should have the same color</strong></p>
+<p>Choice for B -&gt; 3 colors. This fixes the color of E as well.</p>
+<p>Choice for D -&gt; 2 (all colors except the one chosen for B and E)</p>
+<p>Choice for A -&gt; 2 (all colors except the one chosen for B and E)</p>
+<p>Choice of C -&gt; 2 (all colors except the one chosen for D)</p>
+<p><strong>Case 1B: B and E should have different colors</strong></p>
+<p>Choice for B -&gt; 3</p>
+<p>Choice for D -&gt; 2 (all colors except the one chosen for B)</p>
+<p>Choice for E -&gt; 1 (all colors except the ones chosen for B and D)</p>
+<p>Choice for A -&gt; 1 (all colors except the ones chosen for B and E)</p>
+<p>Choice of C -&gt; 2 (all colors except the one chosen for D)</p>
+<p><strong>Total number of ways = 3 x 2 x 2 x 2 + 3 x 2 x 1 x 1 x 2 = 3 x 2 x 2 x ( 2 + 1 x 1) = 36</strong></p>
+<hr class="docutils" />
+<p><strong>Case 4: 2 colors</strong></p>
+<p><strong>Case 1A: B and E should have the same color</strong></p>
+<p>Choice for B -&gt; 2 colors. This fixes the color of E as well.</p>
+<p>Choice for D -&gt; 1 (all colors except the one chosen for B and E)</p>
+<p>Choice for A -&gt; 1 (all colors except the one chosen for B and E)</p>
+<p>Choice of C -&gt; 1 (all colors except the one chosen for D)</p>
+<p><strong>Case 1B: B and E should have different colors</strong></p>
+<p>Choice for B -&gt; 2</p>
+<p>Choice for D -&gt; 1 (all colors except the one chosen for B)</p>
+<p>Choice for E -&gt; 0 (all colors except the ones chosen for B and D)</p>
+<p>We got a 0 multiplier. So no need to continue case 1B.</p>
+<p><strong>Total number of ways = 2 x 1 x 1 x 1 = 2</strong></p>
+<p>Clearly the painting cannot be done with 1 color. <strong>Hence, the minimum number of colors needed to color this graph is 2. It is called the “chromatic number” of the graph</strong>.</p>
+<p>A complete graph with n nodes will need n colors. Hence, the chromatic number of a complete graph with n nodes is n.</p>
+</section>
 </section>
 
 
@@ -163,6 +241,7 @@
 <li><a class="reference internal" href="#shortest-path">Shortest Path</a></li>
 <li><a class="reference internal" href="#minimum-spanning-tree">Minimum Spanning Tree</a></li>
 <li><a class="reference internal" href="#eulerian-circuits-and-trails">Eulerian Circuits and Trails</a></li>
+<li><a class="reference internal" href="#graph-coloring">Graph Coloring</a></li>
 </ul>
 </li>
 </ul>
@@ -170,6 +249,9 @@
   <h4>Previous topic</h4>
   <p class="topless"><a href="threeDimensional.html"
                         title="previous chapter">Three-Dimensional Geometry</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="speedTricks.html"
+                        title="next chapter">Speed Tricks</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -197,6 +279,9 @@
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              >index</a></li>
+        <li class="right" >
+          <a href="speedTricks.html" title="Speed Tricks"
+             >next</a> |</li>
         <li class="right" >
           <a href="threeDimensional.html" title="Three-Dimensional Geometry"
              >previous</a> |</li>

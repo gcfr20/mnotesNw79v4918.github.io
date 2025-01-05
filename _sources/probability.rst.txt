@@ -1,0 +1,239 @@
+
+Probability
+======================================
+
+Bernoulli trials
+------------------
+
+A fair coin is tossed 7 times. What is the probability of getting exactly 3 heads.
+
+The probability of having the first 3 tosses heads and the rest tails is :math:`\left(\frac{1}{2}\right)^7`. This is one ordering of heads and tails. How many orderings are possible? We need to select 3 out of 7 positions for heads, the rest will be tails. This can be done in :math:`C(7,3)` ways. Thus, the probability of getting exactly 3 heads and 4 tails in any order is
+
+.. math::
+
+   C(7,3)\times \left(\frac{1}{2}\right)^7
+
+Conditional probability
+-------------------------
+
+Consider the following Venn diagram:
+
+.. image:: tripleAintB.png
+  :width: 225
+
+The set :math:`u` contains all the animals in a jungle, the set :math:`A` contains all the carnivorous animals in the jungle, the set :math:`B` contains all the mammals in the jungle, and set :math:`C` contains all the animals in the jungle that can climb trees.
+
+The probability that a random animal in the jungle is a carnivore is
+
+.. math::
+
+   P(A) = \frac{\#A}{\#u}.
+
+However, if we have the information that this random animal is a mammal, the the probability that this animal is a carnivore is
+
+.. math::
+
+   P(A|B) = \frac{\#A\cap B}{\#B}.
+
+The notation :math:`P(A|B)` is for probability of A given B is true, or it is the probability of A conditional on B.
+
+We can simplify this as
+
+.. math::
+
+   P(A|B) = \frac{\#A\cap B}{\#B} = \frac{\frac{\#A\cap B}{\#u}}{\frac{\#B}{\#u}}=\frac{P(A\cap B)}{P(B)}.
+
+Thus,
+
+.. math::
+
+   P(A|B) = \frac{P(A\cap B)}{P(B)}~\text{or}~P(A\cap B)=P(A|B)\cdot P(B).
+
+======================================
+
+Consider another situation. The probability of a fair coin resulting in heads when tossed is :math:`\frac{1}{2}`. If we toss the coin and the result is heads, what is the probability that it will result in heads when it is tossed a second time. Clearly, the result of the first toss does not change the probability of getting heads in the second toss. In this case,
+
+.. math::
+
+   P(\text{Heads on the second toss}|\text{Heads on the first toss})=P(\text{Heads on the second toss})
+
+Thus,
+
+.. math::
+
+   & P(\text{Heads on the second toss}~\cap~\text{Heads on the first toss})
+
+   &= P(\text{Heads on the second toss}|\text{Heads on the first toss})\cdot P(\text{Heads on the first toss})
+
+   &= P(\text{Heads on the second toss})\cdot P(\text{Heads on the first toss})
+
+Such, events are called "independent" events. The conditional probability is just the unconditional probability. **The probability of the intersection of two independent events is the product of the probability of each event**.
+
+Some more examples:
+
+Whether it will rain today and whether it is a Monday today are independent events.
+
+When two dice are rolled, the probability of getting 1 on the first die and 4 on the second die are independent events.
+
+
+Mutually exclusive events
+---------------------------
+
+The probability of a person getting up before 7 in the morning on a weekday is 0.9. The probability of the person getting up before 7 in the morning on a weekend is 0.2. What is the probability of the person getting up before 7 on a random day?
+
+There are two possibilites that cover all days - this random day is either a weekday or a weekend day. Moreover the day cannot both be a weekday and a weekend day. **Such possibilities that are disjoint (have no overlap/intersection) are called "mutually exclusive" events. When these events cover all possibilities, they are called "mutually exclusive exhaustive" events**. They are useful in the following way:
+
+.. math::
+
+   & P(\text{person will get up before 7 today})
+
+   & = P(\text{person will get up before 7}~\cap~\text{today is a weekday}) + P(\text{person will get up before 7}~\cap~\text{today is a weekend})
+
+   & = P(\text{person will get up before 7}|\text{today is a weekday})\cdot P(\text{today is a weekday})
+
+   &+ P(\text{person will get up before 7}|\text{today is a weekend})\cdot P(\text{today is a weekend})
+
+   &= 0.9\times \frac{5}{7} + 0.2\times \frac{2}{7} = 0.7
+
+======================================
+
+Another example is if we are trying to compute the probability whether it will snow on a random day, the relevant mutually exclusive exhaustive events would be the month of the year in which the random day could fall.
+
+The day of the week still forms a set of mutually exclusive exhaustive events. But it is not very relevant to finding whether it would snow on that day.
+
+======================================
+
+Expectation value
+-------------------
+
+When I order a package from a company, the probabilities that I get the package delivered in 1, 2, 3, 4, or 5 days are 0.2, 0.4, 0.2, 0.1, and 0.1, respectively. Note that the probabilites add up to 1. On average, how many days does it take for me to get a package?
+
+Well **we have to take the average of the number of days by weighting them by their probabilities. This quantity - the expected number of days - is called the "expectation value"**. It is denoted in one of the following ways:
+
+.. math::
+
+   E[\text{days}],~\left<\text{days}\right>,~\overline{\text{days}}
+
+For our problem:
+ 
+.. math::
+
+   E[\text{days}] & = 1 \times P(1) + 2 \times P(2) + 3 \times P(3) + 4 \times P(4) + 5 \times P(5)
+
+   & = 0.2 + 2\times 0.4 + 3 \times 0.2 + 4\times 0.1 + 5\times 0.1 = 2.5
+
+
+Markov Chains
+--------------------------------------
+
+Mary drives between three cities A, B, and C. On any given day, she will drive to a different city or will stay put in the city that she is in. The directed graph below shows the probabilities of driving from one city to another city on any given day or the probability of staying in the same city.
+
+For example, consider all the edges that start out from node B. There is an edge going out to node A with probability 0.3, another edge going out to C with probability 0.6, and an edge looping back to B with probability 0.1. Thus, if Mary is at B. There is a 0.3 probability that she will drive to A that day, a 0.6 probability that she will drive to C, and a 0.1 probability that she will remain in B. These probabilities have to add up to 1 as they are mutually exclusive exhaustive events. There are only three disjoint possibilities. She drives to node A from B, node C from B, or stays in B.
+
+.. image:: probability_figs/markov_chain.png
+  :width: 400
+
+If the probabilities for Mary to be at A, B, and C at the end of Monday are 0.1, 0.4, and 0.5 (again these have to add up to 1 - mutually exclusive exhaustive events), what are the probabilities for Mary to be at A, B, and C at the end of Tuesday?	  
+	  
+.. math::
+
+   P(\text{A on Tue}) & = P(\text{A end}|\text{A start})\cdot P(\text{A on Mon}) + P(\text{A end}|\text{B start})\cdot P(\text{B on Mon}) + P(\text{A end}|\text{C start})\cdot P(\text{C on Mon})
+
+   & = 0.1\times 0.1 + 0.3\times 0.4 + 0.3\times 0.5 = 0.28
+
+   P(\text{B on Tue}) & = P(\text{B end}|\text{A start})\cdot P(\text{A on Mon}) + P(\text{B end}|\text{B start})\cdot P(\text{B on Mon}) + P(\text{B end}|\text{C start})\cdot P(\text{C on Mon})
+
+   & = 0.1\times 0.1 + 0.1\times 0.4 + 0.2\times 0.5 = 0.15
+
+   P(\text{C on Tue}) & = P(\text{C end}|\text{A start})\cdot P(\text{A on Mon}) + P(\text{C end}|\text{B start})\cdot P(\text{B on Mon}) + P(\text{C end}|\text{C start})\cdot P(\text{C on Mon})
+
+   & = 0.8\times 0.1 + 0.6\times 0.4 + 0.5\times 0.5 = 0.57
+
+The conditional probabilities above are "transition probabilities" - the probability of transitioning from one node to another - and are precisely the probabilites labelled on the graph edges.
+   
+Note that 0.28 + 0.15 + 0.57 = 1 (these are again mutually exclusive exhaustive events). A, B, and C are the only possibilities where Mary could be on Tuesday and these are disjoint possibilities. She cannot be in more than one city at the
+same time.
+
+Let us simplify our notation along the following lines: :math:`P(\text{X end}|\text{Y start})` as :math:`P_{X\rightarrow Y}`, and :math:`P(\text{X on Tue})` as :math:`P^X_{\text{Tue}}`.
+
+======================================
+
+**(Advanced Concept; Optional)**
+
+Then, the above equations can be written compactly as
+
+.. math::
+
+   \begin{bmatrix}
+   P^A_{\text{Tue}}  \\
+   P^B_{\text{Tue}} \\
+   P^C_{\text{Tue}} 
+   \end{bmatrix} =
+   \begin{bmatrix}
+   P_{A\rightarrow A} &    P_{B\rightarrow A}  &    P_{C\rightarrow A} \\
+   P_{A\rightarrow B} &    P_{B\rightarrow B}  &    P_{C\rightarrow B} \\
+   P_{A\rightarrow C} &    P_{B\rightarrow C}  &    P_{C\rightarrow C} \\
+   \end{bmatrix}
+   \begin{bmatrix}
+   P^A_{\text{Mon}}  \\
+   P^B_{\text{Mon}} \\
+   P^C_{\text{Mon}} 
+   \end{bmatrix} 
+
+and can be treated as matrix multiplication.
+
+======================================
+
+Here is an example problem (last problem from AMC8 2022):
+
+.. image:: probability_figs/mc_ex_1.png
+  :width: 700
+
+**Solution:**
+	  
+Let the leaves be labelled 1, 2, 3, and 4, with 1 as the starting leaf.
+
+There is symmetry in the transition probabilities.
+
+.. math::
+
+   P_{i\rightarrow j} = \begin{cases}
+
+   0,~\text{if}~i=j \\
+
+   \frac{1}{3},~\text{if}~i\neq j
+
+   \end{cases}
+
+Let :math:`x=\frac{1}{3}`.
+   
+.. math::
+
+   \textbf{Initial probabilities:}~& P^1_0 = 1,~P^2_0 = 0,~P^3=0,~P^4_0 = 0
+
+   \textbf{After hop 1:}~& P^1_1 = 0,~P^2_1 = x,~P^3_1=x,~P^4_1 = x
+
+   \textbf{After hop 2:}~& P^1_2 = 3x^2,~P^2_2 = 2x^2,~P^3_2=2x^2,~P^4_2 = 2x^2
+
+   \textbf{After hop 3:}~& P^1_3 = 6x^3,~P^2_3 = 7x^3,~P^3_3=7x^3,~P^4_3 = 7x^3
+
+   \textbf{After hop 4:}~& P^1_4 = 21x^4,~P^2_4 = 20x^4,~P^3_4=20x^4,~P^4_4 = 20x^4
+
+   &\implies P^1_4 = 21x^4 = \frac{21}{3^4}=\frac{7}{3^3}=\frac{7}{27}
+
+
+Here are the details for the hop4 probability calculation. The probabilities for other hops are calculated  on similar lines. The leaves 2, 3, and 4 are symmetrical in this problem. Thus, the probability for 2, 3, and 4 are identical after any hop. Thus, we do the calculation for only one of these three leaves and for leaf 1.
+
+.. math::
+
+   P^1_4 &= P_{1\rightarrow 1}\cdot P^1_3 + P_{2\rightarrow 1}\cdot P^2_3 + P_{3\rightarrow 1}\cdot P^3_3 + P_{4\rightarrow 1}\cdot P^4_3
+
+   &= 3\times P_{2\rightarrow 1}\cdot P^2_3 = 3\times \left(7x^3\right)\cdot x=21x^4
+
+   P^2_4 &= P_{1\rightarrow 2}\cdot P^1_3 + P_{2\rightarrow 2}\cdot P^2_3 + P_{3\rightarrow 2}\cdot P^3_3 + P_{4\rightarrow 2}\cdot P^4_3
+
+   &= P_{1\rightarrow 2}\cdot P^1_3 + 2\times P_{2\rightarrow 1}\cdot P^2_3 = \left(6x^3\right)\cdot x +  2\times \left(7x^3\right)\cdot x = 20x^4
+
+All the steps have been shown for clarity. There is no need to write out all these steps.
+
+ 

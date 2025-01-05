@@ -240,3 +240,152 @@ Now instead of having the starting node being the same as the ending node, what 
 
 The intuition is similar to the one for Eulerian circuit except that the starting node can have one exit edge without a corresponding entry edge as the trail starts at this node, and the ending node can have one entry edge without a corresponding exit edge as the trail stops at this node.
 
+Graph Coloring
+-----------------
+
+.. image:: graph_theory_figs/coloring_rooms.png
+  :width: 300
+
+.. image:: graph_theory_figs/coloring_graph.png
+  :width: 400
+
+The left image shows the layout of a house with 5 rooms. The rooms are to be painted in such a way that **no** adjacent rooms are painted in the same color.
+
+Th right image shows the equivalent graph. Rooms that cannot be painted in the same color are connected by red edges; rooms that can be (not should be) be painted in the same color are connected by green edges. The red and green edges put together form a complete graph (every node connected to every other node). Thus, there are :math:`C(5,2)=10` total edges.
+
+**How many ways are there to color the rooms if 5, 4, 3, or 2 colors are available?**
+
+======================================
+
+**Case 1: 5 colors**
+
+Attempt 1:
+
+Start with an arbitrary node (say node B in this example). There are 5 color choices for node B.
+
+Move to node adjacent to an already colored node (say node D). There are 4 color choices for node D (all colors except the one chosen for node B)
+
+Continue the iterations. Move to node E. 4 color choices for E (all colors except the one chosen for node D). Note that the color assigned to node B can be reused here as E is connected to node B by a green edge, not a red edge.
+
+Move to node A. **The number of choices depends on whether nodes B and E have the same color or different colors. Hence, we much distinguish those cases upfront.**
+
+Let us try this again.
+
+======================================
+
+Attempt 2:
+
+**Case 1: 5 colors**
+
+**Case 1A: B and E should have the same color**
+
+Choice for B -> 5 colors. This fixes the color of E as well.
+
+Choice for D -> 4 (all colors except the one chosen for B and E)
+
+Choice for A -> 4 (all colors except the one chosen for B and E)
+
+Choice of C -> 4 (all colors except the one chosen for D)
+
+**Case 1B: B and E should have different colors**
+
+Choice for B -> 5
+
+Choice for D -> 4 (all colors except the one chosen for B)
+
+Choice for E -> 3 (all colors except the ones chosen for B and D)
+
+Choice for A -> 3 (all colors except the ones chosen for B and E)
+
+Choice of C -> 4 (all colors except the one chosen for D)
+
+**Total number of ways = 5 x 4 x 4 x 4 + 5 x 4 x 3 x 3 x 4 = 5 x 4 x 4 x ( 4 + 3 x 3) = 1040**
+
+======================================
+
+**Case 2: 4 colors**
+
+**Case 1A: B and E should have the same color**
+
+Choice for B -> 4 colors. This fixes the color of E as well.
+
+Choice for D -> 3 (all colors except the one chosen for B and E)
+
+Choice for A -> 3 (all colors except the one chosen for B and E)
+
+Choice of C -> 3 (all colors except the one chosen for D)
+
+**Case 1B: B and E should have different colors**
+
+Choice for B -> 4
+
+Choice for D -> 3 (all colors except the one chosen for B)
+
+Choice for E -> 2 (all colors except the ones chosen for B and D)
+
+Choice for A -> 2 (all colors except the ones chosen for B and E)
+
+Choice of C -> 3 (all colors except the one chosen for D)
+
+**Total number of ways = 4 x 3 x 3 x 3 + 4 x 3 x 2 x 2 x 3 = 4 x 3 x 3 x ( 3 + 2 x 2) = 252**
+
+======================================
+
+**Case 3: 3 colors**
+
+**Case 1A: B and E should have the same color**
+
+Choice for B -> 3 colors. This fixes the color of E as well.
+
+Choice for D -> 2 (all colors except the one chosen for B and E)
+
+Choice for A -> 2 (all colors except the one chosen for B and E)
+
+Choice of C -> 2 (all colors except the one chosen for D)
+
+**Case 1B: B and E should have different colors**
+
+Choice for B -> 3
+
+Choice for D -> 2 (all colors except the one chosen for B)
+
+Choice for E -> 1 (all colors except the ones chosen for B and D)
+
+Choice for A -> 1 (all colors except the ones chosen for B and E)
+
+Choice of C -> 2 (all colors except the one chosen for D)
+
+**Total number of ways = 3 x 2 x 2 x 2 + 3 x 2 x 1 x 1 x 2 = 3 x 2 x 2 x ( 2 + 1 x 1) = 36**
+
+======================================
+
+**Case 4: 2 colors**
+
+**Case 1A: B and E should have the same color**
+
+Choice for B -> 2 colors. This fixes the color of E as well.
+
+Choice for D -> 1 (all colors except the one chosen for B and E)
+
+Choice for A -> 1 (all colors except the one chosen for B and E)
+
+Choice of C -> 1 (all colors except the one chosen for D)
+
+**Case 1B: B and E should have different colors**
+
+Choice for B -> 2
+
+Choice for D -> 1 (all colors except the one chosen for B)
+
+Choice for E -> 0 (all colors except the ones chosen for B and D)
+
+We got a 0 multiplier. So no need to continue case 1B.
+
+
+**Total number of ways = 2 x 1 x 1 x 1 = 2**
+
+Clearly the painting cannot be done with 1 color. **Hence, the minimum number of colors needed to color this graph is 2. It is called the "chromatic number" of the graph**.
+
+A complete graph with n nodes will need n colors. Hence, the chromatic number of a complete graph with n nodes is n.
+
+

@@ -13,6 +13,7 @@ Welcome to Math Notes's documentation!
    algebra.rst
    numberTheory.rst
    combinatorics.rst
+   probability.rst
    geometry.rst
    graphTheory.rst
    speedTricks.rst
