@@ -185,7 +185,7 @@ P^C_{\text{Mon}}
 \textbf{After hop 4:}~&amp; P^1_4 = 21x^4,~P^2_4 = 20x^4,~P^3_4=20x^4,~P^4_4 = 20x^4
 
 &amp;\implies P^1_4 = 21x^4 = \frac{21}{3^4}=\frac{7}{3^3}=\frac{7}{27}"/></p>
-</div><p>Here are the details for the hop4 probability calculation. The probabilities for other hops are calculated  on similar lines. The leaves 2, 3, and 4 are symmetrical in this problem. Thus, the probability for 2, 3, and 4 are identical after any hop. Thus, we do the calculation for only one of these three leaves and for leaf 1.</p>
+</div><p>Here are the details for the hop 4 probability calculation. The probabilities for other hops are calculated  on similar lines. The leaves 2, 3, and 4 are symmetrical in this problem. Thus, the probability for 2, 3, and 4 are identical after any hop. Thus, we do the calculation for only one of these three leaves and for leaf 1.</p>
 <div class="math">
 <p><img src="_images/math/547d47cccf34e6414060aa8328d1e927f24557d7.png" alt="P^1_4 &amp;= P_{1\rightarrow 1}\cdot P^1_3 + P_{2\rightarrow 1}\cdot P^2_3 + P_{3\rightarrow 1}\cdot P^3_3 + P_{4\rightarrow 1}\cdot P^4_3
 
@@ -194,7 +194,39 @@ P^C_{\text{Mon}}
 P^2_4 &amp;= P_{1\rightarrow 2}\cdot P^1_3 + P_{2\rightarrow 2}\cdot P^2_3 + P_{3\rightarrow 2}\cdot P^3_3 + P_{4\rightarrow 2}\cdot P^4_3
 
 &amp;= P_{1\rightarrow 2}\cdot P^1_3 + 2\times P_{2\rightarrow 1}\cdot P^2_3 = \left(6x^3\right)\cdot x +  2\times \left(7x^3\right)\cdot x = 20x^4"/></p>
-</div><p>All the steps have been shown for clarity. There is no need to write out all these steps.</p>
+</div><p>All the steps have been shown only for clarity. There is no need to write out all these steps.</p>
+</section>
+<section id="probability-trees">
+<h2>Probability Trees<a class="headerlink" href="#probability-trees" title="Permalink to this headline">¶</a></h2>
+<p>Srini and Leo play a game. Srini starts by attempting to throw a ball into a basket. If he succeeds, the game is over. Otherwise, Leo gets to try. If Leo is successful, the game is over. Otherwise, Srini gets the next chance. They continue alternating attempts until someone gets the ball into the basket. At that point, the game is over and the person who scored the basket is the winner. On any single attempt, Srini and Leo have respective probabilities of 0.3 and 0.5 of successfully scoring a basket. <strong>What is the probability that Leo wins the game on the fourth throw?</strong></p>
+<a class="reference internal image-reference" href="_images/prob_tree_bball.png"><img alt="_images/prob_tree_bball.png" src="_images/prob_tree_bball.png" style="width: 400px;" /></a>
+<p>This game can be represented by the tree structure above. A tree is just a graph with no cycles (a path that starts at a node and returns to the same node after traversing one or more edges).</p>
+<p>We traverse the tree just like we traverse the graph for a Markov chain. Each edge depicts a transition probability. The only difference is that if we transition to a leaf node (one of the nodes in the right column that has no edge starting from the node), then our journey is over.</p>
+<p>Note that just in the case of Markov chains, the sum of the probabilities of the edges coming out of non-leaf nodes (the nodes in the left column) is 1.</p>
+<p><strong>The probability that Leo wins on the third throw is 0.7 x 0.5 x 0.7 x 0.5 = 0.1225. This corresponds to the node traversal “Srini makes throw 1 -&gt; Leo makes throw 2 -&gt; Srini makes throw 3 -&gt; Leo makes throw 4 -&gt; Leo wins on throw 4”.</strong></p>
+<hr class="docutils" />
+<p>Let us extend this analysis a little more. What is the probability that Leo is the winner irrespective of which throw he wins on?</p>
+<div class="math">
+<p><img src="_images/math/78a0c561e9ec5da11fb250f8d0ebdbbf05833d28.png" alt="P(\text{Leo wins}) = P(\text{Leo wins on throw 2}) + P(\text{Leo wins on throw 4}) + P(\text{Leo wins on throw 6}) + \ldots"/></p>
+</div><p>Note, the events on the right are mutually exclusive events and they are exhaustive in the sense that they cover all the cases for Leo winning.</p>
+<p>Plugging in the values in the above sum, we get the sum for an infinite geometric progression.</p>
+<div class="math">
+<p><img src="_images/math/873317af780b078919201a93268a5135409f095f.png" alt="P(\text{Leo wins}) &amp; = 0.7 \times 0.5 + 0.7 \times 0.5 \times 0.7 \times 0.5 + 0.7\times 0.5\times 0.7 \times 0.5 \times 0.7 \times 0.5 + \ldots
+
+&amp; = 0.35 + 0.35^2 + 0.35^3 + \ldots
+
+&amp; = \frac{0.35}{1-0.35} = \frac{35}{65}=\frac{7}{13}"/></p>
+</div><p>We have used the formula for adding an infinite geometric progreassion from our <a class="reference internal" href="algebraicIdentities.html#adding-geometric-series"><span class="std std-ref">Adding geometric series discussion</span></a>.</p>
+<p>Similarly, we can compute the probability that Srini wins.</p>
+<div class="math">
+<p><img src="_images/math/d0564702f2781370485101a24d6a8196397228fc.png" alt="P(\text{Srini wins}) &amp; = P(\text{Srini wins on throw 1}) + P(\text{Srini wins on throw 3}) + P(\text{Srini wins on throw 5}) + \ldots
+
+&amp; = 0.3 + 0.7 \times 0.5 \times 0.3 + 0.7\times 0.5\times 0.7 \times 0.5 \times 0.3 + \ldots
+
+&amp; = 0.3\times \left(1 + 0.35 + 0.35^2 + \ldots \right)
+
+&amp; = \frac{0.3}{1-0.35} = \frac{30}{65}=\frac{6}{13}"/></p>
+</div><p>Surprise, surprise … <img class="math" src="_images/math/2ee839ac08e2d56afc3ba4053d8160df6cea7b60.png" alt="P(\text{Leo wins}) + P(\text{Srini wins}) = \frac{7}{13}+\frac{6}{13}=1"/>.</p>
 </section>
 </section>
 
@@ -213,6 +245,7 @@ P^2_4 &amp;= P_{1\rightarrow 2}\cdot P^1_3 + P_{2\rightarrow 2}\cdot P^2_3 + P_{
 <li><a class="reference internal" href="#mutually-exclusive-events">Mutually exclusive events</a></li>
 <li><a class="reference internal" href="#expectation-value">Expectation value</a></li>
 <li><a class="reference internal" href="#markov-chains">Markov Chains</a></li>
+<li><a class="reference internal" href="#probability-trees">Probability Trees</a></li>
 </ul>
 </li>
 </ul>

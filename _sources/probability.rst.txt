@@ -222,7 +222,7 @@ Let :math:`x=\frac{1}{3}`.
    &\implies P^1_4 = 21x^4 = \frac{21}{3^4}=\frac{7}{3^3}=\frac{7}{27}
 
 
-Here are the details for the hop4 probability calculation. The probabilities for other hops are calculated  on similar lines. The leaves 2, 3, and 4 are symmetrical in this problem. Thus, the probability for 2, 3, and 4 are identical after any hop. Thus, we do the calculation for only one of these three leaves and for leaf 1.
+Here are the details for the hop 4 probability calculation. The probabilities for other hops are calculated  on similar lines. The leaves 2, 3, and 4 are symmetrical in this problem. Thus, the probability for 2, 3, and 4 are identical after any hop. Thus, we do the calculation for only one of these three leaves and for leaf 1.
 
 .. math::
 
@@ -234,6 +234,57 @@ Here are the details for the hop4 probability calculation. The probabilities for
 
    &= P_{1\rightarrow 2}\cdot P^1_3 + 2\times P_{2\rightarrow 1}\cdot P^2_3 = \left(6x^3\right)\cdot x +  2\times \left(7x^3\right)\cdot x = 20x^4
 
-All the steps have been shown for clarity. There is no need to write out all these steps.
+All the steps have been shown only for clarity. There is no need to write out all these steps.
 
- 
+
+Probability Trees
+----------------------
+
+Srini and Leo play a game. Srini starts by attempting to throw a ball into a basket. If he succeeds, the game is over. Otherwise, Leo gets to try. If Leo is successful, the game is over. Otherwise, Srini gets the next chance. They continue alternating attempts until someone gets the ball into the basket. At that point, the game is over and the person who scored the basket is the winner. On any single attempt, Srini and Leo have respective probabilities of 0.3 and 0.5 of successfully scoring a basket. **What is the probability that Leo wins the game on the fourth throw?**
+
+.. image:: probability_figs/prob_tree_bball.png
+  :width: 400
+
+This game can be represented by the tree structure above. A tree is just a graph with no cycles (a path that starts at a node and returns to the same node after traversing one or more edges).
+
+We traverse the tree just like we traverse the graph for a Markov chain. Each edge depicts a transition probability. The only difference is that if we transition to a leaf node (one of the nodes in the right column that has no edge starting from the node), then our journey is over.
+
+Note that just in the case of Markov chains, the sum of the probabilities of the edges coming out of non-leaf nodes (the nodes in the left column) is 1.
+
+**The probability that Leo wins on the third throw is 0.7 x 0.5 x 0.7 x 0.5 = 0.1225. This corresponds to the node traversal "Srini makes throw 1 -> Leo makes throw 2 -> Srini makes throw 3 -> Leo makes throw 4 -> Leo wins on throw 4".**
+
+======================================
+
+Let us extend this analysis a little more. What is the probability that Leo is the winner irrespective of which throw he wins on?
+
+.. math::
+
+   P(\text{Leo wins}) = P(\text{Leo wins on throw 2}) + P(\text{Leo wins on throw 4}) + P(\text{Leo wins on throw 6}) + \ldots
+
+Note, the events on the right are mutually exclusive events and they are exhaustive in the sense that they cover all the cases for Leo winning.
+
+Plugging in the values in the above sum, we get the sum for an infinite geometric progression.
+
+.. math::
+
+   P(\text{Leo wins}) & = 0.7 \times 0.5 + 0.7 \times 0.5 \times 0.7 \times 0.5 + 0.7\times 0.5\times 0.7 \times 0.5 \times 0.7 \times 0.5 + \ldots
+
+   & = 0.35 + 0.35^2 + 0.35^3 + \ldots
+
+   & = \frac{0.35}{1-0.35} = \frac{35}{65}=\frac{7}{13}
+
+We have used the formula for adding an infinite geometric progreassion from our :ref:`Adding geometric series discussion  <algebraicidentities:Adding geometric series>`.
+
+Similarly, we can compute the probability that Srini wins.
+
+.. math::
+
+   P(\text{Srini wins}) & = P(\text{Srini wins on throw 1}) + P(\text{Srini wins on throw 3}) + P(\text{Srini wins on throw 5}) + \ldots
+
+   & = 0.3 + 0.7 \times 0.5 \times 0.3 + 0.7\times 0.5\times 0.7 \times 0.5 \times 0.3 + \ldots
+
+   & = 0.3\times \left(1 + 0.35 + 0.35^2 + \ldots \right)
+
+   & = \frac{0.3}{1-0.35} = \frac{30}{65}=\frac{6}{13}
+
+Surprise, surprise ... :math:`P(\text{Leo wins}) + P(\text{Srini wins}) = \frac{7}{13}+\frac{6}{13}=1`.
