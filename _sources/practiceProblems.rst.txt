@@ -386,5 +386,40 @@ P 77
 .. image:: practice_problems/prob77.png
   :width: 800
 
+P 78
+
+.. image:: practice_problems/prob78.png
+  :width: 800
+
+P 79
+
+.. image:: practice_problems/prob79.png
+  :width: 800
+
+P 80
+
+.. image:: practice_problems/prob80.png
+  :width: 800
+
+P 81
+
+.. image:: practice_problems/prob81.png
+  :width: 800
+
+P 82
+
+.. image:: practice_problems/prob82.png
+  :width: 800
+
+P 83
+
+.. image:: practice_problems/prob83.png
+  :width: 800
+
+P 84
+
+.. image:: practice_problems/prob84.png
+  :width: 800
+
 
 
