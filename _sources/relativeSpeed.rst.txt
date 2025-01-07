@@ -37,9 +37,6 @@ The solution can be cast either relative to the blue dot or relative to the red 
 .. image:: geom_figs/rel_vel/rect_opp_animation.gif
   :width: 500
 
-======================================
-	  
-
 
 In a circle
 -----------------------
@@ -65,6 +62,26 @@ Between the first and the second meeting, the red point needs to cover one entir
 The blue point sees the red particle approaching anticlockwise at 20+10 = 30 m/s. The initial spacing for anticlockwise motion is 200 x 3/4 = 150 m. Thus, the points meet for the first time after 150/30 = 5 s. The blue point would have covered 5 x 10 = 50 m (a quarter circle) in that time. Thus, they meet for the first time at the bottom of the circle. This is same as in the first case.
 
 Between the first and the second meeting, the red point needs to cover one entire circle relative to the blue point. This happens in 200/30 = 6.667 s (circle distance divided by the relative speed). The blue and the red points would have covered 10 x 6.667 = 66.67 m and 20 x 6.67 = 133.34 m, respectively, in this time. Thus, the between the meeting, the blue dot covers a little more than a quarter circle. The first meeting happens at the bottom of the circle. Hence, the second meeting happens between the leftmost point and the top of the circle.
+
+======================================
+
+Example problems:
+
+Annie and Bonnie are running laps around a 400-meter oval track. They started together, but Annie has pulled ahead because she runs 25% faster than Bonnie. How many laps will Annie have run when she first passes Bonnie?
+
+.. math::
+
+   & v_B = x,~v_A=1.25 x~\text{(Their speeds)}
+
+   & \text{Time of first pass} = \frac{400}{v_B-v_A}
+
+   & \text{Number of laps Annie runs in that time} =\frac{ v_A\times \text{Time of first pass}}{400} = \frac{v_A}{v_B-v_A} = \frac{1.25}{1.25-1.00}=5
+
+======================================
+   
+Alice and Bob play a game involving a circle whose circumference is divided by 12 equally-spaced points. The points are numbered clockwise, from 1 to 12. Both start on point 12. Alice moves clockwise and Bob, counterclockwise. In a turn of the game, Alice moves 5 points clockwise and Bob moves 9 points counterclockwise. The game ends when they stop on the same point. How many turns will this take?
+
+Relative to Bob, Alice moves 5 + 9 = 14 points towards him every turn. To meet at the same point, Alice should cover an integer multiple of 12 points relative to Bob. With 14 points in each turn, the smallest number of turns that results in an integer multiple of 12 is 6 turns.
 
 	  
 Chasing particles

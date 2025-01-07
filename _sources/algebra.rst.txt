@@ -12,6 +12,8 @@ Algebra
 
    ratio.rst
 
+   word_problems.rst
+
    amgmhm.rst
 
    relativeSpeed.rst
