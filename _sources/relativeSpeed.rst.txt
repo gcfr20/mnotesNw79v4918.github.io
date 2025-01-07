@@ -37,6 +37,28 @@ The solution can be cast either relative to the blue dot or relative to the red 
 .. image:: geom_figs/rel_vel/rect_opp_animation.gif
   :width: 500
 
+======================================
+
+Example problem:
+
+A motor boat whose speed in still water is 10 miles/hour went 91 miles downstream and returned. What is the speed of the riverflow if the trip took 20 hours?
+
+.. math::
+
+   & v:~\text{Speed of the riverflow}
+
+   & \text{Upstream speed of the boat relative to the bank} = 10 - v
+
+   & \text{Downstream speed of the boat relative to the bank} = 10 + v
+
+   & \text{Time taken} = \text{Distance} / \text{Speed}
+
+   & 20 = \frac{91}{10+v} + \frac{91}{10-v}
+
+   & 20 = \frac{91(10-v)+91(10+v)}{100-v^2}=\frac{91\times 20}{100-v^2}
+
+   & 100-v^2=91 \implies v=3~\text{miles/hour}
+
 
 In a circle
 -----------------------
