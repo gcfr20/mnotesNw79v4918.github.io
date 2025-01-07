@@ -75,7 +75,7 @@ Note: If :math:`a,~b,~c` are in arithmetic progression, then :math:`b=\frac{a+c}
 
    & \text{Arithmetic progression: }\text{3,~3+d,~3+2d}
 
-   & \text{Geomteric progression: }\text{3,~3+d-6=d-3,~3+2d}
+   & \text{Geometric progression: }\text{3,~3+d-6=d-3,~3+2d}
 
    & \implies (d-3)^2=3(3+2d)
 
