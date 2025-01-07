@@ -64,6 +64,27 @@ Jeremy's father drives him to school in rush hour traffic in 20 minutes. One day
 
 ======================================
 
+Between 3 and an unknown number is a third number such that the three numbers form an arithmetic progression. If the middle number is reduced by 6, the numbers form a geometric progression. Find the unknown number.
+
+
+Note: If :math:`a,~b,~c` are in arithmetic progression, then :math:`b=\frac{a+c}{2}` (the arithmetic mean). If :math:`a,~b,~c` are in geometric progression, then :math:`b=\sqrt{ac}` (the geometric mean).
+
+.. math::
+
+   & d: \text{The common difference for the arithmetic progression}
+
+   & \text{Arithmetic progression: }\text{3,~3+d,~3+2d}
+
+   & \text{Geomteric progression: }\text{3,~3+d-6=d-3,~3+2d}
+
+   & \implies (d-3)^2=3(3+2d)
+
+   & d^2-6d+9=9+6d \implies d^2 = 12d \implies d = 12
+
+   & \text{Unknown number }=3+2d=27
+
+======================================
+
 The clock in Sri's car, which is not accurate, gains time at a constant rate. One day as he begins shopping, he notes that his car clock and his watch (which is accurate) both say 12:00 noon. When he is done shopping, his watch says 12:30 and his car clock says 12:35. Later that day, Sri loses his watch. He looks at his car clock and it says 7:00. What is the actual time?
 
 .. math::
