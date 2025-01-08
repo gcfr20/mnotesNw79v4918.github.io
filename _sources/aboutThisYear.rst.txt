@@ -1,0 +1,22 @@
+
+About 2025
+======================================
+
+.. math::
+
+   & 2025 = 45^2 = 3^4 \times 5^2
+
+   & 45 = 1 + 2 + 3 + \ldots + 9
+   
+   & 2025 = 1^3 + 2^3 + 3^3 + \ldots + 9^3
+
+Number of divisors = :math:`(4+1)\times (2+1)= 15`
+
+Number of divisors that are perfect squares = :math:`\#\left\{3^0,3^2,3^4\right\}\times \#\left\{5^0,5^2\right\} = 3 \times 2 = 6`
+
+Number of divisors that are perfect cubes = :math:`\#\left\{3^0, 3^3\right\}\times \#\left\{5^0\right\} = 2 \times 1 = 2`
+
+Product of divisors = :math:`\sqrt{2025^{15}}`
+
+Sum of divisors = :math:`\left(\frac{3^5-1}{3-1}\right)\left(\frac{5^3-1}{5-1}\right)=\frac{242}{2}\cdot \frac{124}{4}=3751`
+

@@ -18,7 +18,8 @@ Welcome to Math Notes's documentation!
    graphTheory.rst
    speedTricks.rst
    practiceProblems.rst
-   
+   aboutThisYear.rst
+	      
 
 Indices and tables
 ==================
