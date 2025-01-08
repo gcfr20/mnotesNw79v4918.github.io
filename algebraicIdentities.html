@@ -91,7 +91,21 @@ a+ax+...+ax^{n-1} &amp;=&amp;a\left(\frac{x^n-1}{x-1}\right)"/></p>
 </div><p><strong>S = average of the first and last terms x number of terms</strong></p>
 <div class="math">
 <p><img src="_images/math/971c28bce950c1fd24d86e05c11cdc370af9b98d.png" alt="1+2+3+...+n = \frac{(1+n)}{2}\times n=\frac{n(n+1)}{2}"/></p>
-</div></section>
+</div><hr class="docutils" />
+<p>Example problem:</p>
+<div class="math">
+<p><img src="_images/math/d3f154cf105c7bdf3fd09da90a79abd9411e1b0a.png" alt="1-\frac{1}{2}-\frac{1}{4}+\frac{1}{8}-\frac{1}{16}-\frac{1}{32}+\frac{1}{64}-\frac{1}{128}-\frac{1}{256}+\ldots=?"/></p>
+</div><p>This looks like a geometric series. However, the sign for the terms is following the progression +,-,-,+,-,-,+,-,-,+,…. So we don’t have a common ratio between consecutive terms.</p>
+<p>Advanced concept: The series is absolutely convergent. Hence, any grouping or rearrangement of the series does not change the limit of the partial sums.</p>
+<p>We can break down the problem into</p>
+<div class="math">
+<p><img src="_images/math/388125a0462f8a2b11e42f16d8d43b381ea7facc.png" alt="&amp; \left(1+\frac{1}{8}+\frac{1}{64}+\ldots\right)-\left(\frac{1}{2}+\frac{1}{16}+\frac{1}{128}+\ldots\right)-\left(\frac{1}{4}+\frac{1}{32}+\frac{1}{1256}+\ldots\right)
+
+&amp; = \frac{1}{1-\frac{1}{8}}-\frac{\frac{1}{2}}{1-\frac{1}{8}}-\frac{\frac{1}{4}}{1-\frac{1}{8}}
+
+&amp; = \frac{8}{7} \times \left(1-\frac{1}{2}-\frac{1}{4}\right) = \frac{2}{7}"/></p>
+</div><p>We split the series into 4 geometric series, and then used the infinite series formula.</p>
+</section>
 </section>
 
 

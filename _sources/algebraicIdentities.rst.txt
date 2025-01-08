@@ -77,3 +77,27 @@ Reverse the series and add element-wise. The sum will be :math:`n` times the ave
 .. math::
 
    1+2+3+...+n = \frac{(1+n)}{2}\times n=\frac{n(n+1)}{2}
+
+======================================
+
+Example problem:
+
+.. math::
+
+   1-\frac{1}{2}-\frac{1}{4}+\frac{1}{8}-\frac{1}{16}-\frac{1}{32}+\frac{1}{64}-\frac{1}{128}-\frac{1}{256}+\ldots=?
+
+This looks like a geometric series. However, the sign for the terms is following the progression +,-,-,+,-,-,+,-,-,+,.... So we don't have a common ratio between consecutive terms.
+
+Advanced concept: The series is absolutely convergent. Hence, any grouping or rearrangement of the series does not change the limit of the partial sums.
+
+We can break down the problem into
+
+.. math::
+
+   & \left(1+\frac{1}{8}+\frac{1}{64}+\ldots\right)-\left(\frac{1}{2}+\frac{1}{16}+\frac{1}{128}+\ldots\right)-\left(\frac{1}{4}+\frac{1}{32}+\frac{1}{1256}+\ldots\right)
+
+   & = \frac{1}{1-\frac{1}{8}}-\frac{\frac{1}{2}}{1-\frac{1}{8}}-\frac{\frac{1}{4}}{1-\frac{1}{8}}
+
+   & = \frac{8}{7} \times \left(1-\frac{1}{2}-\frac{1}{4}\right) = \frac{2}{7}
+ 
+We split the series into 4 geometric series, and then used the infinite series formula.

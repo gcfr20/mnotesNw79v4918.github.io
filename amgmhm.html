@@ -18,7 +18,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Relative Speed" href="relativeSpeed.html" />
-    <link rel="prev" title="Ratio and proportion, Variation" href="ratio.html" /> 
+    <link rel="prev" title="Word Problems" href="word_problems.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
@@ -30,7 +30,7 @@
           <a href="relativeSpeed.html" title="Relative Speed"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="ratio.html" title="Ratio and proportion, Variation"
+          <a href="word_problems.html" title="Word Problems"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">Math Notes  documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="algebra.html" accesskey="U">Algebra</a> &#187;</li>
@@ -86,8 +86,85 @@
 <section id="applications">
 <h2>Applications<a class="headerlink" href="#applications" title="Permalink to this headline">¶</a></h2>
 <p>For any two variables <img class="math" src="_images/math/b3e65e3b6408fcfa00452530b73f55d1755f9965.png" alt="a"/> and <img class="math" src="_images/math/68c7c8c65602677ab56cf7fd88002023f0edc575.png" alt="b"/>, when the sum is fixed, the product is maximum when <img class="math" src="_images/math/be000a4ea587ae1bc9785bcf819612d9b148a6af.png" alt="a=b"/>; when the product is fixed, the sum is minimum when <img class="math" src="_images/math/be000a4ea587ae1bc9785bcf819612d9b148a6af.png" alt="a=b"/>.</p>
-<p>For a rectangle, the area is the product of the sides and the perimeter scales as the sum of the sides. Thus, for a fixed perimeter, the area is maximum when the rectangle is a square. For a fixed ares, the perimeter is minimum when the rectangle is a square.</p>
-</section>
+<p><strong>For a rectangle, the area is the product of the sides and the perimeter scales as the sum of the sides. Thus, for a fixed perimeter, the area is maximum when the rectangle is a square. For a fixed ares, the perimeter is minimum when the rectangle is a square.</strong></p>
+<hr class="docutils" />
+<p>We will now look at a couple of <strong>advanced examples</strong>. If we are dealing with power of two variables <img class="math" src="_images/math/141bbefb74014fc5e43499901bf78607ae335583.png" alt="p"/> and <img class="math" src="_images/math/a5fa84b363f309ebc8fe7db38304541732c7de9a.png" alt="q"/>, the AM-GM inequality has the general form</p>
+<div class="math">
+<p><img src="_images/math/18a8cd543e75905628a1ce54e7d6b03e5b1bff57.png" alt="x\cdot p^mq^n + y\cdot p^uq^v + z\cdot p^fq^g \geq C\left(p^mq^n\times p^uq^v\times p^fq^g\right)^k"/></p>
+</div><p>We have lumped all numerical constants into <img class="math" src="_images/math/4db5b6e16e06f929ce3f675c5e535d06ffb02ff7.png" alt="C"/> and written the appropriate power as <img class="math" src="_images/math/9630132210b904754c9ab272b61cb527d12263ca.png" alt="k"/>. Our applications will not require <img class="math" src="_images/math/4db5b6e16e06f929ce3f675c5e535d06ffb02ff7.png" alt="C"/> and <img class="math" src="_images/math/9630132210b904754c9ab272b61cb527d12263ca.png" alt="k"/>. Hence, the lumping. <img class="math" src="_images/math/888f7c323ac0341871e867220ae2d76467d74d6e.png" alt="x"/>, <img class="math" src="_images/math/1b5e577d6216dca3af7d87aa122a0b9b360d6cb3.png" alt="y"/>, and <img class="math" src="_images/math/8d051150f8669295ecdbe92367941012175a824d.png" alt="z"/> are numbers (not variables).</p>
+<p>For example,</p>
+<div class="math">
+<p><img src="_images/math/c5cdc0a93436497a37d1336c4cda5b9988c29c0a.png" alt="3x^2y^3 + 5xy^2 + 7xy \geq C\left(x^2y^3\times xy^2\times xy\right)^k = C\left(x^4y^6\right)^k = C\left(x^2y^3\right)^{2k} = C\left(x^2y^3\right)^s~\text{(where $s=2k$)}"/></p>
+</div><hr class="docutils" />
+<p>Advanced example:</p>
+<p>What should be the ratio of the height to the radius of a cylinder if for a fixed total surface area of the cylinder (including the two caps), the volume of the cylinder is maximum?</p>
+<div class="math">
+<p><img src="_images/math/f2184a2a53878cc257261864e3f167a03856c073.png" alt="&amp; h:~\text{Height}
+
+&amp; t:~\text{The ratio of height to radius}
+
+&amp; r:~\text{Radius}
+
+&amp; S:~\text{Total surface area}
+
+&amp; V:~\text{Volume}
+
+&amp; S = 2\pi r h + 2\pi r^2 = 2\pi r^2 (t + 1)
+
+&amp; V = \pi r^2 h = \pi r^3 t"/></p>
+</div><p>We want to vary the two knobs <img class="math" src="_images/math/79a3d439d28652c547386f39b555d90d3aaf102d.png" alt="r"/> and <img class="math" src="_images/math/907a4add6d5db5b7f197f7924f1371b8ac404fe6.png" alt="t"/> such that <img class="math" src="_images/math/b988975be41fd13b4d091c10202ba19374643586.png" alt="S"/> is fixed and <img class="math" src="_images/math/e4762cec46619bf7781cae62216214f909395368.png" alt="V"/> is maximized. We can ignore the constant multiples in the analysis.</p>
+<p>For fixed <img class="math" src="_images/math/550adedd49045e18ee7005d9a0e1e1bf2a201015.png" alt="r^2(t+1)"/>, maximize <img class="math" src="_images/math/aeb9992856e32928a795a800391b5516f181534f.png" alt="r^3 t"/>.</p>
+<p>An attempt at applying AM-GM inequality (ignoring any numerical constant multipliers on the left) gives us</p>
+<div class="math">
+<p><img src="_images/math/15165ed1fd51eb5e710c46854bf5ae2e23198269.png" alt="&amp; r^2t + r^2 \geq C\left(r^4 t\right)^k"/></p>
+</div><p>The problem is that we need some power of <img class="math" src="_images/math/aeb9992856e32928a795a800391b5516f181534f.png" alt="r^3 t"/> on the right hand side. The above inequality does not give us that. We have <img class="math" src="_images/math/f2927038413cef8566993ba8240ee7c96991291e.png" alt="r^4 t"/>.</p>
+<p>Next, let us try splitting either the first term or the second term (on the left hand side) needs to be split into a certain number of equal parts.</p>
+<p>First try to split the second term into two equal parts (still ignoring numerical constants on the left. Hence no 1/2 multipliers).</p>
+<div class="math">
+<p><img src="_images/math/8a56f86a5d7ba6935c4999d05029f14d442ee0fc.png" alt="&amp; r^2t + r^2 + r^2 \geq C\left(r^6t\right)^k~\text{($C$ and $k$ are different from the previous usage)}"/></p>
+</div><p>We have <img class="math" src="_images/math/c266a79fd7da8c60081807a56ed7da8202bec2ed.png" alt="r^6 t"/>, not <img class="math" src="_images/math/aeb9992856e32928a795a800391b5516f181534f.png" alt="r^3 t"/>.</p>
+<p>Next, split the first term into equal parts.</p>
+<div class="math">
+<p><img src="_images/math/6d91acaa2df598637f05274cdd655af338537c97.png" alt="&amp; r^2t + r^2t + r^2 \geq C\left(r^6t^2\right)^k = C\left(r^3t\right)^s"/></p>
+</div><p>This time, we have our <img class="math" src="_images/math/aeb9992856e32928a795a800391b5516f181534f.png" alt="r^3 t"/> combination.</p>
+<p>Now, we write the left hand side including the numerical multipliers in the correct ratio.</p>
+<div class="math">
+<p><img src="_images/math/2162d11b1f08172b66f3e634e73e81df35d66752.png" alt="&amp; 2\pi r^2 (t + 1)\sim \frac{r^2t}{2} + \frac{r^2t}{2} + r^2
+
+&amp; \frac{r^2t}{2} + \frac{r^2t}{2} + r^2 \geq C\left(r^3t\right)^s"/></p>
+</div><p>The right hand side will take the maximum value when the terms on the left hand side are equal.  The first two terms are already equal by choice. Thus, the first and the third terms need to be equal.</p>
+<div class="math">
+<p><img src="_images/math/f5ae339ce94170bdc94889e667f825c926d65715.png" alt="&amp; \frac{r^2 t}{2} = r^2 \implies t=2"/></p>
+</div><p>Therefore, the volume is maximized when the height is twice the radius.</p>
+<hr class="docutils" />
+<p>Advanced example:</p>
+<p>The volume of a right triangular prism is V. The base of the prism is an equilateral triangle. What must be the side of the equilateral triangle for the total surface area of the prism to be the least?</p>
+<div class="math">
+<p><img src="_images/math/6507431f86ab0503d4aab823f76130ccf861fb0a.png" alt="&amp; s:~\text{Side of the equilateral triangle}
+
+&amp; h:~\text{Height of the prism}
+
+&amp; A_b:~\text{Area of the base}
+
+&amp; A:~\text{Total surface area of the prism}
+
+&amp; A_b = \frac{\sqrt{3}}{4} s^2
+
+&amp; V = A_b h = \frac{\sqrt{3}}{4} s^2h
+
+&amp; A = 2A_b + 3sh = \frac{\sqrt{3}}{2} s^2 + 3sh"/></p>
+</div><p>In this problem <img class="math" src="_images/math/e4762cec46619bf7781cae62216214f909395368.png" alt="V"/> is fixed. Thus, <img class="math" src="_images/math/082fc5dbfdf87b9ab968a7e65988834c14474f18.png" alt="s^2 h"/> is fixed. The objective is to minimize <img class="math" src="_images/math/211284f68205c3e66773eaf026f32a0acdd3dfb3.png" alt="A"/>. The terms in the sum here (ignoring numerical constants) are <img class="math" src="_images/math/8ab4b82ece5a67cb801cf339bca8ff343a570c2e.png" alt="s^2"/> and <img class="math" src="_images/math/3acb77106681396478714e127f9c460f8ae05e21.png" alt="sh"/>.</p>
+<p>Following the same strategy as the preceding problem, we are looking for the <img class="math" src="_images/math/082fc5dbfdf87b9ab968a7e65988834c14474f18.png" alt="s^2 h"/> combination on the right hand side.</p>
+<p>The split that will give us this combination is</p>
+<div class="math">
+<p><img src="_images/math/2259115662432f2af86d86b84dc98ac9a1381c8f.png" alt="s^2 + sh + sh \geq C\left(s^4h^2\right)^k = C\left(s^2h\right)^w"/></p>
+</div><p>Including the numerical multipliers in the correct ratio,</p>
+<div class="math">
+<p><img src="_images/math/7fe3c051c404c61ce1b4fe8e17b43f7972ab81fe.png" alt="\frac{\sqrt{3}}{2} s^2 + \frac{3}{2} sh + \frac{3}{2} sh \geq C\left(s^2 h\right)^w"/></p>
+</div><p>For fixed right hand side, the left hand side will take minimum value when the left hand side terms are equal. The second and third terms are already equal. We need to equate the first two terms.</p>
+<div class="math">
+<p><img src="_images/math/253034c907d9d10032da99ff5fef6380515411c1.png" alt="\frac{\sqrt{3}}{2} s^2 = \frac{3}{2} sh \implies h=\frac{s}{\sqrt{3}} \implies V = \frac{\sqrt{3}}{4}s^2h = \frac{s^3}{4} \implies s = \sqrt[3]{4V}"/></p>
+</div></section>
 </section>
 
 
@@ -110,8 +187,8 @@
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="ratio.html"
-                        title="previous chapter">Ratio and proportion, Variation</a></p>
+  <p class="topless"><a href="word_problems.html"
+                        title="previous chapter">Word Problems</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="relativeSpeed.html"
                         title="next chapter">Relative Speed</a></p>
@@ -146,7 +223,7 @@
           <a href="relativeSpeed.html" title="Relative Speed"
              >next</a> |</li>
         <li class="right" >
-          <a href="ratio.html" title="Ratio and proportion, Variation"
+          <a href="word_problems.html" title="Word Problems"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">Math Notes  documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="algebra.html" >Algebra</a> &#187;</li>
