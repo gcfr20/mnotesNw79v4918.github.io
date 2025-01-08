@@ -133,6 +133,20 @@ George walks 1 mile to school. He leaves home at the same time each day, walks a
 
    & 4v = 3v + 6 \implies v = 6~\text{miles per hour}
 
+======================================
+
+In a class of 10 students, the average score on a test was 75. However, the teacher realized that one of the students accidentally received 100 instead of 50 on the test. If the mistake is corrected, what will be the correct average score?
+
+.. math::
+
+   & x:~\text{Correct average score}
+
+   & \text{Total score before correction - Total score after correction}= 50
+
+   & 10\times 75 - 10\times x = 50
+
+   & x = 75 -\frac{50}{10} =  70
+
 
 Two variable equations
 --------------------------
