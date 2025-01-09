@@ -69,6 +69,30 @@ For any two variables :math:`a` and :math:`b`, when the sum is fixed, the produc
 
 ===========================================
 
+Given that :math:`x` and :math:`y` are positive real numbers related by :math:`3x+2y=36`, what is the largest value that :math:`xy` and :math:`xy^2` can take?
+
+Part 1:
+
+.. math::
+
+  & \frac{3x+2y}{2}\geq \sqrt{(3x)(2y)} \implies \frac{36}{2}\geq \sqrt{6}\cdot \sqrt{xy}
+
+  & \left(\frac{18^2}{6}\right) = 54 \geq xy
+
+  & \text{This largest value of $54$ occurs when $3x=2y=\frac{36}{2}=18$ i.e. when $x=6$ and $y=9$}
+
+Part 2:
+
+.. math::
+
+  & \frac{3x+y+y}{3}\geq \sqrt[3]{(3x)(y)(y)} \implies \frac{36}{3}\geq \sqrt[3]{3}\cdot \sqrt[3]{xy^2}
+
+  & \left(\frac{12^3}{3}\right) = 576 \geq xy^2
+
+  & \text{This largest value of $576$ occurs when $3x=y=\frac{36}{3}=12$ i.e. when $x=4$ and $y=12$}
+
+===========================================
+
 
 We will now look at a couple of **advanced examples**. If we are dealing with power of two variables :math:`p` and :math:`q`, the AM-GM inequality has the general form
 
