@@ -18,7 +18,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Geometry" href="geometry.html" />
-    <link rel="prev" title="Recurrence Relations (Advanced)" href="recurrence.html" /> 
+    <link rel="prev" title="Partitions" href="partitions.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
@@ -30,7 +30,7 @@
           <a href="geometry.html" title="Geometry"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="recurrence.html" title="Recurrence Relations (Advanced)"
+          <a href="partitions.html" title="Partitions"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">Math Notes  documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Probability</a></li> 
@@ -195,7 +195,24 @@ P^2_4 &amp;= P_{1\rightarrow 2}\cdot P^1_3 + P_{2\rightarrow 2}\cdot P^2_3 + P_{
 
 &amp;= P_{1\rightarrow 2}\cdot P^1_3 + 2\times P_{2\rightarrow 1}\cdot P^2_3 = \left(6x^3\right)\cdot x +  2\times \left(7x^3\right)\cdot x = 20x^4"/></p>
 </div><p>All the steps have been shown only for clarity. There is no need to write out all these steps.</p>
-</section>
+<hr class="docutils" />
+<p>There is a another way to attack this problem.</p>
+<p>By symmetry, the probability that the cricket is on any of the leaves 2, 3, or 4 after <img class="math" src="_images/math/a44c09dc69d687fd66b7a1a12197c0299aa5db1c.png" alt="n-1"/> hops is</p>
+<p><img class="math" src="_images/math/dfb01e95a520a4e5b68759c6e4911b1a67ee8fd3.png" alt="\frac{1}{3}\left(1-p_{n-1}\right)"/>,</p>
+<p>where <img class="math" src="_images/math/27efdd7b6a00af61100a6cf0adc29f0042a1ff0a.png" alt="p_{n-1}"/> is the probability that the cricket is on leaf 1 after n-1 hops.</p>
+<p>The probability of hopping to leaf 1 from any one of these leaves in the next hop is 1/3.</p>
+<p>Therefore, the probability of getting to leaf 1 in the nth step is</p>
+<p><img class="math" src="_images/math/d30d0afaca8a80fbfec0bbbcda870a96a84fe3e0.png" alt="p_n=3\times \frac{1}{3}\times \frac{1}{3}\left(1-p_{n-1}\right)=\frac{1}{3}\left(1-p_{n-1}\right)"/>.</p>
+<p>Thus,</p>
+<div class="math">
+<p><img src="_images/math/3832c5986129aaf26741db447af20108e028c9b3.png" alt="p_1 &amp;= 0
+
+p_2 &amp;= \frac{1}{3} \left(1-p_1\right) = \frac{1}{3}
+
+p_3 &amp;= \frac{1}{3} \left(1-p_2\right) = \frac{2}{9}
+
+p_4 &amp;= \frac{1}{3} \left(1-p_3\right) = \frac{7}{27}"/></p>
+</div></section>
 <section id="probability-trees">
 <h2>Probability Trees<a class="headerlink" href="#probability-trees" title="Permalink to this headline">¶</a></h2>
 <p>Srini and Leo play a game. Srini starts by attempting to throw a ball into a basket. If he succeeds, the game is over. Otherwise, Leo gets to try. If Leo is successful, the game is over. Otherwise, Srini gets the next chance. They continue alternating attempts until someone gets the ball into the basket. At that point, the game is over and the person who scored the basket is the winner. On any single attempt, Srini and Leo have respective probabilities of 0.3 and 0.5 of successfully scoring a basket. <strong>What is the probability that Leo wins the game on the fourth throw?</strong></p>
@@ -251,8 +268,8 @@ P^2_4 &amp;= P_{1\rightarrow 2}\cdot P^1_3 + P_{2\rightarrow 2}\cdot P^2_3 + P_{
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="recurrence.html"
-                        title="previous chapter">Recurrence Relations (Advanced)</a></p>
+  <p class="topless"><a href="partitions.html"
+                        title="previous chapter">Partitions</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="geometry.html"
                         title="next chapter">Geometry</a></p>
@@ -287,7 +304,7 @@ P^2_4 &amp;= P_{1\rightarrow 2}\cdot P^1_3 + P_{2\rightarrow 2}\cdot P^2_3 + P_{
           <a href="geometry.html" title="Geometry"
              >next</a> |</li>
         <li class="right" >
-          <a href="recurrence.html" title="Recurrence Relations (Advanced)"
+          <a href="partitions.html" title="Partitions"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">Math Notes  documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Probability</a></li> 

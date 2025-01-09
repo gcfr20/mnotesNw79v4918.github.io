@@ -236,6 +236,36 @@ Here are the details for the hop 4 probability calculation. The probabilities fo
 
 All the steps have been shown only for clarity. There is no need to write out all these steps.
 
+======================================
+
+There is a another way to attack this problem.
+
+By symmetry, the probability that the cricket is on any of the leaves 2, 3, or 4 after :math:`n-1` hops is
+
+:math:`\frac{1}{3}\left(1-p_{n-1}\right)`,
+
+where :math:`p_{n-1}` is the probability that the cricket is on leaf 1 after n-1 hops.
+
+The probability of hopping to leaf 1 from any one of these leaves in the next hop is 1/3.
+
+Therefore, the probability of getting to leaf 1 in the nth step is
+
+:math:`p_n=3\times \frac{1}{3}\times \frac{1}{3}\left(1-p_{n-1}\right)=\frac{1}{3}\left(1-p_{n-1}\right)`.
+
+Thus,
+
+.. math::
+
+   p_1 &= 0
+
+   p_2 &= \frac{1}{3} \left(1-p_1\right) = \frac{1}{3}
+
+   p_3 &= \frac{1}{3} \left(1-p_2\right) = \frac{2}{9}
+
+   p_4 &= \frac{1}{3} \left(1-p_3\right) = \frac{7}{27}
+   
+
+
 
 Probability Trees
 ----------------------
