@@ -1,0 +1,92 @@
+
+Two variable inequalities
+======================================
+
+Steph scored 15 baskets out of 20 attempts in the first half of a game, and 10 baskets out of 10 attempts in the second half. Candace took 12 attempts in the first half and 18 attempts in the second. In each half, Steph scored a higher percentage of baskets than Candace. Surprisingly they ended with the same overall percentage of baskets scored. How many more baskets did Candace score in the second half than in the first?
+
+.. math::
+
+   & x:~\text{Number of baskets Candace scores in half 1}
+
+   & y:~\text{Number of baskets Candace scores in half 2}
+
+   & \frac{15}{20} > \frac{x}{12} \implies 9 > x
+
+   & \frac{10}{10} > \frac{y}{18} \implies 18 > y
+
+   & x + y = 25 \implies x = 25-y
+
+   & 9 > 25-y,~18 > y \implies 18>y>25-9 \implies 18>y>16\implies y=17\implies x=8
+
+  
+=======================================
+
+Fifteen integers :math:`a_1, a_2, a_3, \ldots, a_{15}` are arranged in order on a number line. The integers are equally spaced and have the property that :math:`1\leq  a_1 \leq 10,~13 \leq a_2 \leq 20,~241 \leq a_{15}\leq 250`. What is the sum of digits of :math:`a_{14}` ?
+
+.. math::
+
+   & a_1 = a
+
+   & a_2 = a+d
+
+   & a_{15} = a+14d
+
+   & a_{14} = a+13d
+
+   &--------------
+
+   &  1\leq a \leq 10
+
+   &  13\leq a+d \leq 20
+
+   & 241\leq a+14d \leq 250
+
+   &--------------
+
+.. math::
+
+   20 - d \geq & a
+
+   & a \geq 13-d
+
+   250 - 14d \geq & a
+
+   & a\geq 241 -14 d
+
+   &\implies
+
+   20 - d &\geq 13 - d\implies 20 \geq 13~\text{(Redundant)}
+
+   20 - d &\geq 241 -14d \implies 13 d \geq 221 \implies d \geq 17
+
+   250 - 14d &\geq 241-14d\implies 250 \geq 241~\text{(Redundant)}
+
+   250 -14d &\geq 13-d \implies 237 \geq  13d \implies 19 > d
+
+   &\implies d=18~\text{or}~d=17
+   
+   
+.. math::
+
+      &--------------
+
+      &~\text{Case 1:}~d=18
+
+      & 250\geq a+14d \implies 250\geq a+252 \implies -2\geq a
+
+      &~\text{This violates}~1\leq a \leq 10
+
+      &~\text{Case 2:}~d=17
+
+      & 13\leq a+17\leq 20 \implies -4\leq a \leq 3
+
+      & 241 \leq a+238 \leq 250 \implies 3 \leq a \leq 12
+
+      & \implies a = 3
+
+      & a_{14} = a+13d = 3 + 13 \times 17 = 224
+
+
+Answer: 2 + 2 + 4 = 8
+
+   

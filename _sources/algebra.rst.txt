@@ -17,6 +17,8 @@ Algebra
    amgmhm.rst
 
    relativeSpeed.rst
+
+   inequalities.rst
    
    radicalSimplification.rst
    
