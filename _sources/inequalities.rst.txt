@@ -14,6 +14,8 @@ Steph scored 15 baskets out of 20 attempts in the first half of a game, and 10 b
 
    & \frac{10}{10} > \frac{y}{18} \implies 18 > y
 
+   &\text{Eliminate one variable} 
+   
    & x + y = 25 \implies x = 25-y
 
    & 9 > 25-y,~18 > y \implies 18>y>25-9 \implies 18>y>16\implies y=17\implies x=8
@@ -43,8 +45,10 @@ Fifteen integers :math:`a_1, a_2, a_3, \ldots, a_{15}` are arranged in order on 
 
    &--------------
 
+Eliminate variable :math:`a`.
+   
 .. math::
-
+   
    20 - d \geq & a
 
    & a \geq 13-d
