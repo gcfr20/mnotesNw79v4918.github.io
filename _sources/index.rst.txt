@@ -19,6 +19,7 @@ Welcome to Math Notes's documentation!
    speedTricks.rst
    practiceProblems.rst
    aboutThisYear.rst
+   practiceProblemsB.rst
 	      
 
 Indices and tables
