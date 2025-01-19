@@ -52,3 +52,5 @@ A standard 20-sided die is an icosahedron, where all faces are congruent triangl
 
 How many different positive integer cent values cannot be achieved exactly using unlimited postage stamps worth 6, 7, and 9 cents?
 
+:math:`n=\overline{abcde6}` and :math:`4n=\overline{6abcde}`. :math:`n=?`
+
