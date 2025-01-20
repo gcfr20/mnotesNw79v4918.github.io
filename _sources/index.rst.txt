@@ -20,6 +20,7 @@ Welcome to Math Notes's documentation!
    practiceProblems.rst
    aboutThisYear.rst
    practiceProblemsB.rst
+   practiceProblemsC.rst
 	      
 
 Indices and tables
