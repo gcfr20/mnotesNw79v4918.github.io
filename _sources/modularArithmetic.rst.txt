@@ -1,0 +1,43 @@
+
+Modular Arithmetic
+======================================
+
+:math:`a\equiv b~(mod~n)` means that :math:`a` and :math:`b` give the same remainder when divided by :math:`n`. Note, the remainder when divided by :math:`n` has to be one of :math:`0,1,2,...,n-1`. Thus, all integers fall into one of these n-1 buckets and all numbers within a bucket are congruent to each other. 
+
+For example, :math:`-11,-8,-5,-2,1,4,7,10` all give remainder :math:`1` when divided by :math:`3`. Thus,
+
+.. math::
+
+    -11\equiv -8\equiv -5\equiv -2\equiv 1\equiv 4\equiv 7\equiv 10~(mod~3)
+
+In a modular congruence, any one of these numbers can be used interchangeably.
+
+If :math:`a\equiv b~(mod~n)` and :math:`c\equiv d~(mod~n)`, then
+:math:`(a+c)\equiv (b+d)~(mod~n),~ac\equiv bd~(mod~n)`.
+
+It follows that :math:`ak\equiv bk~(mod~n)` as :math:`k\equiv k~(mod~n)` for any integer :math:`k`. Additionally, successive multiplication gives :math:`a^k\equiv b^k~(mod~n)`.
+
+Examples
+-----------
+
+.. math::
+
+   &-4\equiv 3~(mod~7) 
+  
+   &~
+   
+   & (-4)(-1)\equiv (3)(-1)~(mod~7) 
+
+   & 4\equiv -3~(mod~7)
+
+   &~
+   
+   & (-4)(2)\equiv (3)(2)~(mod~7) 
+
+   & -8\equiv 6~(mod~7) 
+
+   &~
+
+   & (-4)^2\equiv (3)^2~(mod~7)
+
+   & 16\equiv 9~(mod~7)

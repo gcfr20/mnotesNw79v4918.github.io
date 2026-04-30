@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Prime Factorization and Divisors of numbers &#8212; Math Notes  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=2bf1fcf8" />
+    
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Congruences" href="congruences.html" />
+    <link rel="prev" title="Modular Arithmetic" href="modularArithmetic.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="congruences.html" title="Congruences"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="modularArithmetic.html" title="Modular Arithmetic"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Math Notes  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="numberTheory.html" accesskey="U">Number Theory</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Prime Factorization and Divisors of numbers</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="prime-factorization-and-divisors-of-numbers">
+<h1>Prime Factorization and Divisors of numbers<a class="headerlink" href="#prime-factorization-and-divisors-of-numbers" title="Link to this heading">¶</a></h1>
+<section id="prime-factorization">
+<h2>Prime Factorization<a class="headerlink" href="#prime-factorization" title="Link to this heading">¶</a></h2>
+<p>Prime factorization of any number is unique and can be obtained using either the tabular method or the tree method. It is a good idea to write the primes in increasing order.</p>
+<p><img class="math" src="_images/math/87290b6eb5eac7d8c6616cd3a97a8311808182c0.png" alt="540=2^2\times 3^3\times 5^1"/></p>
+</section>
+<section id="gcd-and-lcm">
+<h2>GCD and LCM<a class="headerlink" href="#gcd-and-lcm" title="Link to this heading">¶</a></h2>
+<p>Get the prime factorization of the numbers whose GCD or LCM is desired. Pick the smallest powers for each prime present in any of the prime factorizations for the GCD. Pick the largest powers for the LCM.</p>
+<div class="math">
+<p><img src="_images/math/983fa71c94a4b28124071a62e5ab06604ced17e0.png" alt="540 &amp;= 2^2\times 3^3\times 5^1
+
+210 &amp;= 2^1\times 3^1\times 5^1\times 7^1
+
+1210 &amp;= 2^1\times 5^1\times 11^2"/></p>
+</div><p>Including all the primes that show up:</p>
+<div class="math">
+<p><img src="_images/math/7b2f443895cbba506351f8d6537ef17f0ce4e833.png" alt="540 &amp;= 2^2\times 3^3\times 5^1\times 7^0\times 11^0
+
+210 &amp;= 2^1\times 3^1\times 5^1\times 7^1\times 11^0
+
+1210 &amp;= 2^1\times 3^0\times 5^1\times 7^0\times 11^2"/></p>
+</div><div class="math">
+<p><img src="_images/math/997846fb462e66560b3d044387cb12c57532cdf9.png" alt="&amp;\text{GCD}=2^1\times 3^0\times 5^1\times 7^0\times 11^0=10
+
+&amp;\text{LCM}=2^2\times 3^3\times 5^1\times 7^1\times 11^2=457380"/></p>
+</div><p>When only two numbers are involved, the product of the GCD and LCM is the product of the two numbers. The reason for this is that in this case the product of the smallest power and the largest power for each prime in the factorization will be the product of the powers of that prime in the two numbers.</p>
+<div class="math">
+<p><img src="_images/math/a5da5ca0b218ee6f22dce843c3bb7e46d81e507e.png" alt="&amp; 20 = 2^2 \times 5^1
+
+&amp; 250   = 2^1 \times 5^3
+
+&amp; (2^1 \times 5^1) \times (2^2\times 5^3)=(2^2\times 5^1)\times (2^1\times 5^3)
+
+&amp; \text{GCD}\times \text{LCM}=20 \times 250"/></p>
+</div></section>
+<section id="divisors">
+<h2>Divisors<a class="headerlink" href="#divisors" title="Link to this heading">¶</a></h2>
+<p>Consider the number 8. Its divisors are 1, 2, 4, and 8. Why are these the only divisors?</p>
+<p>The prime factorization of <img class="math" src="_images/math/963219eafec84d240711eb594e2b8904b8883d82.png" alt="8"/> is <img class="math" src="_images/math/d68034156ca17968dabd55e2f295dad7404accbe.png" alt="2^3"/>. Thus, the divisors are powers of <img class="math" src="_images/math/d94997a2318fec7e8e5bc4d8d79bb633675f9411.png" alt="2"/> such that the power is less than or equal to the power of <img class="math" src="_images/math/d94997a2318fec7e8e5bc4d8d79bb633675f9411.png" alt="2"/> in <img class="math" src="_images/math/963219eafec84d240711eb594e2b8904b8883d82.png" alt="8"/>. In other words, the divisors are <img class="math" src="_images/math/6f308e3af3518af7522f558934d5167e74da3843.png" alt="2^0,~2^1,~2^2,~2^3"/>.</p>
+<section id="number-of-divisors">
+<h3>Number of divisors<a class="headerlink" href="#number-of-divisors" title="Link to this heading">¶</a></h3>
+<p>By extending this logic, the divisors of <img class="math" src="_images/math/a9697528ca8ea7a58a5558b275ffa3e071a1304f.png" alt="72=2^3\times 3^2"/> will be all combinations of <img class="math" src="_images/math/6f308e3af3518af7522f558934d5167e74da3843.png" alt="2^0,~2^1,~2^2,~2^3"/> and <img class="math" src="_images/math/9b11a12068a633a4e58eff47636cac1ac059e5c6.png" alt="3^0,~3^1,~3^2"/>:</p>
+<p><img class="math" src="_images/math/ffb28d5a8fcf3ccd8b381ab65d114ab365ce1b04.png" alt="2^0\times 3^0,~2^0\times 3^1,~2^0\times 3^2"/></p>
+<p><img class="math" src="_images/math/a2227f145eb81e38ce4678eb91d9572d137401ed.png" alt="2^1\times 3^0,~2^1\times 3^1,~2^1\times 3^2"/></p>
+<p><img class="math" src="_images/math/fb1c12cd7d67743d73ac8e28059f9739c4e1236e.png" alt="2^2\times 3^0,~2^2\times 3^1,~2^2\times 3^2"/></p>
+<p><img class="math" src="_images/math/15fc06878e64b65b8a8aed83ee342f31c19b4255.png" alt="2^3\times 3^0,~2^3\times 3^1,~2^3\times 3^2"/></p>
+<p>Thus, the total number of divisors is <img class="math" src="_images/math/4d66d1e4f050b7f8b77fd6ba4fe95982b1445d39.png" alt="(3+1)\times(2+1)=12"/>. This is denoted by the Greek letter “tau”: <img class="math" src="_images/math/39c17a257102bf21869eb2ce1019c5fb29b7adf4.png" alt="\tau(72)=12"/>.</p>
+</section>
+<section id="sum-of-divisors">
+<h3>Sum of divisors<a class="headerlink" href="#sum-of-divisors" title="Link to this heading">¶</a></h3>
+<p>The sum of the divisors is denoted by the Greek letter “sigma”.</p>
+<div class="math">
+<p><img src="_images/math/0e2ce91f012a3e3235a9a76c9e449c10f496ae29.png" alt="\sigma(72)&amp;= 2^0\times 3^0+2^0\times 3^1+2^0\times 3^2
+
+&amp;+2^1\times 3^0+2^1\times 3^1+2^1\times 3^2
+
+&amp;+2^2\times 3^0+2^2\times 3^1+2^2\times 3^2
+
+&amp;+2^3\times 3^0+2^3\times 3^1+2^3\times 3^2
+
+&amp;= \left(2^0+2^1+2^2+2^3\right)\left(3^0+3^1+3^2\right)
+
+&amp;= 15\times 13=195"/></p>
+</div><p>The summation in the last step can be done manually for small sums. When the numbers are large, one can note that each paranthesis in the penultimate step is the <a class="reference internal" href="algebraicIdentities.html#adding-geometric-series"><span class="std std-ref">summation of a geometric series</span></a>.</p>
+<p>Thus,</p>
+<div class="math">
+<p><img src="_images/math/c12d4206bcd59c731599b925344a5a7ebc507197.png" alt="\sigma(72)&amp;= \left(2^0+2^1+2^2+2^3\right)\left(3^0+3^1+3^2\right)
+
+&amp;=\left(\frac{2^4-1}{2-1}\right)\times \left(\frac{3^3-1}{3-1}\right)
+
+&amp;= 15\times 13=195"/></p>
+</div><p>Another example:</p>
+<div class="math">
+<p><img src="_images/math/94aebabe444b53ade181b232c5848427bce7817a.png" alt="540&amp;=2^2\times 3^3\times 5^1
+
+\tau(540)&amp;=(2+1)(3+1)(1+1)=24
+
+\sigma(540)&amp;=\left(\frac{2^3-1}{2-1}\right)\left(\frac{3^4-1}{3-1}\right)\left(\frac{5^2-1}{5-1}\right)=1680"/></p>
+</div></section>
+<section id="product-of-divisors">
+<h3>Product of divisors<a class="headerlink" href="#product-of-divisors" title="Link to this heading">¶</a></h3>
+<p>The product of the divisors can be obtained easily by noting that for every divisor, the number can be written as a product of the divisor and another complementary divisor. Thus, listing out the equations for all the divisors we can get the product of the divsors. See an example for the number 8 below.</p>
+<div class="math">
+<p><img src="_images/math/9116d26ae56375c4971ba5660907eb18e650bb76.png" alt="8 &amp;= 1 \times 8
+
+8 &amp;= 2 \times 4
+
+8 &amp;= 4 \times 2
+
+8 &amp;= 8 \times 1"/></p>
+</div><p>Taking the product of all the equations</p>
+<div class="math">
+<p><img src="_images/math/2a2b0ae306587b16040d475ffad28224d11c01e8.png" alt="8^4 = 8^{\tau(8)} &amp;=(1\times 2\times 4\times 8)^2
+
+&amp;= \text{Product of divisors}^2
+
+\text{Product of divisors} &amp;= \sqrt{8^4}= 64"/></p>
+</div></section>
+<section id="highest-power-of-a-number-that-divides-a-factorial">
+<h3>Highest power of a number that divides a factorial<a class="headerlink" href="#highest-power-of-a-number-that-divides-a-factorial" title="Link to this heading">¶</a></h3>
+<p>What is the highest power of 2 that divides 12!?</p>
+<p>Let us denote this by the Greek-letter “nu”: <img class="math" src="_images/math/33a639b028a088d056a1cb04bd35caa1f7ff6b47.png" alt="\nu_2(12!)"/></p>
+<p><img class="math" src="_images/math/40ebcbe6afc718ef7cf2b80ed8e3cf450d8fb4c2.png" alt="10!=1\times 2\times3\times 4\times 5\times 6\times 7\times 8\times 9\times 10\times 11\times 12"/></p>
+<p>Observe that 2, 6, and 10 contribute one power of 2 each; 4 and 12 contribute two powers of 2 each; and 8 contributes three powers of 2.</p>
+<p>A different way of counting this is as follows: 2, 4, 6, 8, 10, and 12 contribute the first power of 2 each; 4, 8, and 12 contribute a second power of 2 each; and finally 8 contributes a third power of 2. Thus, we are counting the number of multiples of 2^1, 2^2, and 2^3 in 12!.</p>
+<p><img class="math" src="_images/math/579cb7b1c88af19abf789c94e036c733b68e19b0.png" alt="\frac{12}{2}=6,~\frac{12}{4}=3,~\frac{12}{8}=1.5"/>. Thus, we throw away the fractional part and get <img class="math" src="_images/math/28231cb410c1791bcf7395669478b789ba4b6c18.png" alt="6+3+1=10"/> as the higher power of 2 that divides 12!.</p>
+<p>The “throw away the fractional part” is handled by the greatest integer function - the largest integer that is smaller than a number is the greatest integer function. We will call it the floor function and will write it as follows:</p>
+<div class="math">
+<p><img src="_images/math/d1ea4ec8630f635af3f15774737b03228ea8f2cc.png" alt="\lfloor 13.24 \rfloor &amp;= 13"/></p>
+</div><p>We won’t have to deal with negative numbers here. Nonetheless, as an example for negative numbers, <img class="math" src="_images/math/78ee57b2c8f91890389e09d8e76ab8d759d374a2.png" alt="\lfloor -13.24\rfloor=-14"/>.</p>
+<p>Thus,</p>
+<div class="math">
+<p><img src="_images/math/409e8ff5f512094837cc44969d1991d3848f355d.png" alt="\nu_2(12)&amp;=\left\lfloor \frac{12}{2^1}\right\rfloor+\left\lfloor \frac{12}{2^2}\right\rfloor+\left\lfloor \frac{12}{2^3}\right\rfloor+\left\lfloor \frac{12}{2^4}\right\rfloor+\left\lfloor \frac{12}{2^5}\right\rfloor + ...
+
+&amp;=6+3+1+0+0+... = 10"/></p>
+</div><p>In the above example, we were looking for the highest power of a prime number. What if one wants the highest power of a number that is the product of prime numbers?</p>
+<p>What is <img class="math" src="_images/math/5f946014996a3315f9a4a99d33b7834425a3547d.png" alt="\nu_{42}(100!)"/> ?</p>
+<p>The prime factorization of 42 is <img class="math" src="_images/math/7963c7b47036a6b93b6c1bb0706a4cc7f74246d5.png" alt="2^1\times 3^1\times 7^1"/>. Note that we are restricting ourselves to the case where the highest power of any prime in the prime factorization is 1. Each power of 42 in 100! will come from one 2, one 3, and one 7. Moreover, powers of 2 will be more frequent than powers of 3 which, in turn, will be more frequent than powers of 7. Thus, we only need to find the highest power of 7 that divides 100!.</p>
+<div class="math">
+<p><img src="_images/math/561b321f92f6739ddb707b4c5c84248df1ec89c8.png" alt="\nu_{42}(100)= \nu_{7}(100) = \left\lfloor \frac{100}{7} \right\rfloor + \left\lfloor \frac{100}{7^2} \right\rfloor = 14 + 2 = 16"/></p>
+</div><p>Powers of 7 greater than 2 are larger than 100. Thus, the floor functions for those powers are 0.</p>
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Prime Factorization and Divisors of numbers</a><ul>
+<li><a class="reference internal" href="#prime-factorization">Prime Factorization</a></li>
+<li><a class="reference internal" href="#gcd-and-lcm">GCD and LCM</a></li>
+<li><a class="reference internal" href="#divisors">Divisors</a><ul>
+<li><a class="reference internal" href="#number-of-divisors">Number of divisors</a></li>
+<li><a class="reference internal" href="#sum-of-divisors">Sum of divisors</a></li>
+<li><a class="reference internal" href="#product-of-divisors">Product of divisors</a></li>
+<li><a class="reference internal" href="#highest-power-of-a-number-that-divides-a-factorial">Highest power of a number that divides a factorial</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="modularArithmetic.html"
+                          title="previous chapter">Modular Arithmetic</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="congruences.html"
+                          title="next chapter">Congruences</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/divisors.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="congruences.html" title="Congruences"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="modularArithmetic.html" title="Modular Arithmetic"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Math Notes  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="numberTheory.html" >Number Theory</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Prime Factorization and Divisors of numbers</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2024, Amit Itagi.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>

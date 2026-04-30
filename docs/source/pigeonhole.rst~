@@ -1,0 +1,149 @@
+
+Inclusion-Exclusion Principle
+======================================
+
+Basic Set Theory
+-----------------
+
+Consider a set U of the first 100 positive integers. Let A be the subset of U that contains the numbers that are divisible by 2, B the subset of U that contains the numbers that are divisible by 3, and C the subset of U that contains the numbers that are divisible by 5.
+
+The subset of U that contains the elements of set U that do not belong to A is called the complement of set A with respect to set U and is denoted by :math:`A'`. In this case, the complement of A contains the odd numbers in the first 100 positive integers.
+
+The set of numbers that are either in set A, or in set B, or in both is called the union of sets A and B and is denoted by :math:`A\cup B`. This set contains numbers that are divisible by 2, 3, or both.
+
+The set of numbers that are in both sets A and B is called the intersection of sets A and B and is denoted by :math:`A\cap B`. This set contains numbers that are divisible by both 2 and 3 i.e. the numbers divisible by 6.
+
+While considering such problems, a Venn diagram is very useful. The images below show the different regions in the Venn diagram in green.
+
+:math:`A\cap B`
+
+.. image:: tripleAintB.png
+  :width: 225
+
+:math:`B\cap C`
+
+.. image:: tripleBintC.png
+  :width: 225
+
+:math:`C\cap A`
+
+.. image:: tripleAintC.png
+  :width: 225
+
+:math:`A\cap B\cap C`
+
+.. image:: tripleIntersection.png
+  :width: 225
+
+:math:`A\cup B\cup C`
+
+.. image:: tripleUnion.png
+  :width: 225
+	  
+:math:`\left(A\cup B\cup C\right)'`
+
+.. image:: tripleComplement.png
+  :width: 225
+
+When the number of sets grow, it is difficult to label the different regions. One could use the following scheme shown for three sets.
+
+.. image:: VennDiagram.png
+  :width: 250
+  :alt: Venn diagram with three sets
+
+The different regions are labelled by three digit numbers consisting of base 2 i.e. only two symbols 0 or 1. The leftmost digit indicates whether the region is a part of set A. The middle digit indicates whether the region is a part of set B, and finally the rightmost digit indicates whether the region is a part of set C.
+
+Thus, :math:`A\cap B` consists of regions whose first two digits are 1 and :math:`A\cup B` consists of regions where either one or two of the first two digits are 1.
+
+The union of A, B, and C - :math:`A\cup B\cup C` consists of regions where at least one of the three digits is 1. The intersection of A, B, and C - :math:`A\cap B\cap C` consists of the single region where all three digits are 1.
+
+Finally, the region which is in none of the sets A, B, and C is indicated by 000. This is the complement of the union of the three sets.
+
+
+Counting by including and excluding
+-------------------------------------
+
+Let the number of elements of a set :math:`S` is denoted by :math:`\#S`. This is also called the cardinality of set :math:`S`.
+
+Clearly, :math:`\#A'=\#U-\#A`. This is complementary counting. This applies in general. So :math:`\#(A\cup B\cup C)'=\#U-\#(A\cup B\cup C)`. We will use this concept in problems called "derangements".
+
+In the following discussion, we will keep referring to the above Venn diagram with the base 2 or binary digits. For convenience, we replicate the image below. The following results can be verified from the diagram.
+
+.. math::
+
+   \#A &= \#100 + \#101 + \#110 + \#111
+
+   \#B &= \#010 + \#011 + \#110 + \#111
+    
+   \#(A\cup B) &= \#010 + \#011 + \#100 + \#101 + \#110 + \#111
+
+   \#(A\cap B) &= \#110 + \#111 
+ 
+
+.. image:: VennDiagram.png
+  :width: 250
+
+
+With the intention of computing :math:`\#(A\cup B)`, suppose we just add :math:`\#A` and :math:`\#B`, then we would have included the 110 and 111 regions twice. Thus, we need to subtract these regions once. However, these two regions make up :math:`A\cap B`. Hence,
+
+:math:`\#(A\cup B)=\#A+\#B-\#(A\cap B)`.
+
+This is a simple example of counting by including and excluding regions.
+	  
+=================================================
+
+If we were to extend this logic to compute :math:`\#(A\cup B\cup C)`, we would add the number of elements in the three sets and then subtract the two-way intersection counts i.e.
+
+:math:`\#A+\#B+\#C-\#(A\cap B)-\#(B\cap C)-\#(C\cap A)`,
+
+the regions 110, 101, and 011 would get added in twice and subtracted off once as in the two set case. However, the region 111 would get added in thrice and subtracted off thrice. Hence, we need to add it back once. Region 111 is :math:`A\cap B\cap C`. Therefore,
+
+.. math::
+
+   \#(A\cup B\cup C)=&\#A+\#B+\#C
+
+   &-\#(A\cap B)-\#(B\cap C)-\#(C\cap A)
+
+   &+\#(A\cap B\cap C)
+
+This logic can be extended to 4 sets, 5 sets and so on. The pattern is to include the sets, exclude the double intersections, include the triple intersections, exclude the quadruple intersections, and so on.
+
+=================================================
+
+Note that if there is no overlap between the sets, the sets are called "disjoint" or "mutually exclusive". In this case, all the intersections have cardinality 0 and we are back to the addition principle:
+
+:math:`\#(A\cup B\cup C)=\#A + \#B + \#C`.
+
+.. image:: disjointSets.png
+  :width: 225
+
+=================================================
+
+Derangements
+--------------
+
+Example: There are 4 students with 4 assigned seats. In how many ways can the students sit on the 4 seats such that no student sits on his/her assigned seat.
+
+Let U be the set of all configurations (ignoring any seat assignment constraints). Let A be the set of configurations where the first student is sitting on the assigned seat, B be the set of configurations where the second student is sitting on the assigned seat, and so on. :math:`A\cap B` will be the set of configurations where both of the first two students are sitting on their assigned seats.
+
+The number we are looking for is :math:`\#U-\#(A\cup B\cup C\cup D)`.
+
+The problem is symmetric in the four students. Hence,
+
+:math:`\#A=\#B=\#C=\#D=3!`, :math:`\#(A\cap B)=\#(A\cap C)=\#(A\cap D)=\#(B\cap C)=...=2!`, and so on. Note, if A is sitting on the assigned seat, the other three students can be shuffled in P(3,3)=3! ways. If A and B are sitting on their assigned seats, the other two students can be shuffled in P(2,2)=2! ways.
+
+Hence,
+
+.. math::
+
+   \#(A\cup B \cup C \cup D)&=C(4,1)\#A - C(4,2)\#(A\cap B)
+
+   &+ C(4,3)\#(A\cap B\cap C) - C(4,4)\#(A\cap B\cap C\cap D)
+
+   &=4\times 3!- 6\times 2! + 4\times 1 - 1=15
+
+.. math::
+   
+   \#U-&\#(A\cup B\cup C\cup D)=P(4,4)-15=4!-15=9
+
+

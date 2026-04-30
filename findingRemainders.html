@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Finding Remainders &#8212; Math Notes  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=2bf1fcf8" />
+    
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Euler and Wilson’s Theorems" href="eulerWilsonThms.html" />
+    <link rel="prev" title="Congruences" href="congruences.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="eulerWilsonThms.html" title="Euler and Wilson’s Theorems"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="congruences.html" title="Congruences"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Math Notes  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="numberTheory.html" accesskey="U">Number Theory</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Finding Remainders</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="finding-remainders">
+<h1>Finding Remainders<a class="headerlink" href="#finding-remainders" title="Link to this heading">¶</a></h1>
+<p>Here we discuss the following type of questions:</p>
+<p>What is the remainder when <img class="math" src="_images/math/bf07c29429667430a42a8f4065a3fc0f543e28b6.png" alt="3^{231}"/> is divided by <img class="math" src="_images/math/dde4a4d9663576559438acefb8f9901053e6bd3b.png" alt="17"/>?</p>
+<p>What is the last digit of <img class="math" src="_images/math/5babf628ce10e59396243dfbd5f211a265894b74.png" alt="29^{51}"/>? This is same as finding the remainder of the number when divided by 10.</p>
+<p>What is the last two digits of <img class="math" src="_images/math/5babf628ce10e59396243dfbd5f211a265894b74.png" alt="29^{51}"/>? This is same as finding the remainder of the number when divided by 100.</p>
+<p>The basic method to answer these questions is to use the modular arithmeic/congruences background that we have already developed. Later on, we will look at a couple of theorems that can be powerful tools.</p>
+<hr class="docutils" />
+<p>Finding last digits</p>
+<div class="math">
+<p><img src="_images/math/efaf7217c354347f3e727657789fe712f832b45f.png" alt="2^1 &amp;\equiv 2~(mod~10)
+
+2^2 &amp;\equiv (2)(2) \equiv 4 ~(mod~10)
+
+2^3 &amp;\equiv (4)(2) \equiv 8 \equiv -2 ~(mod~10)
+
+2^4 &amp;\equiv (-2)(2)\equiv -4 \equiv 6 ~(mod~10)
+
+2^5 &amp;\equiv (-4)(2)\equiv -8\equiv 2 \equiv 2^1 ~(mod~10)"/></p>
+</div><p>The cycle repeats with periodicity of 4 in the powers.</p>
+<p>Hence, the problem is more about finding the remainder when the power is divided by 4.</p>
+<hr class="docutils" />
+<p>For example, find the last digit of <img class="math" src="_images/math/554e79603357af299e38327ec95b53e95428b22b.png" alt="2^{1172719191911919}"/></p>
+<div class="math">
+<p><img src="_images/math/a90a70a35cc83005de61492798563a30edfcf52e.png" alt="1172719191911919 &amp;\equiv (11727191919119\times 100 + 19)\equiv (0 + 19)\equiv 19 \equiv 3~(mod~4)
+
+&amp;\implies 2^{1172719191911919} \equiv 2^3 \equiv 8~(mod~10)"/></p>
+</div><hr class="docutils" />
+<p>Find the remainder when <img class="math" src="_images/math/f94aef0916ec41e31c5b7a15851740f1738530fe.png" alt="13^{10023}"/> is divided by <img class="math" src="_images/math/d4b0d452d2c7a8434cf3308e1585ede3ede48e61.png" alt="15"/>.</p>
+<div class="math">
+<p><img src="_images/math/429f0b1ad038b2ece679ef9d58839d2c90d0624d.png" alt="13^{10023} &amp;\equiv (-2)^{10023}~(mod~15)
+
+&amp;~
+
+(-2)^4 &amp;\equiv 16 \equiv 1~(mod~15)
+
+&amp;~
+
+10023 &amp;\equiv 23~(mod~4) \equiv 3~(mod~4)"/></p>
+</div><div class="math">
+<p><img src="_images/math/0d8abc6352889b9572a75073e90b176524f7f4a0.png" alt="\text{Hence, $(-2)^{10023}\equiv (1)(-2)^3\equiv -8~(mod~15)$}"/></p>
+</div><div class="math">
+<p><img src="_images/math/662ce16a5daf56c0c0418b5cde7f7918a6a190a6.png" alt="13^{10023} \equiv -8~(mod~15) \equiv 7~(mod~15)"/></p>
+</div><hr class="docutils" />
+<p>Find the last two digits of <img class="math" src="_images/math/b0b7775049c7d22d3aa7677171d9a801b50df857.png" alt="7^{47}"/></p>
+<p>Some observations:</p>
+<div class="math">
+<p><img src="_images/math/cfc41978ed27ed9dadf9d41bf9bee0568e26720a.png" alt="&amp; 100 = 2^2 \times 5^2 = 4\times 25.~ \text{gcd($4$, $25$)=$1$}
+
+&amp; x\equiv y~(mod~100)\implies (x-y)\equiv 0~(mod~100)\implies (x-y)\equiv 0~(mod~4)~\text{and}~(x-y)\equiv 0~(mod~25)
+
+&amp;\implies x\equiv y~(mod~4)~\text{and}~x\equiv y~(mod~25)"/></p>
+</div><p>From the section on congruences, we know how to solve such systems of congruences. If a solution exists (which we know exists for our problem), then the solution will be unique modulo <img class="math" src="_images/math/db7253ee0dfdef39b9a7ed0ff3b99246c0fc5f84.png" alt="\text{lcm}(4,25)=100"/> which is what we want for the last two digits.</p>
+<div class="math">
+<p><img src="_images/math/b60ca84b7745a50ccd0ccbcd117a665efd2b4955.png" alt="7^{47} &amp;\equiv (-1)^{47} \equiv -1 \equiv 3~(mod~4)
+
+&amp; ~
+
+7^2 &amp;\equiv 49 \equiv -1~(mod~25) \implies 7^{47} \equiv \left(7^2\right)^{23}(7)\equiv (-1)^{23}(7)\equiv -7\equiv 18 ~(mod~25)"/></p>
+</div><p>We need to now solve the following system:</p>
+<div class="math">
+<p><img src="_images/math/2dd598b8226cb24b717e644e9fbcf406afbb5da7.png" alt="x &amp;\equiv 3~(mod~4)
+
+x &amp;\equiv 18~(mod~25)"/></p>
+</div><p>The solutions to the second congruence modulo 100 are <img class="math" src="_images/math/4631e3ef629433cc856ef227a759359ee8b71fc3.png" alt="18,~43,~68,~93"/>. Not surprisingly, there are 4 solutions with different residues modulo 4.</p>
+<p>The one that satisfies the first congruence is <img class="math" src="_images/math/3e8d793ecd2683e70828a6534f141e68a4cc378e.png" alt="43"/>.</p>
+<p>Hence, <img class="math" src="_images/math/4d67d8c1d8cb8fb63dea3f2c40284ddf9b5866dc.png" alt="7^{47}\equiv x\equiv 43~(mod~100)"/></p>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="congruences.html"
+                          title="previous chapter">Congruences</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="eulerWilsonThms.html"
+                          title="next chapter">Euler and Wilson’s Theorems</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/findingRemainders.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="eulerWilsonThms.html" title="Euler and Wilson’s Theorems"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="congruences.html" title="Congruences"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Math Notes  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="numberTheory.html" >Number Theory</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Finding Remainders</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2024, Amit Itagi.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>

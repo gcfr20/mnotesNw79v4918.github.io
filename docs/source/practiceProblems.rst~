@@ -1,0 +1,425 @@
+Practice Problems
+===============================
+
+P 1
+
+.. image:: practice_problems/prob1.png
+  :width: 800
+
+P 2
+
+.. image:: practice_problems/prob2.png
+  :width: 800
+
+P 3
+
+.. image:: practice_problems/prob3.png
+  :width: 800
+
+P 4
+
+.. image:: practice_problems/prob4.png
+  :width: 800
+
+P 5
+
+.. image:: practice_problems/prob5.png
+  :width: 800
+
+P 6
+
+.. image:: practice_problems/prob6.png
+  :width: 800
+
+P 7
+
+.. image:: practice_problems/prob7.png
+  :width: 800
+
+P 8
+
+.. image:: practice_problems/prob8.png
+  :width: 800
+
+P 9
+
+.. image:: practice_problems/prob9.png
+  :width: 800
+
+P 10
+
+.. image:: practice_problems/prob10.png
+  :width: 800
+
+P 11
+
+.. image:: practice_problems/prob11.png
+  :width: 800
+
+P 12
+
+.. image:: practice_problems/prob12.png
+  :width: 800
+
+P 13
+
+.. image:: practice_problems/prob13.png
+  :width: 800
+
+P 14
+
+.. image:: practice_problems/prob14.png
+  :width: 800
+
+P 15
+
+.. image:: practice_problems/prob15.png
+  :width: 800
+
+P 16
+
+.. image:: practice_problems/prob16.png
+  :width: 800
+
+P 17
+
+.. image:: practice_problems/prob17.png
+  :width: 800
+
+P 18
+
+.. image:: practice_problems/prob18.png
+  :width: 800
+
+P 19
+
+.. image:: practice_problems/prob19.png
+  :width: 800
+
+P 20
+
+.. image:: practice_problems/prob20.png
+  :width: 800
+
+P 21
+
+.. image:: practice_problems/prob21.png
+  :width: 800
+
+P 22
+
+.. image:: practice_problems/prob22.png
+  :width: 800
+
+P 23
+
+.. image:: practice_problems/prob23.png
+  :width: 800
+
+P 24
+
+.. image:: practice_problems/prob24.png
+  :width: 800
+
+P 25
+
+.. image:: practice_problems/prob25.png
+  :width: 800
+
+P 26
+
+.. image:: practice_problems/prob26.png
+  :width: 800
+
+P 27
+
+.. image:: practice_problems/prob27.png
+  :width: 800
+
+P 28
+
+.. image:: practice_problems/prob28.png
+  :width: 800
+
+P 29
+
+.. image:: practice_problems/prob29.png
+  :width: 800
+
+P 30
+
+.. image:: practice_problems/prob30.png
+  :width: 800
+
+P 31
+
+.. image:: practice_problems/prob31.png
+  :width: 800
+
+P 32
+
+.. image:: practice_problems/prob32.png
+  :width: 800
+
+P 33
+
+.. image:: practice_problems/prob33.png
+  :width: 800
+
+P 34
+
+.. image:: practice_problems/prob34.png
+  :width: 800
+
+P 35
+
+.. image:: practice_problems/prob35.png
+  :width: 800
+
+P 36
+
+.. image:: practice_problems/prob36.png
+  :width: 800
+
+P 37
+
+.. image:: practice_problems/prob37.png
+  :width: 800
+
+P 38
+
+.. image:: practice_problems/prob38.png
+  :width: 800
+
+P 39
+
+.. image:: practice_problems/prob39.png
+  :width: 800
+
+P 40
+
+.. image:: practice_problems/prob40.png
+  :width: 800
+
+P 41
+
+.. image:: practice_problems/prob41.png
+  :width: 800
+
+P 42
+
+.. image:: practice_problems/prob42.png
+  :width: 800
+
+P 43
+
+.. image:: practice_problems/prob43.png
+  :width: 800
+
+P 44
+
+.. image:: practice_problems/prob44.png
+  :width: 800
+
+P 45
+
+.. image:: practice_problems/prob45.png
+  :width: 800
+
+P 46
+
+.. image:: practice_problems/prob46.png
+  :width: 800
+
+P 47
+
+.. image:: practice_problems/prob47.png
+  :width: 800
+
+P 48
+
+.. image:: practice_problems/prob48.png
+  :width: 800
+
+P 49
+
+.. image:: practice_problems/prob49.png
+  :width: 800
+
+P 50
+
+.. image:: practice_problems/prob50.png
+  :width: 800
+
+P 51
+
+.. image:: practice_problems/prob51.png
+  :width: 800
+
+P 52
+
+.. image:: practice_problems/prob52.png
+  :width: 800
+
+P 53
+
+.. image:: practice_problems/prob53.png
+  :width: 800
+
+P 54
+
+.. image:: practice_problems/prob54.png
+  :width: 800
+
+P 55
+
+.. image:: practice_problems/prob55.png
+  :width: 800
+
+P 56
+
+.. image:: practice_problems/prob56.png
+  :width: 800
+
+P 57
+
+.. image:: practice_problems/prob57.png
+  :width: 800
+
+P 58
+
+.. image:: practice_problems/prob58.png
+  :width: 800
+
+P 59
+
+.. image:: practice_problems/prob59.png
+  :width: 800
+
+P 60
+
+.. image:: practice_problems/prob60.png
+  :width: 800
+
+P 61
+
+.. image:: practice_problems/prob61.png
+  :width: 800
+
+P 62
+
+.. image:: practice_problems/prob62.png
+  :width: 800
+
+P 63
+
+.. image:: practice_problems/prob63.png
+  :width: 800
+
+P 64
+
+.. image:: practice_problems/prob64.png
+  :width: 800
+
+P 65
+
+.. image:: practice_problems/prob65.png
+  :width: 800
+
+P 66
+
+.. image:: practice_problems/prob66.png
+  :width: 800
+
+P 67
+
+.. image:: practice_problems/prob67.png
+  :width: 800
+
+P 68
+
+.. image:: practice_problems/prob68.png
+  :width: 800
+
+P 69
+
+.. image:: practice_problems/prob69.png
+  :width: 800
+
+P 70
+
+.. image:: practice_problems/prob70.png
+  :width: 800
+
+P 71
+
+.. image:: practice_problems/prob71.png
+  :width: 800
+
+P 72
+
+.. image:: practice_problems/prob72.png
+  :width: 800
+
+P 73
+
+.. image:: practice_problems/prob73.png
+  :width: 800
+
+P 74
+
+.. image:: practice_problems/prob74.png
+  :width: 800
+
+P 75
+
+.. image:: practice_problems/prob75.png
+  :width: 800
+
+P 76
+
+.. image:: practice_problems/prob76.png
+  :width: 800
+
+P 77
+
+.. image:: practice_problems/prob77.png
+  :width: 800
+
+P 78
+
+.. image:: practice_problems/prob78.png
+  :width: 800
+
+P 79
+
+.. image:: practice_problems/prob79.png
+  :width: 800
+
+P 80
+
+.. image:: practice_problems/prob80.png
+  :width: 800
+
+P 81
+
+.. image:: practice_problems/prob81.png
+  :width: 800
+
+P 82
+
+.. image:: practice_problems/prob82.png
+  :width: 800
+
+P 83
+
+.. image:: practice_problems/prob83.png
+  :width: 800
+
+P 84
+
+.. image:: practice_problems/prob84.png
+  :width: 800
+
+
+

@@ -1,0 +1,72 @@
+
+Arithmetic, geometric, and harmonic means
+===========================================
+
+Terms are in harmonic progression if their reciprocals are in arithmetic progression.
+
+Almost all harmonic progression problems are solved by studying the arithmetic progression of the reciprocals.
+
+Arithmetic mean
+---------------------
+
+.. math::
+
+   \frac{a+b}{2},~\frac{a+b+c}{3},~\frac{a+b+c+d}{4}
+
+Geometric mean
+-----------------
+
+.. math::
+
+   (ab)^{\frac{1}{2}},~&(abc)^{\frac{1}{3}},~(abcd)^{\frac{1}{4}}
+
+   &\text{or}
+
+   \sqrt{ab},~&\sqrt[3]{abc},~\sqrt[4]{abcd}
+
+  
+Harmonic mean
+-----------------
+
+.. math::
+
+   \frac{2}{\frac{1}{a}+\frac{1}{b}},~\frac{3}{\frac{1}{a}+\frac{1}{b}+\frac{1}{c}},~\frac{4}{\frac{1}{a}+\frac{1}{b}+\frac{1}{c}+\frac{1}{d}}
+
+Inequalities
+--------------
+
+For positive real numbers only:
+
+.. math::
+
+   AM \geq GM \geq HM
+
+The equalities happen when the numbers whose mean is being taken are equal
+
+AM-HM looks like
+
+.. math::
+
+   &\left(a+b\right)\left(\frac{1}{a}+\frac{1}{b}\right)\geq 4
+
+   &\left(a+b+c\right)\left(\frac{1}{a}+\frac{1}{b}+\frac{1}{c}\right)\geq 9
+
+AM-GM looks like
+
+.. math::
+
+   &\frac{a+b}{2}\geq \sqrt{ab}
+
+   &\frac{a+b+c}{3}\geq \sqrt[3]{abc}
+
+Applications
+--------------
+
+For any two variables :math:`a` and :math:`b`, when the sum is fixed, the product is maximum when :math:`a=b`; when the product is fixed, the sum is minimum when :math:`a=b`.
+
+
+For a rectangle, the area is the product of the sides and the perimeter scales as the sum of the sides. Thus, for a fixed perimeter, the area is maximum when the rectangle is a square. For a fixed ares, the perimeter is minimum when the rectangle is a square.
+
+
+
+   

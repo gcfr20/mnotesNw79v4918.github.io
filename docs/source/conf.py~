@@ -18,8 +18,8 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Math Notes'
-copyright = '2024, AI'
-author = 'AI'
+copyright = '2024, Amit Itagi'
+author = 'Amit Itagi'
 
 
 # -- General configuration ---------------------------------------------------
@@ -30,7 +30,6 @@ author = 'AI'
 extensions = [
     'sphinx.ext.imgmath',
     'sphinx.ext.autosectionlabel',
-    'sphinx.ext.githubpages',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -55,11 +54,3 @@ html_theme = 'classic'
 html_static_path = ['_static']
 
 autosectionlabel_prefix_document = True
-
-from sphinx.builders.html import StandaloneHTMLBuilder
-StandaloneHTMLBuilder.supported_image_types = [
-    'image/gif',
-    'image/svg+xml',
-    'image/png',
-    'image/jpeg'
-]

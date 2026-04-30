@@ -1,0 +1,40 @@
+
+Angles in a polygon
+======================================
+
+Convex polygons in a plane
+------------------------------
+
+.. image:: geom_figs/polygon_angles/convex_exterior.png
+  :width: 400
+
+.. image:: geom_figs/polygon_angles/convex_interior_with_center.png
+  :width: 400
+
+.. image:: geom_figs/polygon_angles/convex_interior_wo_center.png
+  :width: 400
+
+
+Non-convex polygons in a plane
+---------------------------------
+
+.. image:: geom_figs/polygon_angles/non_convex_interior_basic.png
+  :width: 400
+
+.. image:: geom_figs/polygon_angles/non_convex_interior.png
+  :width: 400
+
+Stars
+---------------------------------
+
+.. image:: geom_figs/polygon_angles/star_exterior.png
+  :width: 400
+
+.. image:: geom_figs/polygon_angles/star_problem.png
+  :width: 400
+
+Convex polygons on polyhedra
+-------------------------------
+
+.. image:: geom_figs/polygon_angles/polygon_on_cube.png
+  :width: 400

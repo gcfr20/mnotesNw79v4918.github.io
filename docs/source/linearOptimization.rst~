@@ -1,0 +1,41 @@
+
+Linear Function
+======================================
+
+Line trough two points
+-------------------------
+
+Given two non-coincident points :math:`(x_1,y_1)` and :math:`(x_2,y_2)`, find the equation of the line through the two points.
+
+If :math:`x_1=x_2`, then the equation is :math:`x=x_1`.
+
+Else, if :math:`y_1=y_2`, then the equation is :math:`y=y_1`.
+
+In the general case, where neither of the above two special cases are true, the equation of the line through the points is given by
+
+.. math::
+
+   \frac{y-y_1}{y_2-y_1}=\frac{x-x_1}{x_2-x_1}
+
+Basically, the slope between :math:`(x_1,y_1)` and an arbitrary point on the line :math:`(x,y)` has to be equal to the slope between :math:`(x_1,y_1)` and :math:`(x_2,y_2)`.
+
+
+Linear inequality
+-----------------------
+
+Consider an inequality of the form :math:`4x+3y>12`.
+
+.. image:: geom_figs/coord_geom/lin_ineq.png
+  :width: 500
+
+The straight line :math:`4x+3y=12` divides the XY plane into two regions, one where :math:`4x+3y<12` and the other where :math:`4x+3y>12`.
+
+
+
+
+
+Maximization/Minimization
+---------------------------
+
+    
+   

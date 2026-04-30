@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Euler and Wilson’s Theorems &#8212; Math Notes  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=2bf1fcf8" />
+    
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Background (Advanced Math Concepts)" href="eulerWilsonBackground.html" />
+    <link rel="prev" title="Finding Remainders" href="findingRemainders.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="eulerWilsonBackground.html" title="Background (Advanced Math Concepts)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="findingRemainders.html" title="Finding Remainders"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Math Notes  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="numberTheory.html" accesskey="U">Number Theory</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Euler and Wilson’s Theorems</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="euler-and-wilson-s-theorems">
+<h1>Euler and Wilson’s Theorems<a class="headerlink" href="#euler-and-wilson-s-theorems" title="Link to this heading">¶</a></h1>
+<section id="euler-s-phi-function-or-euler-s-totient-function">
+<h2>Euler’s phi function or Euler’s totient function<a class="headerlink" href="#euler-s-phi-function-or-euler-s-totient-function" title="Link to this heading">¶</a></h2>
+<p>Consider a positive integral power of a prime number, for example, <img class="math" src="_images/math/565821512933f6b214638c38b75853e0302979b9.png" alt="2^4"/>.</p>
+<p><strong>How many numbers smaller than this number are relatively prime to this number?</strong></p>
+<p>x and y are relatively prime or coprime when <img class="math" src="_images/math/2cfcfc0cee7083a6401b55ba0f6251f9a84d9b23.png" alt="gcd(x,y)=1"/>.</p>
+<p>This number is called the Euler’s phi function or Euler’s totient function and is denoted by the Greek letter “phi”: <img class="math" src="_images/math/ab6bd36d1616bc3c3e4e23d09fa4afed51da722c.png" alt="\varphi\left(2^4\right)"/>.</p>
+<p>Clearly, any number that divisible by 2 will have 2 as a common factor with <img class="math" src="_images/math/565821512933f6b214638c38b75853e0302979b9.png" alt="2^4"/>. There are <img class="math" src="_images/math/8faa560f737f7c65fcdf349055e088c853143b14.png" alt="\frac{2^4}{2}=2^3"/> such numbers smaller than or equal to <img class="math" src="_images/math/565821512933f6b214638c38b75853e0302979b9.png" alt="2^4"/>. All other numbers will be relatively prime to <img class="math" src="_images/math/565821512933f6b214638c38b75853e0302979b9.png" alt="2^4"/>.</p>
+<p>Hence, <img class="math" src="_images/math/89526de48ccce9aa9e5c993c9803b28247f1ee03.png" alt="\varphi\left(2^4\right)=2^4-2^3=8"/>.</p>
+<p>Thus, for any prime p and positive integer k, <img class="math" src="_images/math/7d08887717505ada9f4d9793748b2c5ea13dac4d.png" alt="\varphi\left(p^k\right)=p^k-p^{k-1}"/>.</p>
+<p>As a special case, for any prime p, <img class="math" src="_images/math/0163af03b05813dcd5bc9ffb7744fda1fca931ac.png" alt="\varphi(p)=p-1"/>.</p>
+<p>The Euler’s phi function is a multiplicative function (stated here without proof). <strong>If a and b are relatively prime</strong>, then <img class="math" src="_images/math/66d0595227069bd0f2f4720d6558431a696c156e.png" alt="\varphi(ab)=\varphi(a)\varphi(b)"/>. This can be recursively extended to more than two numbers. For example, if a, b, and c are pairwise relatively prime, then <img class="math" src="_images/math/af404d537e49524418084b778f9d397a9aa01493.png" alt="\varphi(abc)=\varphi(a)\varphi(b)\varphi(c)"/>.</p>
+<p>Hence,</p>
+<div class="math">
+<p><img src="_images/math/56bd856462d00715215ab37949b42d48b080ccb6.png" alt="&amp; 100 = (2^2)(5^2)
+
+&amp; \varphi(100)=\varphi\left(2^2\right)\varphi\left(5^2\right) =\left(2^2-2^1\right)\left(5^2-5^1\right)=(2)(20)=40
+
+&amp; ~
+
+&amp; 1260 = (2^2)(3^2)(5^1)(7^1)
+
+&amp; \varphi(1260)=\left(2^2-2^1\right)\left(3^2-3^1\right)(5-1)(7-1)=(2)(6)(4)(6)=288"/></p>
+</div><p>We now state two theorems without proofs. A link is presented at the end of this section for some background which is advanced and can be skipped for most applications.</p>
+</section>
+<section id="euler-s-theorem">
+<h2>Euler’s Theorem<a class="headerlink" href="#euler-s-theorem" title="Link to this heading">¶</a></h2>
+<p><strong>If a and n are relatively prime</strong>, then <img class="math" src="_images/math/f33bc658862bcf3fa610898cdaad353c59557047.png" alt="a^{\varphi(n)}\equiv~1~(mod~n)"/>
+.</p>
+<p>Example: <img class="math" src="_images/math/98563424ec48ea3b7ccc6cc254a736d22aaf213c.png" alt="41^{\varphi(100)}\equiv 41^{40}\equiv 1~(mod~100)"/></p>
+<p>Note: <img class="math" src="_images/math/34252f0c32b8d73e84fa24afc5a64d1711729328.png" alt="2^{\varphi(100)}\equiv 2^{40} \equiv 76\neq 1~(mod~100)"/>. This does not contradict Euler’s theorem because 2 and 100 are not relatively prime.</p>
+<p>The special case of Euler’s theorem when n is a prime is called Fermat’s little theorem.</p>
+<p>Euler’s theorem is a useful tool while finding remainders.</p>
+<hr class="docutils" />
+<p>For example, what are the last two digits of <img class="math" src="_images/math/82ecf39f68492144d1832506d0b8fb76d9ac5359.png" alt="7^{162}"/>?</p>
+<div class="math">
+<p><img src="_images/math/1ef37b047ea187168a355051c8d9ec37c4713864.png" alt="&amp; gcd(7,100) = 1,~\varphi(100)=40
+
+&amp; 7^{162}\equiv \left(7^{40}\right)^4 \left(7^2\right)\equiv (1)(49)\equiv 49~(mod~100)"/></p>
+</div><hr class="docutils" />
+<p>What are the last two digits of <img class="math" src="_images/math/55e41498d9dfe9534939a50242ab928c304e29ee.png" alt="7^{158}"/>?</p>
+<p>Let <img class="math" src="_images/math/41fd5f350dc3352c00bc98c18ce529535fab9898.png" alt="7^{158}\equiv x~(mod~100)"/>.</p>
+<div class="math">
+<p><img src="_images/math/6bb5db3194e0de819ee293bb69f40e69d870747a.png" alt="&amp; 7^{160}\equiv \left(7^{40}\right)^4\equiv 1~(mod~100)~\text{(Euler)}
+
+&amp; 7^{160}\equiv \left(7^{158}\right)\left(7^2\right)\equiv 1~mod~(100)
+
+&amp; 49x\equiv 1~mod~(100)
+
+&amp; 100=4\times 25,~gcd(4,25)=1
+
+&amp; \text{Hence, } 49x\equiv 1~(mod~4)~\text{and}~49x\equiv 1~(mod~25)
+
+&amp; 49x\equiv (1)x\equiv x\equiv 1~(mod~4)
+
+&amp; 49x\equiv (-1)x\equiv -x\equiv 1~(mod~25)\implies x\equiv -1\equiv 24~(mod~25)"/></p>
+</div><p>Thus, we need solution of the system <img class="math" src="_images/math/24ee8f8c7b8d6e4389db8e8e944907c1f135bf90.png" alt="x\equiv 1~(mod~4),~x\equiv 24~(mod~25)"/> resulting in a unique residue modulo 100.</p>
+<p>The second congruence short-lists the following residues modulo 100: 24, 49, 74, 99. The one that satisfies the first congruence is 49.</p>
+</section>
+<hr class="docutils" />
+<section id="wilson-s-theorem">
+<h2>Wilson’s Theorem<a class="headerlink" href="#wilson-s-theorem" title="Link to this heading">¶</a></h2>
+<p><strong>If p is a prime greater than 2</strong>, then <img class="math" src="_images/math/d94aad9a4183befddfc462638cde25005677490f.png" alt="(p-2)!\equiv 1~(mod~p)"/>.</p>
+<p>For any number n, <img class="math" src="_images/math/bf001d4d566caac35bc4b1139a50d36a9616ad69.png" alt="(n-1)\equiv -1~(mod~n)"/>. Thus, Wilson’s theorem can also be written as</p>
+<div class="math">
+<p><img src="_images/math/e3d2de5d3cdf7cb8bea147da2d23628080ef3ed7.png" alt="(p-1)!\equiv (p-2)!\times(p-1)\equiv (1)(-1)\equiv -1~(mod~p)"/></p>
+</div><hr class="docutils" />
+<p>Example: <img class="math" src="_images/math/d2a9950c5c6ca403d28f326bcad19ad655541efd.png" alt="15!\equiv 1~(mod~17),~16!\equiv -1~(mod~17)"/></p>
+<hr class="docutils" />
+<p>What is the remainder when <img class="math" src="_images/math/90ddcca1aa2b4225585982724ab986627f21eecc.png" alt="13!"/> is divided by 17?</p>
+<p>Let <img class="math" src="_images/math/544321986ea36e546954cd2fa28f8883f7f29d56.png" alt="13!\equiv x~(mod~17)"/>.</p>
+<div class="math">
+<p><img src="_images/math/087e0015fd819f514038aa69e91037a4fe308b34.png" alt="&amp; 15!\equiv 1~(mod~17)~\text{(Wilson)}
+
+&amp; (x)(14)(15)\equiv 1~(mod~17)
+
+&amp; (x)(-3)(-2)\equiv 1~(mod~17)
+
+&amp; 6x\equiv 1\equiv -16~(mod~17)
+
+&amp; 3x\equiv -8\equiv 9~(mod~17)
+
+&amp; x\equiv 3~(mod~17)"/></p>
+</div><hr class="docutils" />
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="eulerWilsonBackground.html">Background (Advanced Math Concepts)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eulerWilsonBackground.html#euler-s-theorem">Euler’s Theorem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eulerWilsonBackground.html#wilson-s-theorem">Wilson’s Theorem</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Euler and Wilson’s Theorems</a><ul>
+<li><a class="reference internal" href="#euler-s-phi-function-or-euler-s-totient-function">Euler’s phi function or Euler’s totient function</a></li>
+<li><a class="reference internal" href="#euler-s-theorem">Euler’s Theorem</a></li>
+<li><a class="reference internal" href="#wilson-s-theorem">Wilson’s Theorem</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="findingRemainders.html"
+                          title="previous chapter">Finding Remainders</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="eulerWilsonBackground.html"
+                          title="next chapter">Background (Advanced Math Concepts)</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/eulerWilsonThms.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="eulerWilsonBackground.html" title="Background (Advanced Math Concepts)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="findingRemainders.html" title="Finding Remainders"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Math Notes  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="numberTheory.html" >Number Theory</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Euler and Wilson’s Theorems</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2024, Amit Itagi.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,167 @@
+
+Summation and Products (Finite Terms)
+===========================================
+
+Sequence
+----------
+
+Consider the formula :math:`a_n=2n+1`. By changing the value of :math:`n` from 1 to 5 in the formula, we can generate a **sequence** of terms :math:`a_1,~a_2,~a_3,~a_4,~a_5` or :math:`3,~5,~7,~9,~11`.
+
+
+Notation
+-------------------
+
+Sum Notation
+^^^^^^^^^^^^^^
+
+Consider the sum
+
+.. math::
+
+   1+2+3+...+98.
+
+Here we are adding a variable :math:`k` where the value of :math:`k` goes from 1 to 98. This can be written compactly as
+
+.. math::
+
+   \sum_{k=1}^{98} k
+
+Notice that :math:`k` is just a dummy variable in that :math:`k` can be replaced with any other variable (for example :math:`m`) without changing the sum. Thus,
+
+.. math::
+
+   \sum_{m=1}^{98} m
+
+is also a valid way to write the same sum.
+
+How to write the sum
+
+.. math::
+
+   \underbrace{1+1+...+1}_{\text{$100$ terms}}\text{?}
+
+Well, we are just varying the dummy variable from 1 to 100 such that for every value of the dummy variable, the contribution to the sum is :math:`1`. Hence, the sum is
+
+.. math::
+
+   \sum_{k=1}^{100} 1 = 100.
+
+In a sum involving a finite number of terms, the terms can be rearranged or grouped without changing the sum. This follows from commutative and associative properties of addition, and subtraction being essentially addition (see our discussion of real fields). For example,
+
+.. math::
+
+   1+3+5+7+9-2-4-6-8-10 = (1-2)+(3-4)+(5-6)+(7-8)+(9-10) = -1-1-1-1-1=-5.
+
+Any common factor from all the terms can be factored out.
+
+.. math::
+
+    2+4+6+8+10 = 2(1+2+3+4+5)
+
+Therefore, simplifications as the one shown below are valid.
+
+.. math::
+
+   \sum_{k=1}^{20} \left(2k^2-k+7\right)=2\sum_{k=1}^{20} k^2-\sum_{k=1}^{20} k +7\sum_{k=1}^{20} 1
+
+Note that the variable range need not begin at 1. For example, the sum :math:`5+7+9+11+13` can be written in different ways.
+
+.. math::
+
+   \sum_{k=1}^{5} (3+2k)=\sum_{k=3}^{7} (2k-1)
+
+
+Product Notation
+^^^^^^^^^^^^^^^^^^
+
+Analogous to the sum notation, the product
+
+.. math::
+
+   1\times 2\times 3\times 4\times ...\times 98
+
+is written as
+
+.. math::
+
+   \prod_{k=1}^{98} k.
+
+As in the case of sums, the products can be rearranged and grouped (commutative and associative products of multiplication). One word of caution: the rearrangement and grouping here is in terms of mutliplicative factors, not additive terms in the case of sums. For example,
+
+.. math::
+
+   & \prod_{k=1}^{98} (k^2+k)\neq \prod_{k=1}^{98} k^2 + \prod_{k=1}^{98} k~\textbf{(Notice the not equal to)}
+
+   & \prod_{k=1}^{98} (k^2+k)=\prod_{k=1}^{98} k(k+1)=\prod_{k=1}^{98} k \times \prod_{k=1}^{98} (k+1)
+
+Additionally, handling of constant terms is different from the summation.
+
+.. math::
+
+   \underbrace{3\times 3\times ... \times 3}_{\text{$100$ terms}}=\prod_{k=1}^{100} 3=3^{100}
+
+Telescoping Sums and Products
+-------------------------------
+
+Referring to our discussion of a sequence above, sums and products can be written down in terms of sequence terms.
+
+For example, :math:`\sum_{k=1}^{5} \left(2k^2-k+7\right)` can be written as
+
+.. math::
+
+   \sum_{k=1}^{5} a_k~\text{where}~a_k=2k^2-k+7
+
+and :math:`\prod_{p=1}^{5} p^2` can be written as
+
+.. math::
+
+   \prod_{p=1}^{5} b_p~\text{where}~b_p=p^2
+
+Consider the following sum :math:`S=\frac{1}{1\cdot 2}+\frac{1}{2\cdot 3}+\frac{1}{3\cdot 4}+\frac{1}{4\cdot 5}+...+\frac{1}{99\cdot 100}`. We do some simplifications and write this sum using our sequence notation.
+
+.. math::
+
+   S &=\sum_{n=1}^{99} \frac{1}{n(n+1)}=\sum_{n=1}^{99}\left[\frac{1}{n}-\frac{1}{n+1}\right]
+   
+   &=\sum_{n=1}^{99}\left(c_n - c_{n+1}\right)~\text{where}~c_n=\frac{1}{n}
+
+   &=c_1-c_2+c_2-c_3+c_3-c_4+...+c_{99}-c_{100}
+
+   &=c_1+(c_2-c_2)+(c_3-c_3)+(c_4-c_4)+...+(c_{99}-c_{99})-c_{100}
+
+   &=c_1-c_{100}=1-\frac{1}{100}=\frac{99}{100}
+
+Such sums where only the initial few and the final few terms contribute and all the terms in the middle mutually cancel out are called telescoping sums.
+
+Another example is the sum :math:`Q=\frac{1}{1+\sqrt{2}}+\frac{1}{\sqrt{2}+\sqrt{3}}+...+\frac{1}{\sqrt{99}+\sqrt{100}}`.
+
+.. math::
+
+   Q &=\sum_{k=1}^{99} \frac{1}{\sqrt{k}+\sqrt{k+1}}
+
+   &=\sum_{k=1}^{99} \frac{1}{\sqrt{k}+\sqrt{k+1}}\cdot \frac{\sqrt{k+1}-\sqrt{k}}{\sqrt{k+1}-\sqrt{k}}~\text{(Using our radical simplication method)}
+
+   &=\sum_{k=1}^{99} \frac{\sqrt{k+1}-\sqrt{k}}{(k+1)-k}~\text{(Using $(a+b)(a-b)=a^2-b^2$ in the denominator)}
+
+   &=\sum_{k=1}^{99} \frac{\sqrt{k+1}-\sqrt{k}}{1} =\sum_{k=1}^{99} -\sqrt{k}+\sqrt{k+1}
+
+   &=\sum_{k=1}^{99} d_{k}-d_{k+1}~\text{where}~d_k=-\sqrt{k}
+
+   &=d_1-d_2+d_2-d_3+...+d_{99}-d_{100} = d_1-d_{100}=\sqrt{100}-1=9
+
+We used the radical simplication method described :ref:`here <radicalSimplification:Removing radicals from the denominator>`.
+
+
+
+
+ 
+
+
+   
+ 
+
+   
+
+   
+
+   

@@ -1,0 +1,169 @@
+
+Axioms for Real Numbers
+======================================
+
+In elementary algebra, variables are placeholders for real numbers. Variables take real values. The set of real numbers is denoted by :math:`\mathbb{R}`. Hence, it is important to remember the axioms of real numbers as they carry over to the variables.
+
+Real numbers form a complete ordered field. The "complete" part is relevant in higher mathematics. Here, we will first look at the field axioms and then the order. Axioms are statements that are accepted as being self-evidently true. Theorems (big results), lemmas (small results), and corollaries (small results that are extensions/special cases of the theorems) are then derived from axioms and previously established theorems, lemmas, and corollaries.
+
+Field Axioms
+---------------
+
+* There are two binary operations called "addition" (+) and "multiplication" (:math:`cdot`). Note, other notations are sometimes used for multiplication.
+
+* Addition of two real numbers results in a real number (Closed under addition).
+
+* Multiplication of two real numbers results in a real number (Closed under multiplication).
+
+* Both addition and multiplication are commutative.
+
+  :math:`a+b=b+a,~a\cdot b=b\cdot a`
+
+* Both addition and multiplication are associative.
+
+  :math:`a+b+c=(a+b)+c=a+(b+c),~a\cdot b\cdot c = (a\cdot b)\cdot c=a\cdot (b\cdot c)`
+
+* Multiplication is distributive over addition.
+
+  :math:`a\cdot(b+c)=a\cdot b + a\cdot c`
+
+* There exist neutral elements or identity elements for both addition (0) and multiplication (1). For any real a,
+
+  :math:`a+0=a,~a\cdot 1=a`
+
+* Every element has an additive inverse. The addition of a real number with its additive inverse results in the additive neutral element. The inverse is denoted by putting a "-" sign before the element. 
+
+  :math:`a+(-a)=0`
+
+* Every element other than 0 has a multiplicative inverse. The multiplication of a real number with its multiplicative inverse results in the multiplicative neutral element. The multiplicative inverse of :math:`a` is denoted by :math:`\frac{1}{a}` or :math:`a^{-1}`. For :math:`a\neq 0`,
+
+  :math:`a\cdot\frac{1}{a}=1,~a\cdot a^{-1}=1`
+
+	
+Derived Properties
+^^^^^^^^^^^^^^^^^^^^^^^
+
+From the axioms, one can derive the fact that if :math:`a\cdot b=a\cdot c,~a\neq 0`, then :math:`b=c`. This is called the "cancellation property".
+
+.. math::
+
+   & a\cdot b=a\cdot c
+   
+   & a^{-1}\cdot a\cdot b = a^{-1}\cdot a\cdot c~\text{(Pre-multiply both sides by $a^{-1}$)}
+
+   & \left(a^{-1}\cdot a\right)\cdot b = \left(a^{-1}\cdot a\right)\cdot c~\text{(Use the associative property of multiplication)}
+
+   & 1\cdot b=1\cdot c
+
+   & b=c
+
+
+As a special case, if :math:`a\cdot b=0,~a\neq 0`, then :math:`b=0`. If :math:`a=0,~b=0`, then :math:`a\cdot b=0\cdot 0=0`. Thus, if :math:`a\cdot b=0`, then :math:`a=0` and/or :math:`b=0`.
+
+======================================
+
+For any real :math:`a,~a\cdot 0=0`.
+   
+.. math::
+
+   & 0 + 0 = 0
+   
+   & a\cdot (0 + 0)=a\cdot 0 + a\cdot 0 = a\cdot 0~\text{(Pre-multiply both sides by $a$ and use the distributive property)}
+
+   & a\cdot 0 + \left[a\cdot 0 + (-a\cdot 0)\right] = a\cdot 0 + (-a\cdot 0)~\text{(Add the additive inverse on both sides and use the associative property of addition)}
+
+   & a\cdot 0 + 0 = 0
+
+   & a\cdot 0 = 0
+
+	
+Other Operations
+-------------------
+
+The addition by the additive inverse of an element is called subtraction by the element.
+
+   :math:`a+(-b)=a-b`
+
+The multiplication by the multiplicative inverse of an element is called division by the element.
+
+   :math:`a\cdot b^{-1}=a\cdot \frac{1}{b}=\frac{a}{b}=a\div b`
+
+Note that 0 does not have a multiplicative inverse. Hence, division by 0 is not defined.
+
+Order Properties
+--------------------
+
+There is a special class :math:`P` of real numbers called positive numbers such that
+
+* For any real :math:`a`, exactly one of the following is true:
+
+  :math:`a=0,~a\in P,~(-a)\in P`
+
+* :math:`a\in P~\text{and}~b\in P\implies a+b\in P`
+
+* :math:`a\in P~\text{and}~b\in P\implies ab\in P`
+
+======================================
+
+If :math:`a\neq 0`, then
+
+.. math::
+
+   & a + (-a) = 0
+
+   & (-a)\cdot a+(-a)\cdot (-a) = 0
+
+   & (-a)\cdot a=-\left[(-a)\cdot (-a)\right]
+
+   & a\cdot a+a\cdot (-a) = 0
+
+   & a\cdot a-\left[(-a)\cdot (-a)\right] = 0
+
+   & a\cdot a=(-a)\cdot (-a) = a^2
+
+In the last step, :math:`a\cdot a` is denoted by :math:`a^2`.
+
+
+Either :math:`a\in P` or :math:`(-a)\in P`. In the first case, :math:`a\cdot a\in P`. In the second case, :math:`(-a)\cdot (-a)\in P`. Hence, if :math:`a\neq 0`, then :math:`a^2\in P`.
+
+If :math:`a=0`, then :math:`a^2=0\cdot 0=0`.
+
+======================================
+
+These properties can be recast into the inequality properties that we are familiar with.
+
+:math:`a-b\in P` is written as :math:`a>b` or :math:`b<a`.
+
+Replacing :math:`b` by :math:`0`, if :math:`a\in P`, then :math:`a>0`.
+
+* Exactly one of the following is true:
+
+  :math:`a=b,~a>b,~b>a`
+
+* If :math:`a>b,~b>c`, then :math:`a>c`
+
+* If :math:`a>b`, then :math:`a+c>b+c` for any :math:`c`
+
+* If :math:`a>b` and :math:`c>0`, then :math:`ac>bc`
+
+The notation :math:`a\geq b` means either :math:`a>b` or :math:`a=b`.
+
+:math:`a\leq b` has the analogous meaning.
+
+:math:`a^2\in P~\text{or}~a^2=0` is equivalent to :math:`a^2\geq 0`.
+
+======================================
+
+We do not get into the axiomatics of integers here. However, we will assume that integers are a subset of real numbers that get inductively defined as follows:
+
+.. math::
+
+   &2 = 1 + 1
+
+   &3 = 2 + 1
+
+   &4 = 3 + 1
+
+   &\ldots
+
+This helps us use results such as :math:`a+a=2\cdot a`.

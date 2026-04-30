@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Congruences &#8212; Math Notes  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=2bf1fcf8" />
+    
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Finding Remainders" href="findingRemainders.html" />
+    <link rel="prev" title="Prime Factorization and Divisors of numbers" href="divisors.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="findingRemainders.html" title="Finding Remainders"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="divisors.html" title="Prime Factorization and Divisors of numbers"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Math Notes  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="numberTheory.html" accesskey="U">Number Theory</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Congruences</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="congruences">
+<h1>Congruences<a class="headerlink" href="#congruences" title="Link to this heading">¶</a></h1>
+<p>Some principles can be used to solve congruences are listed below</p>
+<ol class="arabic">
+<li><p>Common factors principle I</p>
+<p>Common factors between the left side, residue, and the modulus can be
+removed</p>
+</li>
+</ol>
+<div class="math">
+<p><img src="_images/math/228a707f7dbf3cee0ff9fd5f12a78a5be4ed3c20.png" alt="&amp;(ak)x\equiv (bk)~(mod~ck)\implies ax\equiv b~(mod~c)
+
+&amp;\text{Example}
+
+&amp;12x\equiv 6~(mod~21)\implies 4x\equiv 2~(mod~7)"/></p>
+</div><ol class="arabic" start="2">
+<li><p>Common factors principle II</p>
+<p>After all the common factors have been removed using principle I,
+we know that the left side and the modulus are relatively prime. Similarly, the residue and the modulus are relatively prime. In that case, any common factors between just the left side and the residue can be removed</p>
+</li>
+</ol>
+<div class="math">
+<p><img src="_images/math/e6e01a53a0f7f1dd4cb701e667eb611883d98473.png" alt="&amp;(ak)x\equiv (bk)~(mod~c),~gcd(ak,c)=1,~gcd(bk,c)=1\implies ax\equiv b~(mod~c)
+
+&amp;\text{Example}
+
+&amp;4x\equiv 2~(mod~7)\implies 2x\equiv 1~(mod~7)"/></p>
+</div><ol class="arabic" start="3">
+<li><p>Modulo simplification if possible</p>
+<p><img class="math" src="_images/math/b3e65e3b6408fcfa00452530b73f55d1755f9965.png" alt="a"/> and <img class="math" src="_images/math/68c7c8c65602677ab56cf7fd88002023f0edc575.png" alt="b"/> in <img class="math" src="_images/math/6dc17822f1fd69402d8c9e7e4c9f6db1450fe4e1.png" alt="ax\equiv b~(mod~c)"/> can be replaced with any equivalent numbers modulo <img class="math" src="_images/math/d520a12f1579170834c32ad5f656de081bbb36fe.png" alt="c"/></p>
+</li>
+</ol>
+<div class="math">
+<p><img src="_images/math/ee911133a8c6a1f89940eb0efd3ae491a3bef592.png" alt="&amp;\text{Example}
+
+&amp;-6x\equiv 8~(mod~7)
+
+&amp;\text{Replace $-6$ by $1$ and $8$ by $1$}
+
+&amp;-6\equiv 1~(mod~7),~8\equiv 1~(mod~7)
+
+&amp;-6x\equiv 8~(mod~7)\implies x\equiv 1~(mod~7)"/></p>
+</div><p>After applying 3., 2. can be checked again.</p>
+<p>Finally, the congruence can be solved by trying out remainders</p>
+<div class="math">
+<p><img src="_images/math/f09823f075d06df5584b4cbad2787f10e068ac01.png" alt="&amp;\text{Example}
+
+&amp;2x\equiv -1~(mod~7)
+
+&amp;\text{results in}
+
+&amp;x\equiv 3~(mod~7)"/></p>
+</div><section id="diophantine-equations">
+<h2>Diophantine Equations<a class="headerlink" href="#diophantine-equations" title="Link to this heading">¶</a></h2>
+<p>A Diophantine equation can be converted into an equivalent congruence and solved</p>
+<p>We will assume that a solution exists. We won’t check for the existence of a solution.</p>
+<p><img class="math" src="_images/math/3323f8a8b648298d965e635ba5bcd54042afb39e.png" alt="ax+by=c"/> can be written as <img class="math" src="_images/math/c2fbd83ab9c18630a2a15f57607982854d00df0a.png" alt="ax\equiv c~(mod~b)"/> or <img class="math" src="_images/math/f3fdc85c8380da9d990ef1ac02b5d425c7bc00e2.png" alt="by\equiv c~(mod~a)"/></p>
+<p><img class="math" src="_images/math/501611913a42626f8a6dc44e65124b45f2587e0c.png" alt="ax-by=c"/> can be written as <img class="math" src="_images/math/c2fbd83ab9c18630a2a15f57607982854d00df0a.png" alt="ax\equiv c~(mod~b)"/> or <img class="math" src="_images/math/22189638e96b4a7ebc3ebdfe46f3c554b8b21662.png" alt="by\equiv -c~(mod~a)"/></p>
+<div class="math">
+<p><img src="_images/math/85dc4f2bd1015bacfd0aaf7a91d4e54a96f19f36.png" alt="&amp;7x+17y=251
+
+&amp;17y\equiv 251~(mod~7)
+
+&amp;\text{Applying 3.}
+
+&amp;3y\equiv 6~(mod~7)
+
+&amp;\text{Applying 2.}
+
+&amp;y\equiv 2~(mod~7)"/></p>
+</div><p>This means <img class="math" src="_images/math/a0f89b53785168e03dcc2865322a16751e727077.png" alt="y=7t+2"/> where <img class="math" src="_images/math/907a4add6d5db5b7f197f7924f1371b8ac404fe6.png" alt="t"/> is any integer. Plugging this back in the original equation</p>
+<div class="math">
+<p><img src="_images/math/76a23b49d5cca619904ba5bfa269911639be9638.png" alt="&amp;7x+17y=251
+
+&amp;7x+17(7t+2)=251
+
+&amp;7(x+17t)=251-17(2)=217
+
+&amp;x+17t=31
+
+&amp;x=31-17t"/></p>
+</div></section>
+<section id="solving-simultaneous-congruences">
+<h2>Solving simultaneous congruences<a class="headerlink" href="#solving-simultaneous-congruences" title="Link to this heading">¶</a></h2>
+<p>First, solve each congruence using the technique specified above</p>
+<div class="math">
+<p><img src="_images/math/3dfab7b8a889fa014289d0d91bef3f990e5ae3fb.png" alt="&amp;12x~\equiv 6~(mod~10)\implies 6x~\equiv 3~(mod~5)\implies x~\equiv 3~(mod~5)
+
+&amp;4x~\equiv 2~(mod~3)\implies 2x~\equiv 1~(mod~3)\implies x~\equiv 2~(mod~3)
+
+&amp;2x~\equiv 1~(mod~21)\implies x~\equiv 11~(mod~21)
+
+&amp;~
+
+&amp;\text{Simplified system}
+
+&amp;x~\equiv 3~(mod~5)
+
+&amp;x~\equiv 2~(mod~3)
+
+&amp;x~\equiv 11~(mod~21)"/></p>
+</div><p>The solution is going to be modulo the lcm of the three modulos. <img class="math" src="_images/math/161a7d0cd5e56544721a96a112f61014ae4db848.png" alt="lcm(5,3,21)=105"/></p>
+<p>Start with largest modulo and list out the residues modulo the lcm</p>
+<div class="math">
+<p><img src="_images/math/e9c5a950d0394c731584ea98d0055d0986322713.png" alt="x~\equiv 11~(mod~21)\implies x~\equiv \text{ (one of }11,~32,~53,~74,~95)~(mod~105)"/></p>
+</div><p>Now consider the second larget modulo and retain only the compatible residues modulo the lcm</p>
+<div class="math">
+<p><img src="_images/math/ceeb9a345f4910332df006a699795145714b9251.png" alt="x~\equiv 3~(mod~5)\implies x~\equiv 53~(mod~105)"/></p>
+</div><p>This result satisfies the thrid congruence in the system <img class="math" src="_images/math/2d199d4b436f90d251270302f86aa0dfadc8386a.png" alt="x\equiv 2~(mod~3)"/> and nothing further needs to be done. If, instead, we had more than one residues in this step, the final congruence would have been used to select the compatible single residue from the set.</p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Congruences</a><ul>
+<li><a class="reference internal" href="#diophantine-equations">Diophantine Equations</a></li>
+<li><a class="reference internal" href="#solving-simultaneous-congruences">Solving simultaneous congruences</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="divisors.html"
+                          title="previous chapter">Prime Factorization and Divisors of numbers</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="findingRemainders.html"
+                          title="next chapter">Finding Remainders</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/congruences.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="findingRemainders.html" title="Finding Remainders"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="divisors.html" title="Prime Factorization and Divisors of numbers"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Math Notes  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="numberTheory.html" >Number Theory</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Congruences</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2024, Amit Itagi.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>
