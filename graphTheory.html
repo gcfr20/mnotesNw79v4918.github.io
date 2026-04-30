@@ -1,26 +1,24 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Graph Theory &#8212; Math Notes  documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=2bf1fcf8" />
     
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Speed Tricks" href="speedTricks.html" />
     <link rel="prev" title="Three-Dimensional Geometry" href="threeDimensional.html" /> 
   </head><body>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -43,102 +41,132 @@
           <div class="body" role="main">
             
   <section id="graph-theory">
-<h1>Graph Theory<a class="headerlink" href="#graph-theory" title="Permalink to this headline">¶</a></h1>
+<h1>Graph Theory<a class="headerlink" href="#graph-theory" title="Link to this heading">¶</a></h1>
 <section id="shortest-path">
-<h2>Shortest Path<a class="headerlink" href="#shortest-path" title="Permalink to this headline">¶</a></h2>
+<h2>Shortest Path<a class="headerlink" href="#shortest-path" title="Link to this heading">¶</a></h2>
 <p>The figure below shows a weighted graph. The nodes represent cities and the edges the roads between the cities. The weights on the edges represent distances between cities along the roads. The objective is to find the shortest distance between node 0 and all other nodes. For example, there are different choices for the roads to use to go from 0 to 8. What is the distance for the shortest path?</p>
 <p>The algorithm used here is attributed to Djikstra.</p>
-<a class="reference internal image-reference" href="_images/weighted_graph.png"><img alt="_images/weighted_graph.png" src="_images/weighted_graph.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="_images/weighted_graph.png"><img alt="_images/weighted_graph.png" src="_images/weighted_graph.png" style="width: 400px;" />
+</a>
 <p>The algorithm proceeds incrementally by visiting one node at a time.</p>
 <p>Step 1:</p>
 <p>Start at <strong>node 0</strong>, note down the distances to the nodes that adjacent to node 0 (have an edge from node 0) in a table. The row highlighted in yellow shows which node is being visited in this step. More on the “From (node)” column later.</p>
-<a class="reference internal image-reference" href="_images/t1.png"><img alt="_images/t1.png" src="_images/t1.png" style="width: 300px;" /></a>
-<a class="reference internal image-reference" href="_images/weighted_graph.png"><img alt="_images/weighted_graph.png" src="_images/weighted_graph.png" style="width: 300px;" /></a>
+<a class="reference internal image-reference" href="_images/t1.png"><img alt="_images/t1.png" src="_images/t1.png" style="width: 300px;" />
+</a>
+<a class="reference internal image-reference" href="_images/weighted_graph.png"><img alt="_images/weighted_graph.png" src="_images/weighted_graph.png" style="width: 300px;" />
+</a>
 <p>Step 2:</p>
 <p>We are done with node 0. Hence, we freeze this row (no more changes allowed in this row) and change the color of node 0 row to orange to remind us that this node is done visiting.</p>
 <p>Next, we visit the node that had the smallest “shortest distance” from node 0 in step 1. In this case, it is <strong>node 1</strong> (Node 1 is at distance 4 from node 0, and node 7 is at distance 8 from node 0). Of the nodes that are not frozen, nodes 2 and 7 are adjacent to node 1. There is already a row for node 7 in the table. We create a new row for node 2.</p>
 <p>The distance from node 0 to node 2 via node 1 is the [“shortest distance” to node 1] + [8 (the distance between nodes 1 and 2)]. This is noted in the table as the current “shortest distance” to node 2 from node 0. The adjacent node from which node 2 was reached from for this shortest distance is node 1. Hence, we note “node 1” in the “From (node)” column for this row.</p>
 <p>For node 7, the distance from node 0 to node 7 via node 1 is 4+11=15. This is larger than the distance recorded at the shortest distance to node 7 in step 1. Hence, we leave the row for node 7 unchanged. The current “shortest distance” to node 7 is still the direct distance from node 0 that was recorded in step 0.</p>
-<a class="reference internal image-reference" href="_images/t2.png"><img alt="_images/t2.png" src="_images/t2.png" style="width: 300px;" /></a>
-<a class="reference internal image-reference" href="_images/weighted_graph.png"><img alt="_images/weighted_graph.png" src="_images/weighted_graph.png" style="width: 300px;" /></a>
+<a class="reference internal image-reference" href="_images/t2.png"><img alt="_images/t2.png" src="_images/t2.png" style="width: 300px;" />
+</a>
+<a class="reference internal image-reference" href="_images/weighted_graph.png"><img alt="_images/weighted_graph.png" src="_images/weighted_graph.png" style="width: 300px;" />
+</a>
 <p>Step 3:</p>
 <p>We are done with node 1 also. Hence, node 1 is frozen (color changed to orange). Of the remaining unfrozen nodes in the table, <strong>node 7</strong> has the current shortest distance from node 0. Hence, this node is visited next.</p>
 <p>Two new rows are added to the table for nodes 6 and 8  - the nodes that are adjacent to node 7, but don’t have existing rows in the table. The current “shortest distance” to node 6 is 8 (shortest distance to node 7) + 1 (distance of node 6 from node 7) = 9. Similarly, the current “shortest distance” to node 8 is 8+7=15.  The “From (node)” for both these nodes is 7 because the current “shortest distance” for these nodes is when the adjacent nodes from which these nodes are approached is node 7.</p>
-<a class="reference internal image-reference" href="_images/t3.png"><img alt="_images/t3.png" src="_images/t3.png" style="width: 300px;" /></a>
-<a class="reference internal image-reference" href="_images/weighted_graph.png"><img alt="_images/weighted_graph.png" src="_images/weighted_graph.png" style="width: 300px;" /></a>
+<a class="reference internal image-reference" href="_images/t3.png"><img alt="_images/t3.png" src="_images/t3.png" style="width: 300px;" />
+</a>
+<a class="reference internal image-reference" href="_images/weighted_graph.png"><img alt="_images/weighted_graph.png" src="_images/weighted_graph.png" style="width: 300px;" />
+</a>
 <p>Step 4:</p>
 <p>Node 7 is frozen. The next visited node is <strong>node 6</strong> - the unfrozen node with the smallest “shortest distance” in the table.</p>
 <p>A new row is introduced for column 5.</p>
 <p>We should also check the unfrozen nodes adjacent to 6 that already have rows in the table. If the distance from node 0 to any of these nodes via node 6 is smaller than the current “shortest distance”, then the “shortest distance” for that node has to changed to this distance, and the “From (node)” columns needs to be changed to “6”. In this example, the present step does not have any such nodes.</p>
-<a class="reference internal image-reference" href="_images/t4.png"><img alt="_images/t4.png" src="_images/t4.png" style="width: 300px;" /></a>
-<a class="reference internal image-reference" href="_images/weighted_graph.png"><img alt="_images/weighted_graph.png" src="_images/weighted_graph.png" style="width: 300px;" /></a>
+<a class="reference internal image-reference" href="_images/t4.png"><img alt="_images/t4.png" src="_images/t4.png" style="width: 300px;" />
+</a>
+<a class="reference internal image-reference" href="_images/weighted_graph.png"><img alt="_images/weighted_graph.png" src="_images/weighted_graph.png" style="width: 300px;" />
+</a>
 <p>Step 5:</p>
 <p>Node 6 is frozen. Based on the “shortest distance” in the table, <strong>node 5</strong> follows. New rows are added for nodes 3 and 4 - the nodes adjacent to row 5 that do not have existing rows. Existing unfrozen adjacent nodes are also checked for “shortest distance” update.</p>
-<a class="reference internal image-reference" href="_images/t5.png"><img alt="_images/t5.png" src="_images/t5.png" style="width: 300px;" /></a>
-<a class="reference internal image-reference" href="_images/weighted_graph.png"><img alt="_images/weighted_graph.png" src="_images/weighted_graph.png" style="width: 300px;" /></a>
+<a class="reference internal image-reference" href="_images/t5.png"><img alt="_images/t5.png" src="_images/t5.png" style="width: 300px;" />
+</a>
+<a class="reference internal image-reference" href="_images/weighted_graph.png"><img alt="_images/weighted_graph.png" src="_images/weighted_graph.png" style="width: 300px;" />
+</a>
 <p>Step 6:</p>
 <p>Node 5 is frozen. Based on the “shortest distance” in the table, <strong>node 2</strong> follows. All nodes have rows by this point; no new rows are added.</p>
 <p>Of the existing unfrozen nodes adjacent to node 2, the distances to nodes 8 and 3 from node 0 via node 2 is smaller than the “shortest distance” in the table for these nodes. Hence, the “shortest distance” for these nodes is updated and the “From (node)” entry for these nodes is changed to “2” (the current shortest distance corresponds to approach of these nodes from node 2).</p>
-<a class="reference internal image-reference" href="_images/t6.png"><img alt="_images/t6.png" src="_images/t6.png" style="width: 300px;" /></a>
-<a class="reference internal image-reference" href="_images/weighted_graph.png"><img alt="_images/weighted_graph.png" src="_images/weighted_graph.png" style="width: 300px;" /></a>
+<a class="reference internal image-reference" href="_images/t6.png"><img alt="_images/t6.png" src="_images/t6.png" style="width: 300px;" />
+</a>
+<a class="reference internal image-reference" href="_images/weighted_graph.png"><img alt="_images/weighted_graph.png" src="_images/weighted_graph.png" style="width: 300px;" />
+</a>
 <p>Step 7:</p>
 <p>Node 2 is frozen and <strong>node 8</strong> is visited. No distance updates are needed (as the distances to adjacent nodes via node 8 is larger than the current “shortest distance”).</p>
-<a class="reference internal image-reference" href="_images/t7.png"><img alt="_images/t7.png" src="_images/t7.png" style="width: 300px;" /></a>
-<a class="reference internal image-reference" href="_images/weighted_graph.png"><img alt="_images/weighted_graph.png" src="_images/weighted_graph.png" style="width: 300px;" /></a>
+<a class="reference internal image-reference" href="_images/t7.png"><img alt="_images/t7.png" src="_images/t7.png" style="width: 300px;" />
+</a>
+<a class="reference internal image-reference" href="_images/weighted_graph.png"><img alt="_images/weighted_graph.png" src="_images/weighted_graph.png" style="width: 300px;" />
+</a>
 <p>Step 8:</p>
 <p>Node 8 is frozen and <strong>node 3</strong> is visited. No distance updates in this step.</p>
-<a class="reference internal image-reference" href="_images/t8.png"><img alt="_images/t8.png" src="_images/t8.png" style="width: 300px;" /></a>
-<a class="reference internal image-reference" href="_images/weighted_graph.png"><img alt="_images/weighted_graph.png" src="_images/weighted_graph.png" style="width: 300px;" /></a>
+<a class="reference internal image-reference" href="_images/t8.png"><img alt="_images/t8.png" src="_images/t8.png" style="width: 300px;" />
+</a>
+<a class="reference internal image-reference" href="_images/weighted_graph.png"><img alt="_images/weighted_graph.png" src="_images/weighted_graph.png" style="width: 300px;" />
+</a>
 <p>Step 9:</p>
 <p>Node 3 is frozen and <strong>node 4</strong> is visited. No distance updates in this step.</p>
-<a class="reference internal image-reference" href="_images/t9.png"><img alt="_images/t9.png" src="_images/t9.png" style="width: 300px;" /></a>
-<a class="reference internal image-reference" href="_images/weighted_graph.png"><img alt="_images/weighted_graph.png" src="_images/weighted_graph.png" style="width: 300px;" /></a>
+<a class="reference internal image-reference" href="_images/t9.png"><img alt="_images/t9.png" src="_images/t9.png" style="width: 300px;" />
+</a>
+<a class="reference internal image-reference" href="_images/weighted_graph.png"><img alt="_images/weighted_graph.png" src="_images/weighted_graph.png" style="width: 300px;" />
+</a>
 <p>Step 10:</p>
 <p>Node 4 is frozen. We are done as all nodes are frozen. The “shortest distance” columns now gives the shortest distance to these nodes from node 0. The “From (node)” gives the adjacent nodes the approach from which corresponds to the shortest distance.</p>
-<a class="reference internal image-reference" href="_images/t10.png"><img alt="_images/t10.png" src="_images/t10.png" style="width: 300px;" /></a>
-<a class="reference internal image-reference" href="_images/weighted_graph.png"><img alt="_images/weighted_graph.png" src="_images/weighted_graph.png" style="width: 300px;" /></a>
+<a class="reference internal image-reference" href="_images/t10.png"><img alt="_images/t10.png" src="_images/t10.png" style="width: 300px;" />
+</a>
+<a class="reference internal image-reference" href="_images/weighted_graph.png"><img alt="_images/weighted_graph.png" src="_images/weighted_graph.png" style="width: 300px;" />
+</a>
 <p>The table shows that the shortest distance to node 4 from node 0 is 21. <strong>The path which gives this shortest distance can be obtained by looking at the “From (node)” columns and working out the path backwards</strong>. Node 4 is approached from node 5, node 5 is approached from node 6, node 6 is approached from node 7, and node 7 is approached from node 0. Hence the path corresponding to the shortest distance is 0-&gt;7-&gt;6-&gt;5-&gt;4.</p>
 <hr class="docutils" />
 <p><strong>If, at any step, there are multiple candidates for the next node to be visited as they have the same “shortest distance” that is the smallest among unfrozen nodes, then any one of those multiple candidates can be chosen as the next node.</strong></p>
 <hr class="docutils" />
 <p>The above algorithm works for directed graphs as well (graphs where the edges are one-way). Only those nodes that have edges directed from the node being visited to them are considered as adjacent nodes while updatng rows or adding new rows.</p>
-<a class="reference internal image-reference" href="_images/weighted_directed_graph.png"><img alt="_images/weighted_directed_graph.png" src="_images/weighted_directed_graph.png" style="width: 300px;" /></a>
+<a class="reference internal image-reference" href="_images/weighted_directed_graph.png"><img alt="_images/weighted_directed_graph.png" src="_images/weighted_directed_graph.png" style="width: 300px;" />
+</a>
 <p>In the above graph, suppose nodes 2 and 4 are unfrozen while visiting node 3, node 2 is considered for updating. However node 4 is not as the edge between 3 and 4 points from 4 to 3, and not 3 to 4.</p>
 </section>
 <section id="minimum-spanning-tree">
-<h2>Minimum Spanning Tree<a class="headerlink" href="#minimum-spanning-tree" title="Permalink to this headline">¶</a></h2>
-<a class="reference internal image-reference" href="_images/v0.png"><img alt="_images/v0.png" src="_images/v0.png" style="width: 350px;" /></a>
+<h2>Minimum Spanning Tree<a class="headerlink" href="#minimum-spanning-tree" title="Link to this heading">¶</a></h2>
+<a class="reference internal image-reference" href="_images/v0.png"><img alt="_images/v0.png" src="_images/v0.png" style="width: 350px;" />
+</a>
 <p>As opposed to finding the shortest distance, we are now interested in building a road network to connect the cities. The weights on the edges show the cost to build a road between the two cities connected by the edge.</p>
 <p>The objective is to minimize the total cost to build the road network while having all the cities connected (to have the ability to drive from any city to any other city). We are trying to a get rid of unwanted roads and reduce the cost. THis network will have no cycles (no closed loops). Such graphs are called “trees” as they look like trees with branches. Hence we are looking to find the “minimum spanning tree” - a tree that spans all nodes and is minimal in the sense of cost.</p>
 <p>The recipe is to take successive steps removing one edge at a time until no further edge removal is possible. At every step the edge with the highest cost is removed <strong>whose removal still keeps the cities connected</strong> that is the graph does not break up into two disjoint graphs.</p>
 <p>Step 1:</p>
 <p>Remove edge 3-5. It is the costliest edge (with cost 14) and its removal still keeps the cities connected. So the edge is redundant in the network.</p>
-<a class="reference internal image-reference" href="_images/v1.png"><img alt="_images/v1.png" src="_images/v1.png" style="width: 350px;" /></a>
+<a class="reference internal image-reference" href="_images/v1.png"><img alt="_images/v1.png" src="_images/v1.png" style="width: 350px;" />
+</a>
 <p>Step 2:</p>
 <p>Remove the costliest edge remaining - edge 1-7 (with cost 11). Removal of this edge still keeps the cities connected.</p>
-<a class="reference internal image-reference" href="_images/v2.png"><img alt="_images/v2.png" src="_images/v2.png" style="width: 350px;" /></a>
+<a class="reference internal image-reference" href="_images/v2.png"><img alt="_images/v2.png" src="_images/v2.png" style="width: 350px;" />
+</a>
 <p>Step 3:</p>
 <p>Remove edge 5-4 (with cost 10)</p>
-<a class="reference internal image-reference" href="_images/v3.png"><img alt="_images/v3.png" src="_images/v3.png" style="width: 350px;" /></a>
+<a class="reference internal image-reference" href="_images/v3.png"><img alt="_images/v3.png" src="_images/v3.png" style="width: 350px;" />
+</a>
 <p>Step 4:</p>
 <p>Edge 3-4 is the costliest remaining edge with a cost of 9. However, removal of this edge leaves node 4 unconnected to the other nodes. So this edge is not redundant and cannot be removed.</p>
 <p>Next, we have two edges - edge 1-2 and edge 0-7 - with code of 8. Either one of the edges can be removed without breaking the graph into disjoint parts. We arbitrarily decide to remove edge 1-2.</p>
 <p>Choosing to remove edge 0-7 will result in a different final minimum spanning tree. However the total cost of that tree will be the same as the tree that is being created by our choice.</p>
-<a class="reference internal image-reference" href="_images/v4.png"><img alt="_images/v4.png" src="_images/v4.png" style="width: 350px;" /></a>
+<a class="reference internal image-reference" href="_images/v4.png"><img alt="_images/v4.png" src="_images/v4.png" style="width: 350px;" />
+</a>
 <p>Step 5:</p>
 <p>Next, we have two costliest edges - edges 2-3 and 7-8 - with the same cost - 7. It can be seen that edge 2-3 is not redundant. Its removal will disconnect nodes 3 and 4 from the rest. However, edge 7-8 is redundant. Hence we remove edge 7-8.</p>
-<a class="reference internal image-reference" href="_images/v5.png"><img alt="_images/v5.png" src="_images/v5.png" style="width: 350px;" /></a>
+<a class="reference internal image-reference" href="_images/v5.png"><img alt="_images/v5.png" src="_images/v5.png" style="width: 350px;" />
+</a>
 <p>Step 6:</p>
 <p>Edge 6-8 is removed.</p>
-<a class="reference internal image-reference" href="_images/v6.png"><img alt="_images/v6.png" src="_images/v6.png" style="width: 350px;" /></a>
+<a class="reference internal image-reference" href="_images/v6.png"><img alt="_images/v6.png" src="_images/v6.png" style="width: 350px;" />
+</a>
 <p>It can be seen that removal of any other edge in this final graph will make some cities inaccessible from the other. Hence, we are done with the edge-removal (also known as “pruning”) steps.</p>
 <hr class="docutils" />
 <p>There could be more than one minimum spanning trees for a graph. This can happen if there are two “edge” candidates with equal cost to be removed at any stage. Depending on which edge is chosen to be removed, the final minimum spanning tree could look different. However, the total cost of the network for all these minimum spanning trees will be the same.</p>
 </section>
 <section id="eulerian-circuits-and-trails">
-<h2>Eulerian Circuits and Trails<a class="headerlink" href="#eulerian-circuits-and-trails" title="Permalink to this headline">¶</a></h2>
+<h2>Eulerian Circuits and Trails<a class="headerlink" href="#eulerian-circuits-and-trails" title="Link to this heading">¶</a></h2>
 <p>“Konigsberg bridge problem” is a classic problem that comes up in every introductory discussion of Eulerian paths.</p>
-<a class="reference internal image-reference" href="_images/konigsberg.png"><img alt="_images/konigsberg.png" src="_images/konigsberg.png" style="width: 300px;" /></a>
+<a class="reference internal image-reference" href="_images/konigsberg.png"><img alt="_images/konigsberg.png" src="_images/konigsberg.png" style="width: 300px;" />
+</a>
 <p>Konigsberg was a city in Prussia (present-day Kaliningrad, Russia) that had two opposite banks on the river Pregel and two islands in the river. These two banks and the islands were connected by seven bridges. In the image above, A and B are the two river banks, C and D are the two islands, and the graph edges represent the seven bridges.</p>
 <p>The question is whether it is possible to start at a node, traverse all the edges (bridges in Konigsberg), each edge exactly once, and return to the starting node. In other words, draw all the edges of the graph using a pencil without lifting the pencil from the paper or retracing an edge. Such a path is called <strong>“Eulerian circuit”</strong>. Note, the condition is on traversing every edge only once. It is ok to go through a node more than once.</p>
 <p>The answer is that this is “impossible” for the Konigsberg graph. Euler proved it in 1736.</p>
@@ -153,9 +181,11 @@
 <p>The intuition is similar to the one for Eulerian circuit except that the starting node can have one exit edge without a corresponding entry edge as the trail starts at this node, and the ending node can have one entry edge without a corresponding exit edge as the trail stops at this node.</p>
 </section>
 <section id="graph-coloring">
-<h2>Graph Coloring<a class="headerlink" href="#graph-coloring" title="Permalink to this headline">¶</a></h2>
-<a class="reference internal image-reference" href="_images/coloring_rooms.png"><img alt="_images/coloring_rooms.png" src="_images/coloring_rooms.png" style="width: 300px;" /></a>
-<a class="reference internal image-reference" href="_images/coloring_graph.png"><img alt="_images/coloring_graph.png" src="_images/coloring_graph.png" style="width: 400px;" /></a>
+<h2>Graph Coloring<a class="headerlink" href="#graph-coloring" title="Link to this heading">¶</a></h2>
+<a class="reference internal image-reference" href="_images/coloring_rooms.png"><img alt="_images/coloring_rooms.png" src="_images/coloring_rooms.png" style="width: 300px;" />
+</a>
+<a class="reference internal image-reference" href="_images/coloring_graph.png"><img alt="_images/coloring_graph.png" src="_images/coloring_graph.png" style="width: 400px;" />
+</a>
 <p>The left image shows the layout of a house with 5 rooms. The rooms are to be painted in such a way that <strong>no</strong> adjacent rooms are painted in the same color.</p>
 <p>Th right image shows the equivalent graph. Rooms that cannot be painted in the same color are connected by red edges; rooms that can be (not should be) be painted in the same color are connected by green edges. The red and green edges put together form a complete graph (every node connected to every other node). Thus, there are <img class="math" src="_images/math/bd1648ea28f27e5e2c550d1210689a6ecc79a9d9.png" alt="C(5,2)=10"/> total edges.</p>
 <p><strong>How many ways are there to color the rooms if 5, 4, 3, or 2 colors are available?</strong></p>
@@ -233,10 +263,11 @@
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table of Contents</a></h3>
-  <ul>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
 <li><a class="reference internal" href="#">Graph Theory</a><ul>
 <li><a class="reference internal" href="#shortest-path">Shortest Path</a></li>
 <li><a class="reference internal" href="#minimum-spanning-tree">Minimum Spanning Tree</a></li>
@@ -246,12 +277,17 @@
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="threeDimensional.html"
-                        title="previous chapter">Three-Dimensional Geometry</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="speedTricks.html"
-                        title="next chapter">Speed Tricks</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="threeDimensional.html"
+                          title="previous chapter">Three-Dimensional Geometry</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="speedTricks.html"
+                          title="next chapter">Speed Tricks</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -259,7 +295,7 @@
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
-<div id="searchbox" style="display: none" role="search">
+<search id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
@@ -267,13 +303,13 @@
       <input type="submit" value="Go" />
     </form>
     </div>
-</div>
-<script>$('#searchbox').show(0);</script>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -290,8 +326,8 @@
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, AI.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+    &#169; Copyright 2024, AI.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

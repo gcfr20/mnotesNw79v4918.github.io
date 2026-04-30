@@ -1,26 +1,24 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Stones and Sticks Principle &#8212; Math Notes  documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=2bf1fcf8" />
     
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Recurrence Relations (Advanced)" href="recurrence.html" />
     <link rel="prev" title="Pigeonhole Principle" href="pigeonhole.html" /> 
   </head><body>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -44,12 +42,13 @@
           <div class="body" role="main">
             
   <section id="stones-and-sticks-principle">
-<h1>Stones and Sticks Principle<a class="headerlink" href="#stones-and-sticks-principle" title="Permalink to this headline">¶</a></h1>
+<h1>Stones and Sticks Principle<a class="headerlink" href="#stones-and-sticks-principle" title="Link to this heading">¶</a></h1>
 <p>In our discussion of the <a class="reference internal" href="inclusionExclusion.html#distinguishable-distributions"><span class="std std-ref">inclusion-exclusion principle</span></a> , we had come across the following problem:</p>
 <p>In how many ways can 12 distinguishable presents be given to three people such that every person gets at least one present and all the presents are given out?</p>
 <p>Now we modify the problem such that the 12 presents are indistinguishable. The difference from the earlier problem is that now only the present count matters. In the earlier problem, exactly which present was given mattered.</p>
 <p>This problem can be solved using the stones and sticks principle. Imagine that the 12 presents are 12 stones placed in a row (blue circles in the image below). We will make three groups of stones by placing two sticks (the black vertical lines) in two of the 11 gaps (gaps are shown by the red pointers) between the stones. This will ensure that the stones are divided into three groups and none of the three groups is empty. The first group of stones (presents) go to the first person, the second group to the second person, and the third group to the third person.</p>
-<a class="reference internal image-reference" href="_images/stones_and_sticks.png"><img alt="_images/stones_and_sticks.png" src="_images/stones_and_sticks.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="_images/stones_and_sticks.png"><img alt="_images/stones_and_sticks.png" src="_images/stones_and_sticks.png" style="width: 400px;" />
+</a>
 <p>Thus, the problem reduces to choosing 2 of the 11 gaps for the sticks. So the answer is C(11,2). By ensuring that only one stick goes in a gap, we guarantee that no group is empty.</p>
 <hr class="docutils" />
 <p>This problem is equivalent to the following problem:</p>
@@ -106,14 +105,18 @@
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="pigeonhole.html"
-                        title="previous chapter">Pigeonhole Principle</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="recurrence.html"
-                        title="next chapter">Recurrence Relations (Advanced)</a></p>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="pigeonhole.html"
+                          title="previous chapter">Pigeonhole Principle</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="recurrence.html"
+                          title="next chapter">Recurrence Relations (Advanced)</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -121,7 +124,7 @@
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
-<div id="searchbox" style="display: none" role="search">
+<search id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
@@ -129,13 +132,13 @@
       <input type="submit" value="Go" />
     </form>
     </div>
-</div>
-<script>$('#searchbox').show(0);</script>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -153,8 +156,8 @@
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, AI.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+    &#169; Copyright 2024, AI.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

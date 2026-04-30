@@ -1,26 +1,24 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Three-Dimensional Geometry &#8212; Math Notes  documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=2bf1fcf8" />
     
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Graph Theory" href="graphTheory.html" />
     <link rel="prev" title="Mass Points" href="massPoints.html" /> 
   </head><body>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -44,9 +42,9 @@
           <div class="body" role="main">
             
   <section id="three-dimensional-geometry">
-<h1>Three-Dimensional Geometry<a class="headerlink" href="#three-dimensional-geometry" title="Permalink to this headline">¶</a></h1>
+<h1>Three-Dimensional Geometry<a class="headerlink" href="#three-dimensional-geometry" title="Link to this heading">¶</a></h1>
 <section id="polyhedra">
-<h2>Polyhedra<a class="headerlink" href="#polyhedra" title="Permalink to this headline">¶</a></h2>
+<h2>Polyhedra<a class="headerlink" href="#polyhedra" title="Link to this heading">¶</a></h2>
 <p>3D equivalent of polygons - polygonal faces and straight edges</p>
 <p>We restrict ourselves to convex polyhedra. If any two points on the polyhedra are connected by a line segment, the line segment should not have any part outside the polyhedra.</p>
 <p>For a convex polyhedra, the following relationship attributed to Euler holds:</p>
@@ -55,7 +53,8 @@
 </div><p>where <strong>F: Number of faces, V: Number of vertices, and E: Number of edges</strong>.</p>
 <hr class="docutils" />
 <p>Here is an example problem:</p>
-<a class="reference internal image-reference" href="_images/icoxxxhedron.png"><img alt="_images/icoxxxhedron.png" src="_images/icoxxxhedron.png" style="width: 200px;" /></a>
+<a class="reference internal image-reference" href="_images/icoxxxhedron.png"><img alt="_images/icoxxxhedron.png" src="_images/icoxxxhedron.png" style="width: 200px;" />
+</a>
 <p>The polyhedron in the above figure has 20 triangular faces and 12 pentagonal faces. How many edges and vertices does it have?</p>
 <p>In this problem, it is easier to find out how many polygons meet at an edge (the answer is 2) than to find out how many polygons meet at a vertex.</p>
 <p>First step: Count the edges contributed by all the faces</p>
@@ -71,9 +70,10 @@
 32 + V &amp;= 60 + 2 \implies V = 30"/></p>
 </div></section>
 <section id="distance-in-2d">
-<h2>Distance in 2D<a class="headerlink" href="#distance-in-2d" title="Permalink to this headline">¶</a></h2>
+<h2>Distance in 2D<a class="headerlink" href="#distance-in-2d" title="Link to this heading">¶</a></h2>
 <p>Let us first start with 2D.</p>
-<a class="reference internal image-reference" href="_images/dist2D.png"><img alt="_images/dist2D.png" src="_images/dist2D.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="_images/dist2D.png"><img alt="_images/dist2D.png" src="_images/dist2D.png" style="width: 400px;" />
+</a>
 <p>In the figure above, applying Pythagoras theorem, the distance DI can be calculated as <img class="math" src="_images/math/e33029fb04cad9c4875de475616cb996cf3209a2.png" alt="DI=\sqrt{DA^2+AI^2}"/>. If an XY coordinate system is attached to the figure such that DA is along X and AI is along Y, then DA is the change in the X coordinate - <img class="math" src="_images/math/7c3282642d867109f551c02c4946b913e5c0a430.png" alt="\Delta x"/> - and AI is the change in the Y coordinate - <img class="math" src="_images/math/09081834f13c72fb00b7cf764822a9e48ece7003.png" alt="\Delta y"/> - as one goes from D to I. Thus,</p>
 <div class="math">
 <p><img src="_images/math/3f23ff13a0c69a381369d75904136ca7e395d7e0.png" alt="DI=\sqrt{(\Delta x)^2+(\Delta y)^2}."/></p>
@@ -85,7 +85,8 @@
 </div><p>The choice of the origin and the direction of the X axis was arbitrary. Thus, the above relations hold for any choice of X and Y coordinates.</p>
 <hr class="docutils" />
 <p>Now, consider the following problem:</p>
-<a class="reference internal image-reference" href="_images/dist2D_multi.png"><img alt="_images/dist2D_multi.png" src="_images/dist2D_multi.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="_images/dist2D_multi.png"><img alt="_images/dist2D_multi.png" src="_images/dist2D_multi.png" style="width: 400px;" />
+</a>
 <p>The segment chain with lengths 13, 7, and 11 starts at one end of the diagonal and ends at the other end. Hence, we could use this segment to compute the diagonal. An obvious choice of the coordinate system is to choose X axis parallel to the 13 and 11 segements (bottom-left to top-right) and Y axis parallel to the 7 segment (down-right to up-left). With this choice,</p>
 <div class="math">
 <p><img src="_images/math/8a44fc07df65154d203aba2184f9cb698291c574.png" alt="\Delta x &amp;= 13 + 11 = 24
@@ -105,11 +106,12 @@
 <p>The length of the rectangle can be computed from the diagonal and the width.</p>
 </section>
 <section id="distance-in-3d">
-<h2>Distance in 3D<a class="headerlink" href="#distance-in-3d" title="Permalink to this headline">¶</a></h2>
+<h2>Distance in 3D<a class="headerlink" href="#distance-in-3d" title="Link to this heading">¶</a></h2>
 <p>When dealing with distances in 3D, we need a third Z axis that is perpendicular to both X and Y. The distance is then be given by</p>
 <div class="math">
 <p><img src="_images/math/934aebb9f03e8f7b71a77c8f8d78e50447446c46.png" alt="\sqrt{(\Delta x)^2 + (\Delta y)^2 + (\Delta z)^2}"/></p>
-</div><a class="reference internal image-reference" href="_images/dist3D.png"><img alt="_images/dist3D.png" src="_images/dist3D.png" style="width: 700px;" /></a>
+</div><a class="reference internal image-reference" href="_images/dist3D.png"><img alt="_images/dist3D.png" src="_images/dist3D.png" style="width: 700px;" />
+</a>
 <p>In the above figure, the objective is to find length EF. X, Y, Z is an arbitrary coordinate system such that the X, Y, and Z axes are perpendicular to each other.</p>
 <p>As one traverses from E to F, the X, Y, and Z coordinates chnage by <img class="math" src="_images/math/7c3282642d867109f551c02c4946b913e5c0a430.png" alt="\Delta x"/>, <img class="math" src="_images/math/09081834f13c72fb00b7cf764822a9e48ece7003.png" alt="\Delta y"/>, <img class="math" src="_images/math/f52e428a596299d136f6a197f954d730669c0253.png" alt="\Delta z"/>, respectively. GH is the projection (shadow) of EF on the XY plane. Thus, as one traverses from G to H, X and Y change by the same amount as in the case of traversal from E to F. However, there is no change in the Z coordinate. Using Pythagoras, as in the 2D case, <img class="math" src="_images/math/efff36c5f94880f1ba0b6a16662a480a1d590ac2.png" alt="GH=\sqrt{(\Delta x)^2 + (\Delta y)^2}"/>. Note that EI is just a parallel translation of GH in the Z direction without change in length. Thus, <img class="math" src="_images/math/a51ae61f5278c25adfff39114636dd28e1075103.png" alt="EI=\sqrt{(\Delta x)^2 + (\Delta y)^2}"/>. FI is perpendicular to EI nd has length <img class="math" src="_images/math/f52e428a596299d136f6a197f954d730669c0253.png" alt="\Delta z"/>. Applying Pythagoras to triangle EIF,</p>
 <div class="math">
@@ -120,7 +122,8 @@
 EF = \sqrt{(\Delta x)^2 + (\Delta y)^2 + (\Delta z)^2}"/></p>
 </div><hr class="docutils" />
 <p>Example: In the rectangular prism below, I and J are the mid-points of BG and EF, respectively. AB=4, AD=2, and DE=5. Find BH (face diagonal), BE (body diagonal), and IJ.</p>
-<a class="reference internal image-reference" href="_images/rect3D.png"><img alt="_images/rect3D.png" src="_images/rect3D.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="_images/rect3D.png"><img alt="_images/rect3D.png" src="_images/rect3D.png" style="width: 400px;" />
+</a>
 <p>AB, AD, and AH are perpendicular to each other. Let us choose X along AB, Y along AH, and Z along AD.</p>
 <p>As one traverses from B to H:</p>
 <div class="math">
@@ -139,9 +142,10 @@ BE &amp;= \sqrt{(-4)^2+(5)^2+(2)^2}=\sqrt{45}"/></p>
 IJ &amp;= \sqrt{(-2)^2+\left(\frac{5}{2}\right)^2+(2)^2}=\sqrt{\frac{57}{4}}=\frac{\sqrt{57}}{2}"/></p>
 </div></section>
 <section id="surface-area-and-volume">
-<h2>Surface Area and Volume<a class="headerlink" href="#surface-area-and-volume" title="Permalink to this headline">¶</a></h2>
+<h2>Surface Area and Volume<a class="headerlink" href="#surface-area-and-volume" title="Link to this heading">¶</a></h2>
 <p>Let us begin with an observation. In the figure below are shown three functions of <img class="math" src="_images/math/888f7c323ac0341871e867220ae2d76467d74d6e.png" alt="x"/>. The green function takes a constant value of <img class="math" src="_images/math/a5fa84b363f309ebc8fe7db38304541732c7de9a.png" alt="q"/> over <img class="math" src="_images/math/2e5b4a97cac1d0960e3ebd39e540fc7a20c9f47a.png" alt="0&lt;x&lt;h"/>. The red function grows linearly from <img class="math" src="_images/math/31fdf41b39df23c95e52c5aef07f59d9adf82f3c.png" alt="0"/> to <img class="math" src="_images/math/a5fa84b363f309ebc8fe7db38304541732c7de9a.png" alt="q"/>, and the blue function grows quadratically from <img class="math" src="_images/math/31fdf41b39df23c95e52c5aef07f59d9adf82f3c.png" alt="0"/> to <img class="math" src="_images/math/a5fa84b363f309ebc8fe7db38304541732c7de9a.png" alt="q"/>. The area under the green curve (and above the X axis) over <img class="math" src="_images/math/2e5b4a97cac1d0960e3ebd39e540fc7a20c9f47a.png" alt="0&lt;x&lt;h"/> is <img class="math" src="_images/math/b89187239963ff8e1517d5e0521e78b322091bf8.png" alt="qh"/>. The area under the red curve is half of that i.e. <img class="math" src="_images/math/08ef1b53ed3c031f46e1a35a1fe01f5d68c0523d.png" alt="\frac{qh}{2}"/>, and the area under the blue curve is <img class="math" src="_images/math/d32bb498c658ffce81d7047bae14b8f055c71b77.png" alt="\frac{qh}{3}"/> (stated without proof).</p>
-<a class="reference internal image-reference" href="_images/graphs.png"><img alt="_images/graphs.png" src="_images/graphs.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="_images/graphs.png"><img alt="_images/graphs.png" src="_images/graphs.png" style="width: 400px;" />
+</a>
 <div class="math">
 <p><img src="_images/math/bc5a62355e955c54c5f29c5777e718b028a483ed.png" alt="&amp;\text{Area under green curve} = qh
 
@@ -150,7 +154,8 @@ IJ &amp;= \sqrt{(-2)^2+\left(\frac{5}{2}\right)^2+(2)^2}=\sqrt{\frac{57}{4}}=\fr
 &amp;\text{Area under blue curve} = \frac{qh}{3}"/></p>
 </div><hr class="docutils" />
 <p>The figure below shows a prism (left) and a pyramid (right). The left solid is generated by sweeping a fixed template - the base of the prism - from the bottom to the top. The surface area of the side of the prism can be thought of being generated by the perimeter of the base being swept through the height of the prism. Similarly the volume of the prism is generated by the sweeing of the base area through the height. The side surface area is the area under the green curve above with <img class="math" src="_images/math/a5fa84b363f309ebc8fe7db38304541732c7de9a.png" alt="q"/> replaced by the perimeter and <img class="math" src="_images/math/4c120f773ab4e1c59ad2bd44aae969ce24dd190a.png" alt="h"/> the height of the prism. The volume is the area under the green curve awith <img class="math" src="_images/math/a5fa84b363f309ebc8fe7db38304541732c7de9a.png" alt="q"/> replaced by the base area. To get the total surface area, the areas of the bottom and top faces need to be added to the side surface area.</p>
-<a class="reference internal image-reference" href="_images/prism_pyramid.png"><img alt="_images/prism_pyramid.png" src="_images/prism_pyramid.png" style="width: 700px;" /></a>
+<a class="reference internal image-reference" href="_images/prism_pyramid.png"><img alt="_images/prism_pyramid.png" src="_images/prism_pyramid.png" style="width: 700px;" />
+</a>
 <div class="math">
 <p><img src="_images/math/8542e39177db827568f044b68cb24cbc156d230c.png" alt="&amp;\text{Surface area of prism} = \text{Perimeter of base}~\times~\text{Height} + 2\times~\text{Base area}
 
@@ -174,7 +179,8 @@ IJ &amp;= \sqrt{(-2)^2+\left(\frac{5}{2}\right)^2+(2)^2}=\sqrt{\frac{57}{4}}=\fr
 </div><p>A cone is a special case of a pyramid with circular base. Hence the volume of a cone is <img class="math" src="_images/math/cccf6247e6ad5dd0a5f6b3fc4310465c4640ef3f.png" alt="\frac{1}{3}\times \pi r^2 \times h"/> where <img class="math" src="_images/math/79a3d439d28652c547386f39b555d90d3aaf102d.png" alt="r"/> is the radius of the base and <img class="math" src="_images/math/4c120f773ab4e1c59ad2bd44aae969ce24dd190a.png" alt="h"/> is the height of the cone.</p>
 <hr class="docutils" />
 <p>The hemisphere can be thought of as a pyramid with height equal to the radius - R. Hoever, the circumference and area of the circular template grows neither linearly, not quadratically.</p>
-<a class="reference internal image-reference" href="_images/hemisphere.png"><img alt="_images/hemisphere.png" src="_images/hemisphere.png" style="width: 300px;" /></a>
+<a class="reference internal image-reference" href="_images/hemisphere.png"><img alt="_images/hemisphere.png" src="_images/hemisphere.png" style="width: 300px;" />
+</a>
 <p>In this case,</p>
 <div class="math">
 <p><img src="_images/math/0f18aa68fa6c5bdb063d49152eff62cfbfbe2c42.png" alt="&amp;\text{Area of the side (excluding the cap)} = (2\pi R) \times (R)=2\pi R^2
@@ -193,10 +199,11 @@ IJ &amp;= \sqrt{(-2)^2+\left(\frac{5}{2}\right)^2+(2)^2}=\sqrt{\frac{57}{4}}=\fr
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table of Contents</a></h3>
-  <ul>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
 <li><a class="reference internal" href="#">Three-Dimensional Geometry</a><ul>
 <li><a class="reference internal" href="#polyhedra">Polyhedra</a></li>
 <li><a class="reference internal" href="#distance-in-2d">Distance in 2D</a></li>
@@ -206,12 +213,17 @@ IJ &amp;= \sqrt{(-2)^2+\left(\frac{5}{2}\right)^2+(2)^2}=\sqrt{\frac{57}{4}}=\fr
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="massPoints.html"
-                        title="previous chapter">Mass Points</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="graphTheory.html"
-                        title="next chapter">Graph Theory</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="massPoints.html"
+                          title="previous chapter">Mass Points</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="graphTheory.html"
+                          title="next chapter">Graph Theory</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -219,7 +231,7 @@ IJ &amp;= \sqrt{(-2)^2+\left(\frac{5}{2}\right)^2+(2)^2}=\sqrt{\frac{57}{4}}=\fr
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
-<div id="searchbox" style="display: none" role="search">
+<search id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
@@ -227,13 +239,13 @@ IJ &amp;= \sqrt{(-2)^2+\left(\frac{5}{2}\right)^2+(2)^2}=\sqrt{\frac{57}{4}}=\fr
       <input type="submit" value="Go" />
     </form>
     </div>
-</div>
-<script>$('#searchbox').show(0);</script>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -251,8 +263,8 @@ IJ &amp;= \sqrt{(-2)^2+\left(\frac{5}{2}\right)^2+(2)^2}=\sqrt{\frac{57}{4}}=\fr
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, AI.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+    &#169; Copyright 2024, AI.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

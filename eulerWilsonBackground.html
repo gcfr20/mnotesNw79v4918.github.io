@@ -1,26 +1,24 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Background (Advanced Math Concepts) &#8212; Math Notes  documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=2bf1fcf8" />
     
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Terminating and Recurring Decimals" href="terminatingFractions.html" />
     <link rel="prev" title="Euler and Wilson’s Theorems" href="eulerWilsonThms.html" /> 
   </head><body>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -45,20 +43,20 @@
           <div class="body" role="main">
             
   <section id="background-advanced-math-concepts">
-<h1>Background (Advanced Math Concepts)<a class="headerlink" href="#background-advanced-math-concepts" title="Permalink to this headline">¶</a></h1>
+<h1>Background (Advanced Math Concepts)<a class="headerlink" href="#background-advanced-math-concepts" title="Link to this heading">¶</a></h1>
 <p>A congruence <img class="math" src="_images/math/bf470dec003d9f6f6d5d4d1954b4464e6708bc3f.png" alt="ax\equiv 1~(mod~n)"/> is equivalent to the Diophantine equation <img class="math" src="_images/math/cb254270c53e7e0415bc492620dd85614e63376a.png" alt="ax+ny=1"/>. <strong>A solution for x exists only if gcd(a,n)=1</strong>. Otherwise, a and n will have a common divisor different from 1, the left hand side will be divisible by this common divisor, but the right hand side will not be, leading to a contradiction.</p>
 <p>In fact, if gcd(a,n)=1, <img class="math" src="_images/math/bf470dec003d9f6f6d5d4d1954b4464e6708bc3f.png" alt="ax\equiv 1~(mod~n)"/> is guaranteed to have a unique solution modulo n. If we define a binary operation - ‘multiplication’ - with arguments a and x as multiplication modulo n, then 1 can be defined as the identity (neutral element) for the operation, and a and x are inverses of each other.</p>
 <section id="euler-s-theorem">
-<h2>Euler’s Theorem<a class="headerlink" href="#euler-s-theorem" title="Permalink to this headline">¶</a></h2>
+<h2>Euler’s Theorem<a class="headerlink" href="#euler-s-theorem" title="Link to this heading">¶</a></h2>
 <p>Consider a subset G of <img class="math" src="_images/math/436d934fbd2a2b031c039282d050be7204a93033.png" alt="S=\{0,1,2,...,n-1\}"/> defined as the set of numbers that are relatively prime to n. Multiplication is commutative and associative, there is a multiplicative identity, and every member of the set G has a multiplicative inverse within set G. Thus, G forms a multiplicative group. The order of the group is <img class="math" src="_images/math/401f5d84622ab47172af82d625be000e63cce564.png" alt="\varphi(n)"/>. When any element of a multiplicative group is raised to the order of the group, the result is the mulitplicative identity. Hence, for all elements of the group G, <img class="math" src="_images/math/03ccabee95fc05fa657b0979b7f64c2ab2a4774a.png" alt="a^{\varphi(n)}\equiv 1~(mod~n)1"/>. This is Euler’s theorem.</p>
 <hr class="docutils" />
 <p>As an example, let us consider numbers modulo 15. <img class="math" src="_images/math/655e1f39d9586d7c66a6f0457bce56772d25f91d.png" alt="\varphi(15)=(3-1)(5-1)=8"/>.</p>
-<table class="colwidths-given docutils align-default">
+<table class="docutils align-default">
 <colgroup>
-<col style="width: 13%" />
-<col style="width: 38%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
+<col style="width: 12.5%" />
+<col style="width: 37.5%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>a</p></th>
@@ -149,7 +147,7 @@
 </section>
 <hr class="docutils" />
 <section id="wilson-s-theorem">
-<h2>Wilson’s Theorem<a class="headerlink" href="#wilson-s-theorem" title="Permalink to this headline">¶</a></h2>
+<h2>Wilson’s Theorem<a class="headerlink" href="#wilson-s-theorem" title="Link to this heading">¶</a></h2>
 <p>Now consider the case of modulo p, where p is a prime greater than 2. Every residue other than 0 is relatively prime with p and is thus invertible. Hence, <img class="math" src="_images/math/0163af03b05813dcd5bc9ffb7744fda1fca931ac.png" alt="\varphi(p)=p-1"/> and the group G is of order <img class="math" src="_images/math/16e014f1f277f4f8f3dd8742db372226c8792d4b.png" alt="p-1"/>.</p>
 <p>For any modulo <img class="math" src="_images/math/5a939c5280da7202ca4531f175a7780ad5e1f80a.png" alt="n"/>, <img class="math" src="_images/math/ec830c85a5fbb48028fe797044da6bdfb924c2fa.png" alt="1"/> and <img class="math" src="_images/math/a44c09dc69d687fd66b7a1a12197c0299aa5db1c.png" alt="n-1"/> are self-inverses. For modulo prime <img class="math" src="_images/math/141bbefb74014fc5e43499901bf78607ae335583.png" alt="p"/>, the <img class="math" src="_images/math/6dfacebff625861aae36fd32707ea962cabb42a5.png" alt="(p-2)"/> residues other than <img class="math" src="_images/math/ec830c85a5fbb48028fe797044da6bdfb924c2fa.png" alt="1"/> and <img class="math" src="_images/math/16e014f1f277f4f8f3dd8742db372226c8792d4b.png" alt="p-1"/> pair up to form pairs of mutual-inverses. Thus, multiplying these <img class="math" src="_images/math/6dfacebff625861aae36fd32707ea962cabb42a5.png" alt="(p-2)"/> numbers results in <img class="math" src="_images/math/d94aad9a4183befddfc462638cde25005677490f.png" alt="(p-2)!\equiv 1~(mod~p)"/>.</p>
 <p>We have not proved that the <img class="math" src="_images/math/9ee506de1ab2c4cae2f241018e03afa6efb7684c.png" alt="p-2"/> residues other than <img class="math" src="_images/math/ec830c85a5fbb48028fe797044da6bdfb924c2fa.png" alt="1"/> and <img class="math" src="_images/math/16e014f1f277f4f8f3dd8742db372226c8792d4b.png" alt="p-1"/> cannot be self inverses. Suppose, one of those residues - <img class="math" src="_images/math/a5fa84b363f309ebc8fe7db38304541732c7de9a.png" alt="q"/> - is a self-inverse.</p>
@@ -185,10 +183,11 @@
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table of Contents</a></h3>
-  <ul>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
 <li><a class="reference internal" href="#">Background (Advanced Math Concepts)</a><ul>
 <li><a class="reference internal" href="#euler-s-theorem">Euler’s Theorem</a></li>
 <li><a class="reference internal" href="#wilson-s-theorem">Wilson’s Theorem</a></li>
@@ -196,12 +195,17 @@
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="eulerWilsonThms.html"
-                        title="previous chapter">Euler and Wilson’s Theorems</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="terminatingFractions.html"
-                        title="next chapter">Terminating and Recurring Decimals</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="eulerWilsonThms.html"
+                          title="previous chapter">Euler and Wilson’s Theorems</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="terminatingFractions.html"
+                          title="next chapter">Terminating and Recurring Decimals</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -209,7 +213,7 @@
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
-<div id="searchbox" style="display: none" role="search">
+<search id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
@@ -217,13 +221,13 @@
       <input type="submit" value="Go" />
     </form>
     </div>
-</div>
-<script>$('#searchbox').show(0);</script>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -242,8 +246,8 @@
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, AI.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+    &#169; Copyright 2024, AI.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

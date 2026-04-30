@@ -1,26 +1,24 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Recurrence Relations (Advanced) &#8212; Math Notes  documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=2bf1fcf8" />
     
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Partitions" href="partitions.html" />
     <link rel="prev" title="Stones and Sticks Principle" href="stonesSticks.html" /> 
   </head><body>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -45,18 +43,21 @@
           <div class="body" role="main">
             
   <section id="recurrence-relations-advanced">
-<h1>Recurrence Relations (Advanced)<a class="headerlink" href="#recurrence-relations-advanced" title="Permalink to this headline">¶</a></h1>
+<h1>Recurrence Relations (Advanced)<a class="headerlink" href="#recurrence-relations-advanced" title="Link to this heading">¶</a></h1>
 <p>The first three sections provide a flavor of recurrence relations. We pick up the thread on distributions from other sections in the fourth section on Stirling number.</p>
 <section id="tower-of-hanoi">
-<h2>Tower of Hanoi<a class="headerlink" href="#tower-of-hanoi" title="Permalink to this headline">¶</a></h2>
+<h2>Tower of Hanoi<a class="headerlink" href="#tower-of-hanoi" title="Link to this heading">¶</a></h2>
 <p>The image below shows a classic problem where there are three pegs and a certain number of discs with distinct sizes (diameters). The discs are initially sitting on the first peg ordered by size. No disc is sitting above a disc that is smaller than its size. The objective is to move this stack of discs to the third peg following two rules: <strong>1) Only one disc can be moved at a time, and 2) A disc can only be placed onto an empty peg, or onto a larger disc.</strong> What is the least number of moves required to move a stack with <img class="math" src="_images/math/5a939c5280da7202ca4531f175a7780ad5e1f80a.png" alt="n"/> discs?</p>
-<a class="reference internal image-reference" href="_images/tower_of_hanoi.png"><img alt="_images/tower_of_hanoi.png" src="_images/tower_of_hanoi.png" style="width: 150px;" /></a>
+<a class="reference internal image-reference" href="_images/tower_of_hanoi.png"><img alt="_images/tower_of_hanoi.png" src="_images/tower_of_hanoi.png" style="width: 150px;" />
+</a>
 <p>If there is only <strong>1 disc</strong>, the move can be done in one step. We will denote this by <img class="math" src="_images/math/acb218a0319d9cbc66c18edb0d356aa3a795682f.png" alt="T(1)=1"/>.</p>
 <p>If there are only <strong>2 discs</strong>, we will first move to the top small disc from peg A to peg B, then move the bottom large disc from peg A to peg C, and finally move the small disc from peg B to peg C. So we need <img class="math" src="_images/math/5b4475c83a242225b86b3862fc6b109cc32d7de7.png" alt="T(2)=3"/> moves.</p>
-<a class="reference internal image-reference" href="_images/tower_of_hanoi_soln2.png"><img alt="_images/tower_of_hanoi_soln2.png" src="_images/tower_of_hanoi_soln2.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="_images/tower_of_hanoi_soln2.png"><img alt="_images/tower_of_hanoi_soln2.png" src="_images/tower_of_hanoi_soln2.png" style="width: 600px;" />
+</a>
 <p>Note, even though we are highlighting the peg names, the whole idea is to move the disc stack to another peg using a third peg as a temporary holding place. In the general case, it does not matter if larger discs are already present on some pegs. The top of the stack consisting of two discs can still be moved using the same algorithm irrespective of if larger discs are already present on other pegs.</p>
 <p>Now, suppose there are <strong>3 discs</strong>. We can move the stack of the top two discs to peg B using the recipe for 2 discs, move the largest of the 3 discs from peg A to peg C, and then move the 2 disc stack from peg B to peg C, again using the two disc recipe.</p>
-<a class="reference internal image-reference" href="_images/tower_of_hanoi_soln3.png"><img alt="_images/tower_of_hanoi_soln3.png" src="_images/tower_of_hanoi_soln3.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="_images/tower_of_hanoi_soln3.png"><img alt="_images/tower_of_hanoi_soln3.png" src="_images/tower_of_hanoi_soln3.png" style="width: 600px;" />
+</a>
 <p>Thus, <img class="math" src="_images/math/42a9eb944e459010183b690e8f3b34672544d88a.png" alt="T(3)=2\times T(2)+1"/>.</p>
 <p>In fact, for any <img class="math" src="_images/math/4f4dac2099abc307369899aef3ea2043f2fb792a.png" alt="n (n&gt;1)"/>, <img class="math" src="_images/math/9b631cd871fb7d06d97dd8e9d74bea15ac331b36.png" alt="T(n+1)=2\times T(n)+1"/>. We can move the stack of the top <img class="math" src="_images/math/5a939c5280da7202ca4531f175a7780ad5e1f80a.png" alt="n"/> discs to peg B, then move the largest disc from peg A to peg C, and finally move the stack of the :math”<cite>n</cite> discs from peg B to peg C.</p>
 <p>Thus, we can compute T(2) from T(1), T(3) from T(2), T(4) from T(3), and so on using our formula without actually thinking about all the moves. Such formulas that are applied successively are called recurrence relations.</p>
@@ -65,7 +66,7 @@
 <p>However, in this section, we do not worry about how to solve such recurrence relations. We are just highlighting the fact that such recurrence relations can be derived and successive application of such recurrence relations allows one to calculate counts for small arguments.</p>
 </section>
 <section id="fibonacci-sequence">
-<h2>Fibonacci Sequence<a class="headerlink" href="#fibonacci-sequence" title="Permalink to this headline">¶</a></h2>
+<h2>Fibonacci Sequence<a class="headerlink" href="#fibonacci-sequence" title="Link to this heading">¶</a></h2>
 <p>Another well-known recurrence relation is for the Fibonacci problem. The details of the problem can be read <a class="reference external" href="https://en.wikipedia.org/wiki/Fibonacci_sequence#Europe">at this link</a>.</p>
 <p>This results in the following recurrence relation:</p>
 <div class="math">
@@ -77,7 +78,7 @@ F(n)&amp;=F(n-1)+F(n)~\text{(For } n&gt;2 \text{ )}"/></p>
 </div></section>
 <hr class="docutils" />
 <section id="combinations">
-<h2>Combinations<a class="headerlink" href="#combinations" title="Permalink to this headline">¶</a></h2>
+<h2>Combinations<a class="headerlink" href="#combinations" title="Link to this heading">¶</a></h2>
 <p>In our discussion of basic combinatorics, we learnt that the number of ways of choosing <img class="math" src="_images/math/9630132210b904754c9ab272b61cb527d12263ca.png" alt="k"/> objects from <img class="math" src="_images/math/5a939c5280da7202ca4531f175a7780ad5e1f80a.png" alt="n"/> distinguishable objects is given by <img class="math" src="_images/math/aaef3d2a9265053cf2d39193d76446004e5d866c.png" alt="C(n,k)=\frac{n!}{(n-k)! k!}"/>.</p>
 <p>We could make this choice in another way. Consider one of the <img class="math" src="_images/math/5a939c5280da7202ca4531f175a7780ad5e1f80a.png" alt="n"/> objects. There are two mutually exclusive possibilities. Either this object is chosen or the object is not chosen. If the object is chosen, then we only need to choose the remaining <img class="math" src="_images/math/80f9cec39846018c61106a1156a7b875d277a88c.png" alt="k-1"/> objects from <img class="math" src="_images/math/a44c09dc69d687fd66b7a1a12197c0299aa5db1c.png" alt="n-1"/> objects. If the object is not chosen, then we need to choose the <img class="math" src="_images/math/9630132210b904754c9ab272b61cb527d12263ca.png" alt="k"/> objects from <img class="math" src="_images/math/a44c09dc69d687fd66b7a1a12197c0299aa5db1c.png" alt="n-1"/> objects. Thus, applying the addition principle (corresponding to the <strong>or</strong> between the mutually exclusive events),</p>
 <div class="math">
@@ -95,7 +96,7 @@ F(n)&amp;=F(n-1)+F(n)~\text{(For } n&gt;2 \text{ )}"/></p>
 </div><p>More details about the application of Pascal’s formula can be found <a class="reference external" href="https://en.wikipedia.org/wiki/Pascal%27s_triangle">here</a>.</p>
 </section>
 <section id="stirling-number">
-<h2>Stirling Number<a class="headerlink" href="#stirling-number" title="Permalink to this headline">¶</a></h2>
+<h2>Stirling Number<a class="headerlink" href="#stirling-number" title="Link to this heading">¶</a></h2>
 <p>In our discussion of the <a class="reference internal" href="inclusionExclusion.html#distinguishable-distributions"><span class="std std-ref">inclusion-exclusion principle</span></a> , we had come across the following problem:</p>
 <p>In how many ways can 12 <strong>distinguishable</strong> presents be given to three people such that every person gets at least one present and all the presents are given out?</p>
 <p>We then encountered a variant of this problem in <a class="reference internal" href="stonesSticks.html#stones-and-sticks-principle"><span class="std std-ref">stones and sticks principle</span></a>.</p>
@@ -138,10 +139,11 @@ F(n)&amp;=F(n-1)+F(n)~\text{(For } n&gt;2 \text{ )}"/></p>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table of Contents</a></h3>
-  <ul>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
 <li><a class="reference internal" href="#">Recurrence Relations (Advanced)</a><ul>
 <li><a class="reference internal" href="#tower-of-hanoi">Tower of Hanoi</a></li>
 <li><a class="reference internal" href="#fibonacci-sequence">Fibonacci Sequence</a></li>
@@ -151,12 +153,17 @@ F(n)&amp;=F(n-1)+F(n)~\text{(For } n&gt;2 \text{ )}"/></p>
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="stonesSticks.html"
-                        title="previous chapter">Stones and Sticks Principle</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="partitions.html"
-                        title="next chapter">Partitions</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="stonesSticks.html"
+                          title="previous chapter">Stones and Sticks Principle</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="partitions.html"
+                          title="next chapter">Partitions</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -164,7 +171,7 @@ F(n)&amp;=F(n-1)+F(n)~\text{(For } n&gt;2 \text{ )}"/></p>
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
-<div id="searchbox" style="display: none" role="search">
+<search id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
@@ -172,13 +179,13 @@ F(n)&amp;=F(n-1)+F(n)~\text{(For } n&gt;2 \text{ )}"/></p>
       <input type="submit" value="Go" />
     </form>
     </div>
-</div>
-<script>$('#searchbox').show(0);</script>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -197,8 +204,8 @@ F(n)&amp;=F(n-1)+F(n)~\text{(For } n&gt;2 \text{ )}"/></p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, AI.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+    &#169; Copyright 2024, AI.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

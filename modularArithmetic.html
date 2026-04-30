@@ -1,26 +1,24 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Modular Arithmetic &#8212; Math Notes  documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=2bf1fcf8" />
     
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Prime Factorization and Divisors of numbers" href="divisors.html" />
     <link rel="prev" title="Number Theory" href="numberTheory.html" /> 
   </head><body>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -44,7 +42,7 @@
           <div class="body" role="main">
             
   <section id="modular-arithmetic">
-<h1>Modular Arithmetic<a class="headerlink" href="#modular-arithmetic" title="Permalink to this headline">¶</a></h1>
+<h1>Modular Arithmetic<a class="headerlink" href="#modular-arithmetic" title="Link to this heading">¶</a></h1>
 <p><img class="math" src="_images/math/9788b48f034adc5e75aaf0bc7fcc3c46d0f71b62.png" alt="a\equiv b~(mod~n)"/> means that <img class="math" src="_images/math/b3e65e3b6408fcfa00452530b73f55d1755f9965.png" alt="a"/> and <img class="math" src="_images/math/68c7c8c65602677ab56cf7fd88002023f0edc575.png" alt="b"/> give the same remainder when divided by <img class="math" src="_images/math/5a939c5280da7202ca4531f175a7780ad5e1f80a.png" alt="n"/>. Note, the remainder when divided by <img class="math" src="_images/math/5a939c5280da7202ca4531f175a7780ad5e1f80a.png" alt="n"/> has to be one of <img class="math" src="_images/math/4adb0d9bfcc2f654f77761eabede10437e10cdf8.png" alt="0,1,2,...,n-1"/>. Thus, all integers fall into one of these n-1 buckets and all numbers within a bucket are congruent to each other.</p>
 <p>For example, <img class="math" src="_images/math/f7220b6c446cbde1d9954405e75fcd291f15c061.png" alt="-11,-8,-5,-2,1,4,7,10"/> all give remainder <img class="math" src="_images/math/ec830c85a5fbb48028fe797044da6bdfb924c2fa.png" alt="1"/> when divided by <img class="math" src="_images/math/3204f0580808cc1d3ded72d87384c025c9e7e272.png" alt="3"/>. Thus,</p>
 <div class="math">
@@ -54,7 +52,7 @@
 <img class="math" src="_images/math/9ef3b750d818b858012fc387ffbb3f0125aa126c.png" alt="(a+c)\equiv (b+d)~(mod~n)~[i],~ac\equiv bd~(mod~n)~[ii]"/>.</p>
 <p>It follows that <img class="math" src="_images/math/ba057ddf65bb2cbdcc15329d887d34d9b29898aa.png" alt="ak\equiv bk~(mod~n)~[iii]"/> as <img class="math" src="_images/math/ff59ee018082984ffb6c2e24b4f59fefa442dd8c.png" alt="k\equiv k~(mod~n)"/> for any integer <img class="math" src="_images/math/9630132210b904754c9ab272b61cb527d12263ca.png" alt="k"/>. Additionally, successive multiplication gives <img class="math" src="_images/math/65a0f1577a8d93d0d28432ce3cf1d181a9bce31a.png" alt="a^k\equiv b^k~(mod~n)~[iv]"/>.</p>
 <section id="examples">
-<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<h2>Examples<a class="headerlink" href="#examples" title="Link to this heading">¶</a></h2>
 <div class="math">
 <p><img src="_images/math/71770525b537a2c8de4b01d462708e84782223fd.png" alt="&amp;-4\equiv 3~(mod~7)
 
@@ -83,22 +81,28 @@
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table of Contents</a></h3>
-  <ul>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
 <li><a class="reference internal" href="#">Modular Arithmetic</a><ul>
 <li><a class="reference internal" href="#examples">Examples</a></li>
 </ul>
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="numberTheory.html"
-                        title="previous chapter">Number Theory</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="divisors.html"
-                        title="next chapter">Prime Factorization and Divisors of numbers</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="numberTheory.html"
+                          title="previous chapter">Number Theory</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="divisors.html"
+                          title="next chapter">Prime Factorization and Divisors of numbers</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -106,7 +110,7 @@
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
-<div id="searchbox" style="display: none" role="search">
+<search id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
@@ -114,13 +118,13 @@
       <input type="submit" value="Go" />
     </form>
     </div>
-</div>
-<script>$('#searchbox').show(0);</script>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -138,8 +142,8 @@
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, AI.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+    &#169; Copyright 2024, AI.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

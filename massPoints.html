@@ -1,26 +1,24 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Mass Points &#8212; Math Notes  documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=2bf1fcf8" />
     
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Three-Dimensional Geometry" href="threeDimensional.html" />
     <link rel="prev" title="Circles" href="circleGeometry.html" /> 
   </head><body>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -44,18 +42,20 @@
           <div class="body" role="main">
             
   <section id="mass-points">
-<h1>Mass Points<a class="headerlink" href="#mass-points" title="Permalink to this headline">¶</a></h1>
+<h1>Mass Points<a class="headerlink" href="#mass-points" title="Link to this heading">¶</a></h1>
 <section id="center-of-mass">
-<h2>Center of Mass<a class="headerlink" href="#center-of-mass" title="Permalink to this headline">¶</a></h2>
-<a class="reference internal image-reference" href="_images/center_of_mass.png"><img alt="_images/center_of_mass.png" src="_images/center_of_mass.png" style="width: 400px;" /></a>
+<h2>Center of Mass<a class="headerlink" href="#center-of-mass" title="Link to this heading">¶</a></h2>
+<a class="reference internal image-reference" href="_images/center_of_mass.png"><img alt="_images/center_of_mass.png" src="_images/center_of_mass.png" style="width: 400px;" />
+</a>
 <p>In triangle ABC, suppose point masses 3, 3, and 5 are placed at A, B, and C respectively. These are denoted by 3A, 3B, and 5C, respectively,</p>
 <p>The center of mass of the masses at A and B is at the mid-point of A  and B as the masses are equal. If a mass equal to the sum of masses of A and B - 6 -  is assumed to act at point D, then the center of mass of this mass and the mass at point C - 5 - is at point F. This is same as the center of mass of the masses at A, B, and C. Hence, we place 6D at D. The total mass of the three masses placed at A, B, and C is equal to the effective mass of 6 placed at D and the mass of 5 at C. The total mass - 11 - is the effective mass at point F. We are not interested in Physics applications of this effective mass here. Instead, we are mainly interested in using these effective masses to infer the ratio of distances.</p>
 <p>Alternatively, the center of mass of the masses at points B and C is at point E. The distances of point E from B and C, respectively are inversely proportional to the masses at points B and C, respectively. If a mass equal to the sum of masses of B and C is assumed to act at point E, then the center of mass of this mass and the mass at point A is also at point F. Hence, this approach of first computing the center of mass of two points and then using an effective mass at this point and the mass at the third point to compute the center of mass of the original three masses is consistent.</p>
 <p>The segments from the triangle vertices to the opposite sides are called <strong>Cevians</strong> (pronounced “chevians” with a “ch” as in cheese). If we had drawn the third Cevian starting at B and passing through F, the foot of the Cevian would be the center of mass of the masses at A and C.</p>
 </section>
 <section id="mass-point-analysis">
-<h2>Mass Point Analysis<a class="headerlink" href="#mass-point-analysis" title="Permalink to this headline">¶</a></h2>
-<a class="reference internal image-reference" href="_images/mass_pts_ex1.png"><img alt="_images/mass_pts_ex1.png" src="_images/mass_pts_ex1.png" style="width: 400px;" /></a>
+<h2>Mass Point Analysis<a class="headerlink" href="#mass-point-analysis" title="Link to this heading">¶</a></h2>
+<a class="reference internal image-reference" href="_images/mass_pts_ex1.png"><img alt="_images/mass_pts_ex1.png" src="_images/mass_pts_ex1.png" style="width: 400px;" />
+</a>
 <p>Given <img class="math" src="_images/math/535b138f9aeb828de243e373875220f6cd464ed4.png" alt="BD:DA=3:1"/> and <img class="math" src="_images/math/fda6df71167956eba7af946823a04a691a9c93cf.png" alt="BE:EC=1:1"/>, find <img class="math" src="_images/math/7d0a9e45c650286c8536e7307c9a4b296e4c4f12.png" alt="CG:GA"/>, <img class="math" src="_images/math/6c0be749dffe42eb4f1f8eb030a7dd6ed0fd6e6b.png" alt="AF:FE"/>, <img class="math" src="_images/math/17feeeffacd8cf6b7ab1d6f0a816156120cdb18e.png" alt="BF:FG"/>, and <img class="math" src="_images/math/7e5c74dd51a63f920e33f3a4952692715a20a3e9.png" alt="CF:FD"/>.</p>
 <p>Let us use the center of mass concept from the preceding sub-section in reverse. Instead of finding center of masses given the point masses, we find masses that would get us the center of mass at the point of intersection of the Cevians. The objective is to place point masses at A, B, and C, and effective masses at D, G, F, and E such that the center of mass of the masses at A, B, and C is at point F.</p>
 <p>Here is the recipe:</p>
@@ -63,7 +63,8 @@
 <p>Place mass at A to be three times the mass at B to fix the center of mass at point D (for the point masses at A and B).</p>
 <p>For convenience of calculation, we choose the equal masses at B and C to be 3. It follows that the mass at A is 9. Any number would work for the equal masses at B and C as we are only concerned with the proportions. 3 is chosen to get nice integral numbers instead of fractions.</p>
 <p>Thus, the effective masses at E, D, G, and F are 3+3=6, 3+9=12, 3+9=12, and 3+3+9=15, respectively.</p>
-<a class="reference internal image-reference" href="_images/mass_pts_ex1_res.png"><img alt="_images/mass_pts_ex1_res.png" src="_images/mass_pts_ex1_res.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="_images/mass_pts_ex1_res.png"><img alt="_images/mass_pts_ex1_res.png" src="_images/mass_pts_ex1_res.png" style="width: 400px;" />
+</a>
 <div class="math">
 <p><img src="_images/math/dc05b3b927bb0cd5d742610722157bf688eb9e5a.png" alt="&amp; \frac{CG}{GA}=\frac{\text{Mass at A}}{\text{Mass at C}}=\frac{9}{3}=3
 
@@ -76,14 +77,16 @@
 <p>Here is another example where the Cevians are medians. The feet of the Cevians are the mid-points of the sides.</p>
 <p>In this case, the point of intersection of the Cevians is called the centroid.</p>
 <p>As the feet of the Cevians are mid-points of the sides, equal masses have to be placed at all the vertices to locate the center of mass at the centroid.</p>
-<a class="reference internal image-reference" href="_images/centroid.png"><img alt="_images/centroid.png" src="_images/centroid.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="_images/centroid.png"><img alt="_images/centroid.png" src="_images/centroid.png" style="width: 400px;" />
+</a>
 <p>From the masses in the above figure, the centroid divides the three medians in the ratio 2:1.</p>
 <div class="math">
 <p><img src="_images/math/4fa97a90f2fd443fd21921bdb080eab05dab6bad.png" alt="&amp; \frac{AD}{DB}=\frac{BE}{EC}=\frac{CG}{GA}=1
 
 &amp; \frac{AF}{FE}=\frac{BF}{FG}=\frac{CF}{FD}=2"/></p>
 </div><hr class="docutils" />
-<a class="reference internal image-reference" href="_images/cevas.png"><img alt="_images/cevas.png" src="_images/cevas.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="_images/cevas.png"><img alt="_images/cevas.png" src="_images/cevas.png" style="width: 400px;" />
+</a>
 <p>In general,</p>
 <div class="math">
 <p><img src="_images/math/8742b42b5859c7d3ef573fa6bae060c360abf7df.png" alt="\frac{AD}{DB}\cdot \frac{BE}{EC}\cdot \frac{CG}{GA} &amp; = \frac{v}{u}\cdot \frac{w}{v}\cdot \frac{u}{w}=1"/></p>
@@ -91,16 +94,19 @@
 <hr class="docutils" />
 <p>The concept of mass points can be extended to quadrilaterals as well. In this case we are looking at intersection of transversals, not Cevians.</p>
 <p>Consider the case where the feet of the transversals are mid-points of the sides.</p>
-<a class="reference internal image-reference" href="_images/quads_mp.png"><img alt="_images/quads_mp.png" src="_images/quads_mp.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="_images/quads_mp.png"><img alt="_images/quads_mp.png" src="_images/quads_mp.png" style="width: 400px;" />
+</a>
 <p>Just as in the case of the centroid of a triangle, equal masses need to be placed at the four vertices of the quadrilateral ABCD. From the masses in the above figure, the transversals which form the diagonals of quadrilateral EFGH bisect each other. Thus, quadrilateral ABCD is a parallelogram. This is a remarkable result. <strong>The quadrialteral formed by connecting successive mid-points of any convex quarilateral is always a parallelogram</strong>.</p>
 <hr class="docutils" />
 <p>Here is another example where mass points approach needs to be supplemented by other geometrical properties.</p>
-<a class="reference internal image-reference" href="_images/area_sim_1.png"><img alt="_images/area_sim_1.png" src="_images/area_sim_1.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="_images/area_sim_1.png"><img alt="_images/area_sim_1.png" src="_images/area_sim_1.png" style="width: 400px;" />
+</a>
 <p>Given in rectangle ABCD, BD=4, AB=2, AE=EC, and CF=FD, find the area of the shaded triangle.</p>
 <p>Triangle BCD is a good candidate for the application of mass points as two Cevians are visible. However, we have only one ratio to work with CF/FD=1. We need two ratios to resolve the traingle using mass points.</p>
 <p>We get the second ratio using similarity. Triangles EGC and DGB are similar. Moreover, BD/EC=2. Hence, BG/GC=2. There is our second ratio.</p>
 <p>So we assign mass 1 to B, 2 to C (to account for BG/GC=2). Then, we assign mass 2 to point D (to account for CF/FD=1). The masses for G, F, and H can then be deduced. See figure below.</p>
-<a class="reference internal image-reference" href="_images/area_sim_1_mp.png"><img alt="_images/area_sim_1_mp.png" src="_images/area_sim_1_mp.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="_images/area_sim_1_mp.png"><img alt="_images/area_sim_1_mp.png" src="_images/area_sim_1_mp.png" style="width: 400px;" />
+</a>
 <p>The area ratios can then be deduced as follows:</p>
 <div class="math">
 <p><img src="_images/math/3898ea67ba4ae83277607fee3c25921280083606.png" alt="&amp;\text{Area of }\Delta BCD=\frac{1}{2}~\text{Area of rectangle ABCD}=4
@@ -120,10 +126,11 @@
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table of Contents</a></h3>
-  <ul>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
 <li><a class="reference internal" href="#">Mass Points</a><ul>
 <li><a class="reference internal" href="#center-of-mass">Center of Mass</a></li>
 <li><a class="reference internal" href="#mass-point-analysis">Mass Point Analysis</a></li>
@@ -131,12 +138,17 @@
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="circleGeometry.html"
-                        title="previous chapter">Circles</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="threeDimensional.html"
-                        title="next chapter">Three-Dimensional Geometry</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="circleGeometry.html"
+                          title="previous chapter">Circles</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="threeDimensional.html"
+                          title="next chapter">Three-Dimensional Geometry</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -144,7 +156,7 @@
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
-<div id="searchbox" style="display: none" role="search">
+<search id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
@@ -152,13 +164,13 @@
       <input type="submit" value="Go" />
     </form>
     </div>
-</div>
-<script>$('#searchbox').show(0);</script>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -176,8 +188,8 @@
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, AI.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+    &#169; Copyright 2024, AI.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

@@ -1,26 +1,24 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Inclusion-Exclusion Principle &#8212; Math Notes  documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=2bf1fcf8" />
     
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Pigeonhole Principle" href="pigeonhole.html" />
     <link rel="prev" title="Basic Combinatorics" href="basicCombinatorics.html" /> 
   </head><body>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -44,35 +42,42 @@
           <div class="body" role="main">
             
   <section id="inclusion-exclusion-principle">
-<h1>Inclusion-Exclusion Principle<a class="headerlink" href="#inclusion-exclusion-principle" title="Permalink to this headline">¶</a></h1>
+<h1>Inclusion-Exclusion Principle<a class="headerlink" href="#inclusion-exclusion-principle" title="Link to this heading">¶</a></h1>
 <section id="basic-set-theory">
-<h2>Basic Set Theory<a class="headerlink" href="#basic-set-theory" title="Permalink to this headline">¶</a></h2>
+<h2>Basic Set Theory<a class="headerlink" href="#basic-set-theory" title="Link to this heading">¶</a></h2>
 <p>Consider a set U of the first 100 positive integers. Let A be the subset of U that contains the numbers that are divisible by 2, B the subset of U that contains the numbers that are divisible by 3, and C the subset of U that contains the numbers that are divisible by 5.</p>
 <p>The subset of U that contains the elements of set U that do not belong to A is called the complement of set A with respect to set U and is denoted by <img class="math" src="_images/math/17c2540ae6f4d04fd9d6ec5721e215f5eb9bb0d9.png" alt="A'"/>. In this case, the complement of A contains the odd numbers in the first 100 positive integers.</p>
 <p>The set of numbers that are either in set A, or in set B, or in both is called the union of sets A and B and is denoted by <img class="math" src="_images/math/51b9145c515d1852620b81c1480dd337a8920240.png" alt="A\cup B"/>. This set contains numbers that are divisible by 2, 3, or both.</p>
 <p>The set of numbers that are in both sets A and B is called the intersection of sets A and B and is denoted by <img class="math" src="_images/math/de0c2da56ae6821eae9bcedca2cdea634e6b38f8.png" alt="A\cap B"/>. This set contains numbers that are divisible by both 2 and 3 i.e. the numbers divisible by 6.</p>
 <p>While considering such problems, a Venn diagram is very useful. The images below show the different regions in the Venn diagram in green.</p>
 <p><img class="math" src="_images/math/de0c2da56ae6821eae9bcedca2cdea634e6b38f8.png" alt="A\cap B"/></p>
-<a class="reference internal image-reference" href="_images/tripleAintB.png"><img alt="_images/tripleAintB.png" src="_images/tripleAintB.png" style="width: 225px;" /></a>
+<a class="reference internal image-reference" href="_images/tripleAintB.png"><img alt="_images/tripleAintB.png" src="_images/tripleAintB.png" style="width: 225px;" />
+</a>
 <p><img class="math" src="_images/math/71ddea1a337656fbd32cc21d06dc5584445d5860.png" alt="B\cap C"/></p>
-<a class="reference internal image-reference" href="_images/tripleBintC.png"><img alt="_images/tripleBintC.png" src="_images/tripleBintC.png" style="width: 225px;" /></a>
+<a class="reference internal image-reference" href="_images/tripleBintC.png"><img alt="_images/tripleBintC.png" src="_images/tripleBintC.png" style="width: 225px;" />
+</a>
 <p><img class="math" src="_images/math/e935450f09bbd16565905f8dfedb1bf7aa7421b9.png" alt="C\cap A"/></p>
-<a class="reference internal image-reference" href="_images/tripleAintC.png"><img alt="_images/tripleAintC.png" src="_images/tripleAintC.png" style="width: 225px;" /></a>
+<a class="reference internal image-reference" href="_images/tripleAintC.png"><img alt="_images/tripleAintC.png" src="_images/tripleAintC.png" style="width: 225px;" />
+</a>
 <p><img class="math" src="_images/math/26992dc0899a01b8c8ee4ffcb8388e922e0502ee.png" alt="A\cap B\cap C"/></p>
-<a class="reference internal image-reference" href="_images/tripleIntersection.png"><img alt="_images/tripleIntersection.png" src="_images/tripleIntersection.png" style="width: 225px;" /></a>
+<a class="reference internal image-reference" href="_images/tripleIntersection.png"><img alt="_images/tripleIntersection.png" src="_images/tripleIntersection.png" style="width: 225px;" />
+</a>
 <p><img class="math" src="_images/math/7df85996251d4a4635017d36b55ae58db79c8293.png" alt="A\cup B\cup C"/></p>
-<a class="reference internal image-reference" href="_images/tripleUnion.png"><img alt="_images/tripleUnion.png" src="_images/tripleUnion.png" style="width: 225px;" /></a>
+<a class="reference internal image-reference" href="_images/tripleUnion.png"><img alt="_images/tripleUnion.png" src="_images/tripleUnion.png" style="width: 225px;" />
+</a>
 <p><img class="math" src="_images/math/981a5680b93184b8ba2072a738732c1b7888e73e.png" alt="\left(A\cup B\cup C\right)'"/></p>
-<a class="reference internal image-reference" href="_images/tripleComplement.png"><img alt="_images/tripleComplement.png" src="_images/tripleComplement.png" style="width: 225px;" /></a>
+<a class="reference internal image-reference" href="_images/tripleComplement.png"><img alt="_images/tripleComplement.png" src="_images/tripleComplement.png" style="width: 225px;" />
+</a>
 <p>When the number of sets grow, it is difficult to label the different regions. One could use the following scheme shown for three sets.</p>
-<a class="reference internal image-reference" href="_images/VennDiagram.png"><img alt="Venn diagram with three sets" src="_images/VennDiagram.png" style="width: 250px;" /></a>
+<a class="reference internal image-reference" href="_images/VennDiagram.png"><img alt="Venn diagram with three sets" src="_images/VennDiagram.png" style="width: 250px;" />
+</a>
 <p>The different regions are labelled by three digit numbers consisting of base 2 i.e. only two symbols 0 or 1. The leftmost digit indicates whether the region is a part of set A. The middle digit indicates whether the region is a part of set B, and finally the rightmost digit indicates whether the region is a part of set C.</p>
 <p>Thus, <img class="math" src="_images/math/de0c2da56ae6821eae9bcedca2cdea634e6b38f8.png" alt="A\cap B"/> consists of regions whose first two digits are 1 and <img class="math" src="_images/math/51b9145c515d1852620b81c1480dd337a8920240.png" alt="A\cup B"/> consists of regions where either one or two of the first two digits are 1.</p>
 <p>The union of A, B, and C - <img class="math" src="_images/math/7df85996251d4a4635017d36b55ae58db79c8293.png" alt="A\cup B\cup C"/> consists of regions where at least one of the three digits is 1. The intersection of A, B, and C - <img class="math" src="_images/math/26992dc0899a01b8c8ee4ffcb8388e922e0502ee.png" alt="A\cap B\cap C"/> consists of the single region where all three digits are 1.</p>
 <p>Finally, the region which is in none of the sets A, B, and C is indicated by 000. This is the complement of the union of the three sets.</p>
 </section>
 <section id="counting-by-including-and-excluding">
-<h2>Counting by including and excluding<a class="headerlink" href="#counting-by-including-and-excluding" title="Permalink to this headline">¶</a></h2>
+<h2>Counting by including and excluding<a class="headerlink" href="#counting-by-including-and-excluding" title="Link to this heading">¶</a></h2>
 <p>Let the number of elements of a set <img class="math" src="_images/math/b988975be41fd13b4d091c10202ba19374643586.png" alt="S"/> is denoted by <img class="math" src="_images/math/cc8dbe79a4ed1e0c62657c948a8cf6db011a70ee.png" alt="\#S"/>. This is also called the cardinality of set <img class="math" src="_images/math/b988975be41fd13b4d091c10202ba19374643586.png" alt="S"/>.</p>
 <p>Clearly, <img class="math" src="_images/math/0a90a8203b4586990d2bb7b67561df2531eb786d.png" alt="\#A'=\#U-\#A"/>. This is complementary counting. This applies in general. So <img class="math" src="_images/math/53e22c7aa5561031fed0a9b930416ab1cdc94bf3.png" alt="\#(A\cup B\cup C)'=\#U-\#(A\cup B\cup C)"/>. We will use this concept in problems called “derangements”.</p>
 <p>In the following discussion, we will keep referring to the above Venn diagram with the base 2 or binary digits. For convenience, we replicate the image below. The following results can be verified from the diagram.</p>
@@ -84,7 +89,8 @@
 \#(A\cup B) &amp;= \#010 + \#011 + \#100 + \#101 + \#110 + \#111
 
 \#(A\cap B) &amp;= \#110 + \#111"/></p>
-</div><a class="reference internal image-reference" href="_images/VennDiagram.png"><img alt="_images/VennDiagram.png" src="_images/VennDiagram.png" style="width: 250px;" /></a>
+</div><a class="reference internal image-reference" href="_images/VennDiagram.png"><img alt="_images/VennDiagram.png" src="_images/VennDiagram.png" style="width: 250px;" />
+</a>
 <p>With the intention of computing <img class="math" src="_images/math/2774a4d36804553eb30e638eb43b4ab026c165bb.png" alt="\#(A\cup B)"/>, suppose we just add <img class="math" src="_images/math/e3314022b331fc5a5effdb0e38e18388ed1c3f7b.png" alt="\#A"/> and <img class="math" src="_images/math/1d7fc4d0bfbfd932022ff3d96549e88a08a3030d.png" alt="\#B"/>, then we would have included the 110 and 111 regions twice. Thus, we need to subtract these regions once. However, these two regions make up <img class="math" src="_images/math/de0c2da56ae6821eae9bcedca2cdea634e6b38f8.png" alt="A\cap B"/>. Hence,</p>
 <p><img class="math" src="_images/math/b6bec93776f591f99ae686ae6ea4237bc68b479f.png" alt="\#(A\cup B)=\#A+\#B-\#(A\cap B)"/>.</p>
 <p>This is a simple example of counting by including and excluding regions.</p>
@@ -102,11 +108,12 @@
 <hr class="docutils" />
 <p>Note that if there is no overlap between the sets, the sets are called “disjoint” or “mutually exclusive”. In this case, all the intersections have cardinality 0 and we are back to the addition principle:</p>
 <p><img class="math" src="_images/math/2fdd66d21f9a2df5ba0b56cc023cd1bd9dae0197.png" alt="\#(A\cup B\cup C)=\#A + \#B + \#C"/>.</p>
-<a class="reference internal image-reference" href="_images/disjointSets.png"><img alt="_images/disjointSets.png" src="_images/disjointSets.png" style="width: 225px;" /></a>
+<a class="reference internal image-reference" href="_images/disjointSets.png"><img alt="_images/disjointSets.png" src="_images/disjointSets.png" style="width: 225px;" />
+</a>
 </section>
 <hr class="docutils" />
 <section id="derangements">
-<h2>Derangements<a class="headerlink" href="#derangements" title="Permalink to this headline">¶</a></h2>
+<h2>Derangements<a class="headerlink" href="#derangements" title="Link to this heading">¶</a></h2>
 <p>Example: There are 4 students with 4 assigned seats. In how many ways can the students sit on the 4 seats such that no student sits on his/her assigned seat.</p>
 <p>Let U be the set of all configurations (ignoring any seat assignment constraints). Let A be the set of configurations where the first student is sitting on the assigned seat, B be the set of configurations where the second student is sitting on the assigned seat, and so on. <img class="math" src="_images/math/de0c2da56ae6821eae9bcedca2cdea634e6b38f8.png" alt="A\cap B"/> will be the set of configurations where both of the first two students are sitting on their assigned seats.</p>
 <p>The number we are looking for is <img class="math" src="_images/math/f4558b881a11e239280038a38171faaa7e246e2a.png" alt="\#U-\#(A\cup B\cup C\cup D)"/>.</p>
@@ -124,7 +131,7 @@
 </div><p>Here is another example</p>
 </section>
 <section id="distinguishable-distributions">
-<h2>Distinguishable Distributions<a class="headerlink" href="#distinguishable-distributions" title="Permalink to this headline">¶</a></h2>
+<h2>Distinguishable Distributions<a class="headerlink" href="#distinguishable-distributions" title="Link to this heading">¶</a></h2>
 <p>In how many ways can 12 distinguishable presents be given to three people such that every person gets at least one present and all the presents are given out?</p>
 <p>Let:</p>
 <p>U be the set that contains the ways in which the presents are given out without the stipulation that every person gets at least one present.</p>
@@ -155,10 +162,11 @@
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table of Contents</a></h3>
-  <ul>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
 <li><a class="reference internal" href="#">Inclusion-Exclusion Principle</a><ul>
 <li><a class="reference internal" href="#basic-set-theory">Basic Set Theory</a></li>
 <li><a class="reference internal" href="#counting-by-including-and-excluding">Counting by including and excluding</a></li>
@@ -168,12 +176,17 @@
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="basicCombinatorics.html"
-                        title="previous chapter">Basic Combinatorics</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="pigeonhole.html"
-                        title="next chapter">Pigeonhole Principle</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="basicCombinatorics.html"
+                          title="previous chapter">Basic Combinatorics</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="pigeonhole.html"
+                          title="next chapter">Pigeonhole Principle</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -181,7 +194,7 @@
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
-<div id="searchbox" style="display: none" role="search">
+<search id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
@@ -189,13 +202,13 @@
       <input type="submit" value="Go" />
     </form>
     </div>
-</div>
-<script>$('#searchbox').show(0);</script>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -213,8 +226,8 @@
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, AI.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+    &#169; Copyright 2024, AI.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

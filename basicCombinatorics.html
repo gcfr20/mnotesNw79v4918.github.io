@@ -1,26 +1,24 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Basic Combinatorics &#8212; Math Notes  documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=2bf1fcf8" />
     
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Inclusion-Exclusion Principle" href="inclusionExclusion.html" />
     <link rel="prev" title="Combinatorics" href="combinatorics.html" /> 
   </head><body>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -44,9 +42,9 @@
           <div class="body" role="main">
             
   <section id="basic-combinatorics">
-<h1>Basic Combinatorics<a class="headerlink" href="#basic-combinatorics" title="Permalink to this headline">¶</a></h1>
+<h1>Basic Combinatorics<a class="headerlink" href="#basic-combinatorics" title="Link to this heading">¶</a></h1>
 <section id="factorial">
-<h2>Factorial<a class="headerlink" href="#factorial" title="Permalink to this headline">¶</a></h2>
+<h2>Factorial<a class="headerlink" href="#factorial" title="Link to this heading">¶</a></h2>
 <p>The product of all positive integers less than or equal to <img class="math" src="_images/math/3bfb3a64189a14b2704f4610827762d5e3145114.png" alt="N"/> is written compactly as <img class="math" src="_images/math/dfe0d321297fca62366b31ee7aa0681593e524ae.png" alt="N!"/> and is called as “N factorial”.</p>
 <div class="math">
 <p><img src="_images/math/50785f8d82515577a7e4aaa109d820ff2dd53cd4.png" alt="&amp;1! = 1
@@ -84,7 +82,7 @@
 
 &amp;(1\times 2)\times(1\times 2)\neq (1\times 2\times 3\times 4)"/></p>
 </div><section id="enumeration">
-<h3>Enumeration<a class="headerlink" href="#enumeration" title="Permalink to this headline">¶</a></h3>
+<h3>Enumeration<a class="headerlink" href="#enumeration" title="Link to this heading">¶</a></h3>
 <p>Combinatorics deals with counting. The most basic way of counting is to list out all possibilities.</p>
 <p>The natural numbers are a great example of how items are laid out methodically. The units place is changed first until the last symbol is hit, then the tens place is incremented and the units place is reset, and so on.</p>
 <p>Similarly, enumerating possibilites should be done systematically to ensure that no possibility is left out.</p>
@@ -131,13 +129,13 @@
 </section>
 <hr class="docutils" />
 <section id="addition-principle">
-<h3>Addition Principle<a class="headerlink" href="#addition-principle" title="Permalink to this headline">¶</a></h3>
+<h3>Addition Principle<a class="headerlink" href="#addition-principle" title="Link to this heading">¶</a></h3>
 <p>A person wants to go from A to B. The person can choose one of 3 trains that run between A to B or one of 5 buses that run on that route.</p>
 <p>The total number of ways for the person to go from A to B is thus 3+5=8. The key concept here is <strong>OR</strong>. The person will either take a train or a bus.</p>
 <p>Whenever counting involves mututally exclusive events, the number of ways from the mutually exclusive events can be added.</p>
 </section>
 <section id="multiplication-principle">
-<h3>Multiplication Principle<a class="headerlink" href="#multiplication-principle" title="Permalink to this headline">¶</a></h3>
+<h3>Multiplication Principle<a class="headerlink" href="#multiplication-principle" title="Link to this heading">¶</a></h3>
 <p>A person wants to fly from A to C. There are no direct flights. The only way ther person can go is to fly on one of 3 flights from A to B, and then on one of 5 flights from B to C.</p>
 <p>The total number of ways for the person to fly from A to C is thus 3x5=15. Here, the key concept is <strong>AND</strong>. The person has to take a flight from A to B and a flight from B to C.</p>
 <hr class="docutils" />
@@ -146,7 +144,7 @@
 <p>The total number of ways can thus be calculated by multiplying the number of ways for each of the three steps.</p>
 </section>
 <section id="permutations">
-<h3>Permutations<a class="headerlink" href="#permutations" title="Permalink to this headline">¶</a></h3>
+<h3>Permutations<a class="headerlink" href="#permutations" title="Link to this heading">¶</a></h3>
 <p>In how many ways can persons A, B, and C sit on 5 distinguishable chairs?</p>
 <p>A can choose a chair in 5 ways, B can choose a chair in 4 ways (as A has occupied one chair), and C can choose a chair in 3 ways (the remaining chairs). Thus, by the multiplication principle, the total number of ways is</p>
 <p><img class="math" src="_images/math/1972ea682ef785f8f47d5cbb4a0b7e800ee24ce2.png" alt="5\times 4\times 3 = 60"/></p>
@@ -159,7 +157,7 @@
 <p><img src="_images/math/3350fb7daf82d6600f5a6fa09f434e7b311d5bd9.png" alt="P(5,5) = \frac{5!}{(5-5)!}=\frac{5!}{0!}=\frac{5!}{1}=5!"/></p>
 </div></section>
 <section id="combinations">
-<h3>Combinations<a class="headerlink" href="#combinations" title="Permalink to this headline">¶</a></h3>
+<h3>Combinations<a class="headerlink" href="#combinations" title="Link to this heading">¶</a></h3>
 <p>If in the above discussion, we replace the three persons with three indistinguishable robots. Thus, we just need to choose 3 chairs out of the 5. Which robot sits on which chair does not matter as the robots are indistinguishable. Hence, the number of ways is <img class="math" src="_images/math/01cd84c86738cd7b0edd8249f855be1af7272674.png" alt="\frac{P(5,3)}{P(3,3)}=\frac{P(5,3)}{3!}"/></p>
 <p>The total number of ways computed as permutations have to be divided by the number of ways in which the three robots can be ordered as all orderings are identical when the robots are indistinguishable.</p>
 <p>This way of counting is called combinations of n objects taken r at a time and is denoted by <img class="math" src="_images/math/308928bb2c5f5f198145d7fffcea240228dd9126.png" alt="C(n,r)"/>.</p>
@@ -169,19 +167,19 @@
 <p>Thus, <strong>the main difference between permutations and combinations is whether the objects are distinguishable and ordering matters or whether the objects are indistinguishable, ordering does not matter, and all orderings are counted as a single arrangement</strong>.</p>
 </section>
 <section id="power-principle">
-<h3>Power Principle<a class="headerlink" href="#power-principle" title="Permalink to this headline">¶</a></h3>
+<h3>Power Principle<a class="headerlink" href="#power-principle" title="Link to this heading">¶</a></h3>
 <p>How many ways can 3 persons choose a drink from Coke and Pepsi?</p>
 <p>Each person can choose a drink in 2 ways. Hence, from the multiplication principle, the total number of ways is <img class="math" src="_images/math/e3d2e17ca4c5663123519746363e8d4e88a4edf9.png" alt="2\times 2\times 2=2^3"/>.</p>
 <p>Thus, we have number of choices per person raised to the power of number of persons.</p>
 </section>
 <section id="complementary-principle">
-<h3>Complementary Principle<a class="headerlink" href="#complementary-principle" title="Permalink to this headline">¶</a></h3>
+<h3>Complementary Principle<a class="headerlink" href="#complementary-principle" title="Link to this heading">¶</a></h3>
 <p>How many numbers smaller than or equal to 25 are relatively prime with 25?</p>
 <p>This can be found by Calculating how many numbers have a common factor with 25 that greater than 1 and subtracting this nunber from 25. The numbers with the common factor are the ones divisible by 5.</p>
 <p>The answer is <img class="math" src="_images/math/0651f45d18ce874b910a9c50af285a82ce3478b2.png" alt="25-\frac{25}{5}=20"/>.</p>
 </section>
 <section id="multinomial-assignment">
-<h3>Multinomial Assignment<a class="headerlink" href="#multinomial-assignment" title="Permalink to this headline">¶</a></h3>
+<h3>Multinomial Assignment<a class="headerlink" href="#multinomial-assignment" title="Link to this heading">¶</a></h3>
 <p>In how many ways can 12 kids be divided into 4 teams of sizes 4, 3, 3, and 2?</p>
 <p>Choose 4 kids from 12 and assign them to the first team, choose 3 from the remaining 8 and assign them to the second team, choose 3 from the remaining 5 and assign them to the third team. The rest of the kids go to the fourth team.</p>
 <p><img class="math" src="_images/math/4dbcaaed431e27345672170a8622dd9c2326f2a2.png" alt="C(12,4)\times C(8,3)\times C(5,3)"/>. This answer is correct, but could be cumbersome to evaluate. However, many terms cancel out, and the following simplification helps in the evaluation. In fact, the final answer can directly be written down noting that we are choosing (4,3,3,2) from 12.</p>
@@ -200,10 +198,11 @@
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table of Contents</a></h3>
-  <ul>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
 <li><a class="reference internal" href="#">Basic Combinatorics</a><ul>
 <li><a class="reference internal" href="#factorial">Factorial</a><ul>
 <li><a class="reference internal" href="#enumeration">Enumeration</a></li>
@@ -220,12 +219,17 @@
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="combinatorics.html"
-                        title="previous chapter">Combinatorics</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="inclusionExclusion.html"
-                        title="next chapter">Inclusion-Exclusion Principle</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="combinatorics.html"
+                          title="previous chapter">Combinatorics</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="inclusionExclusion.html"
+                          title="next chapter">Inclusion-Exclusion Principle</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -233,7 +237,7 @@
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
-<div id="searchbox" style="display: none" role="search">
+<search id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
@@ -241,13 +245,13 @@
       <input type="submit" value="Go" />
     </form>
     </div>
-</div>
-<script>$('#searchbox').show(0);</script>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -265,8 +269,8 @@
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, AI.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+    &#169; Copyright 2024, AI.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

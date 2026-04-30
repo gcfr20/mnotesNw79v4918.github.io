@@ -1,26 +1,24 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Prime Factorization and Divisors of numbers &#8212; Math Notes  documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=2bf1fcf8" />
     
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Congruences" href="congruences.html" />
     <link rel="prev" title="Modular Arithmetic" href="modularArithmetic.html" /> 
   </head><body>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -44,14 +42,14 @@
           <div class="body" role="main">
             
   <section id="prime-factorization-and-divisors-of-numbers">
-<h1>Prime Factorization and Divisors of numbers<a class="headerlink" href="#prime-factorization-and-divisors-of-numbers" title="Permalink to this headline">¶</a></h1>
+<h1>Prime Factorization and Divisors of numbers<a class="headerlink" href="#prime-factorization-and-divisors-of-numbers" title="Link to this heading">¶</a></h1>
 <section id="prime-factorization">
-<h2>Prime Factorization<a class="headerlink" href="#prime-factorization" title="Permalink to this headline">¶</a></h2>
+<h2>Prime Factorization<a class="headerlink" href="#prime-factorization" title="Link to this heading">¶</a></h2>
 <p>Prime factorization of any number is unique and can be obtained using either the tabular method or the tree method. It is a good idea to write the primes in increasing order.</p>
 <p><img class="math" src="_images/math/87290b6eb5eac7d8c6616cd3a97a8311808182c0.png" alt="540=2^2\times 3^3\times 5^1"/></p>
 </section>
 <section id="gcd-and-lcm">
-<h2>GCD and LCM<a class="headerlink" href="#gcd-and-lcm" title="Permalink to this headline">¶</a></h2>
+<h2>GCD and LCM<a class="headerlink" href="#gcd-and-lcm" title="Link to this heading">¶</a></h2>
 <p>Get the prime factorization of the numbers whose GCD or LCM is desired. Pick the smallest powers for each prime present in any of the prime factorizations for the GCD. Pick the largest powers for the LCM.</p>
 <div class="math">
 <p><img src="_images/math/983fa71c94a4b28124071a62e5ab06604ced17e0.png" alt="540 &amp;= 2^2\times 3^3\times 5^1
@@ -81,11 +79,11 @@
 &amp; \text{GCD}\times \text{LCM}=20 \times 250"/></p>
 </div></section>
 <section id="divisors">
-<h2>Divisors<a class="headerlink" href="#divisors" title="Permalink to this headline">¶</a></h2>
+<h2>Divisors<a class="headerlink" href="#divisors" title="Link to this heading">¶</a></h2>
 <p>Consider the number 8. Its divisors are 1, 2, 4, and 8. Why are these the only divisors?</p>
 <p>The prime factorization of <img class="math" src="_images/math/963219eafec84d240711eb594e2b8904b8883d82.png" alt="8"/> is <img class="math" src="_images/math/d68034156ca17968dabd55e2f295dad7404accbe.png" alt="2^3"/>. Thus, the divisors are powers of <img class="math" src="_images/math/d94997a2318fec7e8e5bc4d8d79bb633675f9411.png" alt="2"/> such that the power is less than or equal to the power of <img class="math" src="_images/math/d94997a2318fec7e8e5bc4d8d79bb633675f9411.png" alt="2"/> in <img class="math" src="_images/math/963219eafec84d240711eb594e2b8904b8883d82.png" alt="8"/>. In other words, the divisors are <img class="math" src="_images/math/6f308e3af3518af7522f558934d5167e74da3843.png" alt="2^0,~2^1,~2^2,~2^3"/>.</p>
 <section id="number-of-divisors">
-<h3>Number of divisors<a class="headerlink" href="#number-of-divisors" title="Permalink to this headline">¶</a></h3>
+<h3>Number of divisors<a class="headerlink" href="#number-of-divisors" title="Link to this heading">¶</a></h3>
 <p>By extending this logic, the divisors of <img class="math" src="_images/math/a9697528ca8ea7a58a5558b275ffa3e071a1304f.png" alt="72=2^3\times 3^2"/> will be all combinations of <img class="math" src="_images/math/6f308e3af3518af7522f558934d5167e74da3843.png" alt="2^0,~2^1,~2^2,~2^3"/> and <img class="math" src="_images/math/9b11a12068a633a4e58eff47636cac1ac059e5c6.png" alt="3^0,~3^1,~3^2"/>:</p>
 <p><img class="math" src="_images/math/ffb28d5a8fcf3ccd8b381ab65d114ab365ce1b04.png" alt="2^0\times 3^0,~2^0\times 3^1,~2^0\times 3^2"/></p>
 <p><img class="math" src="_images/math/a2227f145eb81e38ce4678eb91d9572d137401ed.png" alt="2^1\times 3^0,~2^1\times 3^1,~2^1\times 3^2"/></p>
@@ -94,7 +92,7 @@
 <p>Thus, the total number of divisors is <img class="math" src="_images/math/4d66d1e4f050b7f8b77fd6ba4fe95982b1445d39.png" alt="(3+1)\times(2+1)=12"/>. This is denoted by the Greek letter “tau”: <img class="math" src="_images/math/39c17a257102bf21869eb2ce1019c5fb29b7adf4.png" alt="\tau(72)=12"/>.</p>
 </section>
 <section id="sum-of-divisors">
-<h3>Sum of divisors<a class="headerlink" href="#sum-of-divisors" title="Permalink to this headline">¶</a></h3>
+<h3>Sum of divisors<a class="headerlink" href="#sum-of-divisors" title="Link to this heading">¶</a></h3>
 <p>The sum of the divisors is denoted by the Greek letter “sigma”.</p>
 <div class="math">
 <p><img src="_images/math/0e2ce91f012a3e3235a9a76c9e449c10f496ae29.png" alt="\sigma(72)&amp;= 2^0\times 3^0+2^0\times 3^1+2^0\times 3^2
@@ -125,7 +123,7 @@
 \sigma(540)&amp;=\left(\frac{2^3-1}{2-1}\right)\left(\frac{3^4-1}{3-1}\right)\left(\frac{5^2-1}{5-1}\right)=1680"/></p>
 </div></section>
 <section id="product-of-divisors">
-<h3>Product of divisors<a class="headerlink" href="#product-of-divisors" title="Permalink to this headline">¶</a></h3>
+<h3>Product of divisors<a class="headerlink" href="#product-of-divisors" title="Link to this heading">¶</a></h3>
 <p>The product of the divisors can be obtained easily by noting that for every divisor, the number can be written as a product of the divisor and another complementary divisor. Thus, listing out the equations for all the divisors we can get the product of the divsors. See an example for the number 8 below.</p>
 <div class="math">
 <p><img src="_images/math/9116d26ae56375c4971ba5660907eb18e650bb76.png" alt="8 &amp;= 1 \times 8
@@ -144,7 +142,7 @@
 \text{Product of divisors} &amp;= \sqrt{8^4}= 64"/></p>
 </div></section>
 <section id="highest-power-of-a-number-that-divides-a-factorial">
-<h3>Highest power of a number that divides a factorial<a class="headerlink" href="#highest-power-of-a-number-that-divides-a-factorial" title="Permalink to this headline">¶</a></h3>
+<h3>Highest power of a number that divides a factorial<a class="headerlink" href="#highest-power-of-a-number-that-divides-a-factorial" title="Link to this heading">¶</a></h3>
 <p>What is the highest power of 2 that divides 12!?</p>
 <p>Let us denote this by the Greek-letter “nu”: <img class="math" src="_images/math/33a639b028a088d056a1cb04bd35caa1f7ff6b47.png" alt="\nu_2(12!)"/></p>
 <p><img class="math" src="_images/math/40ebcbe6afc718ef7cf2b80ed8e3cf450d8fb4c2.png" alt="10!=1\times 2\times3\times 4\times 5\times 6\times 7\times 8\times 9\times 10\times 11\times 12"/></p>
@@ -175,10 +173,11 @@
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table of Contents</a></h3>
-  <ul>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
 <li><a class="reference internal" href="#">Prime Factorization and Divisors of numbers</a><ul>
 <li><a class="reference internal" href="#prime-factorization">Prime Factorization</a></li>
 <li><a class="reference internal" href="#gcd-and-lcm">GCD and LCM</a></li>
@@ -193,12 +192,17 @@
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="modularArithmetic.html"
-                        title="previous chapter">Modular Arithmetic</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="congruences.html"
-                        title="next chapter">Congruences</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="modularArithmetic.html"
+                          title="previous chapter">Modular Arithmetic</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="congruences.html"
+                          title="next chapter">Congruences</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -206,7 +210,7 @@
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
-<div id="searchbox" style="display: none" role="search">
+<search id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
@@ -214,13 +218,13 @@
       <input type="submit" value="Go" />
     </form>
     </div>
-</div>
-<script>$('#searchbox').show(0);</script>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -238,8 +242,8 @@
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, AI.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+    &#169; Copyright 2024, AI.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

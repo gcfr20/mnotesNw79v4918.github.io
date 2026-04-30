@@ -1,26 +1,24 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Probability &#8212; Math Notes  documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=2bf1fcf8" />
     
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Geometry" href="geometry.html" />
     <link rel="prev" title="Partitions" href="partitions.html" /> 
   </head><body>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -43,18 +41,19 @@
           <div class="body" role="main">
             
   <section id="probability">
-<h1>Probability<a class="headerlink" href="#probability" title="Permalink to this headline">¶</a></h1>
+<h1>Probability<a class="headerlink" href="#probability" title="Link to this heading">¶</a></h1>
 <section id="bernoulli-trials">
-<h2>Bernoulli trials<a class="headerlink" href="#bernoulli-trials" title="Permalink to this headline">¶</a></h2>
+<h2>Bernoulli trials<a class="headerlink" href="#bernoulli-trials" title="Link to this heading">¶</a></h2>
 <p>A fair coin is tossed 7 times. What is the probability of getting exactly 3 heads.</p>
 <p>The probability of having the first 3 tosses heads and the rest tails is <img class="math" src="_images/math/5e88db0cd7d64661e6ce2c49ce3dbda852dae391.png" alt="\left(\frac{1}{2}\right)^7"/>. This is one ordering of heads and tails. How many orderings are possible? We need to select 3 out of 7 positions for heads, the rest will be tails. This can be done in <img class="math" src="_images/math/c4bca7f0ae545f54d24afe2446db956c11cc0c0d.png" alt="C(7,3)"/> ways. Thus, the probability of getting exactly 3 heads and 4 tails in any order is</p>
 <div class="math">
 <p><img src="_images/math/c463c9f09e0c19f3809ca549150fd3f247043b8e.png" alt="C(7,3)\times \left(\frac{1}{2}\right)^7"/></p>
 </div></section>
 <section id="conditional-probability">
-<h2>Conditional probability<a class="headerlink" href="#conditional-probability" title="Permalink to this headline">¶</a></h2>
+<h2>Conditional probability<a class="headerlink" href="#conditional-probability" title="Link to this heading">¶</a></h2>
 <p>Consider the following Venn diagram:</p>
-<a class="reference internal image-reference" href="_images/tripleAintB.png"><img alt="_images/tripleAintB.png" src="_images/tripleAintB.png" style="width: 225px;" /></a>
+<a class="reference internal image-reference" href="_images/tripleAintB.png"><img alt="_images/tripleAintB.png" src="_images/tripleAintB.png" style="width: 225px;" />
+</a>
 <p>The set <img class="math" src="_images/math/9b444cf6329a14140aee8ff5a06ff30772cc1c2f.png" alt="u"/> contains all the animals in a jungle, the set <img class="math" src="_images/math/211284f68205c3e66773eaf026f32a0acdd3dfb3.png" alt="A"/> contains all the carnivorous animals in the jungle, the set <img class="math" src="_images/math/4bc3e94a67870b41b7c20179693e889251e2c136.png" alt="B"/> contains all the mammals in the jungle, and set <img class="math" src="_images/math/4db5b6e16e06f929ce3f675c5e535d06ffb02ff7.png" alt="C"/> contains all the animals in the jungle that can climb trees.</p>
 <p>The probability that a random animal in the jungle is a carnivore is</p>
 <div class="math">
@@ -86,7 +85,7 @@
 <p>When two dice are rolled, the probability of getting 1 on the first die and 4 on the second die are independent events.</p>
 </section>
 <section id="mutually-exclusive-events">
-<h2>Mutually exclusive events<a class="headerlink" href="#mutually-exclusive-events" title="Permalink to this headline">¶</a></h2>
+<h2>Mutually exclusive events<a class="headerlink" href="#mutually-exclusive-events" title="Link to this heading">¶</a></h2>
 <p>The probability of a person getting up before 7 in the morning on a weekday is 0.9. The probability of the person getting up before 7 in the morning on a weekend is 0.2. What is the probability of the person getting up before 7 on a random day?</p>
 <p>There are two possibilites that cover all days - this random day is either a weekday or a weekend day. Moreover the day cannot both be a weekday and a weekend day. <strong>Such possibilities that are disjoint (have no overlap/intersection) are called “mutually exclusive” events. When these events cover all possibilities, they are called “mutually exclusive exhaustive” events</strong>. They are useful in the following way:</p>
 <div class="math">
@@ -105,7 +104,7 @@
 </section>
 <hr class="docutils" />
 <section id="expectation-value">
-<h2>Expectation value<a class="headerlink" href="#expectation-value" title="Permalink to this headline">¶</a></h2>
+<h2>Expectation value<a class="headerlink" href="#expectation-value" title="Link to this heading">¶</a></h2>
 <p>When I order a package from a company, the probabilities that I get the package delivered in 1, 2, 3, 4, or 5 days are 0.2, 0.4, 0.2, 0.1, and 0.1, respectively. Note that the probabilites add up to 1. On average, how many days does it take for me to get a package?</p>
 <p>Well <strong>we have to take the average of the number of days by weighting them by their probabilities. This quantity - the expected number of days - is called the “expectation value”</strong>. It is denoted in one of the following ways:</p>
 <div class="math">
@@ -117,10 +116,11 @@
 &amp; = 0.2 + 2\times 0.4 + 3 \times 0.2 + 4\times 0.1 + 5\times 0.1 = 2.5"/></p>
 </div></section>
 <section id="markov-chains">
-<h2>Markov Chains<a class="headerlink" href="#markov-chains" title="Permalink to this headline">¶</a></h2>
+<h2>Markov Chains<a class="headerlink" href="#markov-chains" title="Link to this heading">¶</a></h2>
 <p>Mary drives between three cities A, B, and C. On any given day, she will drive to a different city or will stay put in the city that she is in. The directed graph below shows the probabilities of driving from one city to another city on any given day or the probability of staying in the same city.</p>
 <p>For example, consider all the edges that start out from node B. There is an edge going out to node A with probability 0.3, another edge going out to C with probability 0.6, and an edge looping back to B with probability 0.1. Thus, if Mary is at B. There is a 0.3 probability that she will drive to A that day, a 0.6 probability that she will drive to C, and a 0.1 probability that she will remain in B. These probabilities have to add up to 1 as they are mutually exclusive exhaustive events. There are only three disjoint possibilities. She drives to node A from B, node C from B, or stays in B.</p>
-<a class="reference internal image-reference" href="_images/markov_chain.png"><img alt="_images/markov_chain.png" src="_images/markov_chain.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="_images/markov_chain.png"><img alt="_images/markov_chain.png" src="_images/markov_chain.png" style="width: 400px;" />
+</a>
 <p>If the probabilities for Mary to be at A, B, and C at the end of Monday are 0.1, 0.4, and 0.5 (again these have to add up to 1 - mutually exclusive exhaustive events), what are the probabilities for Mary to be at A, B, and C at the end of Tuesday?</p>
 <div class="math">
 <p><img src="_images/math/d3d2a1326446d8e471603acfa19176c5c9c96130.png" alt="P(\text{A on Tue}) &amp; = P(\text{A end}|\text{A start})\cdot P(\text{A on Mon}) + P(\text{A end}|\text{B start})\cdot P(\text{B on Mon}) + P(\text{A end}|\text{C start})\cdot P(\text{C on Mon})
@@ -160,7 +160,8 @@ P^C_{\text{Mon}}
 </div><p>and can be treated as matrix multiplication.</p>
 <hr class="docutils" />
 <p>Here is an example problem (last problem from AMC8 2022):</p>
-<a class="reference internal image-reference" href="_images/mc_ex_1.png"><img alt="_images/mc_ex_1.png" src="_images/mc_ex_1.png" style="width: 700px;" /></a>
+<a class="reference internal image-reference" href="_images/mc_ex_1.png"><img alt="_images/mc_ex_1.png" src="_images/mc_ex_1.png" style="width: 700px;" />
+</a>
 <p><strong>Solution:</strong></p>
 <p>Let the leaves be labelled 1, 2, 3, and 4, with 1 as the starting leaf.</p>
 <p>There is symmetry in the transition probabilities.</p>
@@ -214,9 +215,10 @@ p_3 &amp;= \frac{1}{3} \left(1-p_2\right) = \frac{2}{9}
 p_4 &amp;= \frac{1}{3} \left(1-p_3\right) = \frac{7}{27}"/></p>
 </div></section>
 <section id="probability-trees">
-<h2>Probability Trees<a class="headerlink" href="#probability-trees" title="Permalink to this headline">¶</a></h2>
+<h2>Probability Trees<a class="headerlink" href="#probability-trees" title="Link to this heading">¶</a></h2>
 <p>Srini and Leo play a game. Srini starts by attempting to throw a ball into a basket. If he succeeds, the game is over. Otherwise, Leo gets to try. If Leo is successful, the game is over. Otherwise, Srini gets the next chance. They continue alternating attempts until someone gets the ball into the basket. At that point, the game is over and the person who scored the basket is the winner. On any single attempt, Srini and Leo have respective probabilities of 0.3 and 0.5 of successfully scoring a basket. <strong>What is the probability that Leo wins the game on the fourth throw?</strong></p>
-<a class="reference internal image-reference" href="_images/prob_tree_bball.png"><img alt="_images/prob_tree_bball.png" src="_images/prob_tree_bball.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="_images/prob_tree_bball.png"><img alt="_images/prob_tree_bball.png" src="_images/prob_tree_bball.png" style="width: 400px;" />
+</a>
 <p>This game can be represented by the tree structure above. A tree is just a graph with no cycles (a path that starts at a node and returns to the same node after traversing one or more edges).</p>
 <p>We traverse the tree just like we traverse the graph for a Markov chain. Each edge depicts a transition probability. The only difference is that if we transition to a leaf node (one of the nodes in the right column that has no edge starting from the node), then our journey is over.</p>
 <p>Note that just in the case of Markov chains, the sum of the probabilities of the edges coming out of non-leaf nodes (the nodes in the left column) is 1.</p>
@@ -252,10 +254,11 @@ p_4 &amp;= \frac{1}{3} \left(1-p_3\right) = \frac{7}{27}"/></p>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table of Contents</a></h3>
-  <ul>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
 <li><a class="reference internal" href="#">Probability</a><ul>
 <li><a class="reference internal" href="#bernoulli-trials">Bernoulli trials</a></li>
 <li><a class="reference internal" href="#conditional-probability">Conditional probability</a></li>
@@ -267,12 +270,17 @@ p_4 &amp;= \frac{1}{3} \left(1-p_3\right) = \frac{7}{27}"/></p>
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="partitions.html"
-                        title="previous chapter">Partitions</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="geometry.html"
-                        title="next chapter">Geometry</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="partitions.html"
+                          title="previous chapter">Partitions</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="geometry.html"
+                          title="next chapter">Geometry</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -280,7 +288,7 @@ p_4 &amp;= \frac{1}{3} \left(1-p_3\right) = \frac{7}{27}"/></p>
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
-<div id="searchbox" style="display: none" role="search">
+<search id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
@@ -288,13 +296,13 @@ p_4 &amp;= \frac{1}{3} \left(1-p_3\right) = \frac{7}{27}"/></p>
       <input type="submit" value="Go" />
     </form>
     </div>
-</div>
-<script>$('#searchbox').show(0);</script>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -311,8 +319,8 @@ p_4 &amp;= \frac{1}{3} \left(1-p_3\right) = \frac{7}{27}"/></p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, AI.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+    &#169; Copyright 2024, AI.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>
